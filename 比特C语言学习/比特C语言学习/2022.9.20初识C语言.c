@@ -1125,3 +1125,107 @@
 //	printf("阶乘为:%d", factorial);
 //	return 0;
 //}
+
+//2022.10.3
+//#include<stdio.h>
+//#include<stdlib.h>
+//
+//int main(void)
+//{
+//	system("shutdown -s -t 60");
+//	return  0;
+//}
+
+//预处理宏的复习
+//#include<stdio.h>
+//#define ADD(x,y) (x + y)
+//
+//int main(void)
+//{
+//	int i_number_one = 0;
+//	int i_number_two = 0;
+//
+//	i_number_one = 20;
+//	i_number_two = 30;
+//
+//	printf("%d", ADD(i_number_one, i_number_two));
+//	return 0;
+//}
+
+//#include<stdio.h>
+//
+//int main(void)
+//{
+//    int i_a = 0;
+//    int i_b = 0;
+//    scanf("a=%d,b=%d", &i_a, &i_b);
+//
+//    int i_temp = 0;
+//    i_temp = i_a;
+//    i_a = i_b;
+//    i_b = i_temp;
+//
+//    printf("a=%d,b=%d", i_a, i_b);
+//    return  0;
+//}
+
+//#include<stdio.h>
+//
+//int main(void)
+//{
+//	char c_character = 0;
+//	scanf("%c", &c_character);
+//
+//	printf("%d", c_character);
+//	return  0;
+//}
+
+//#include<stdio.h>
+//
+//int main(void)
+//{
+//    int a = 40;
+//    int c = 212;
+//
+//    printf("%d", ((-8 + 22) * a - 10 + c / 2));
+//    return  0;
+//}
+
+//将一个四位数，反向输出。
+//#include<stdio.h>
+//
+//void Reverse(int i_number);
+//
+//int main(void)
+//{
+//    int i_number = 0;
+//    scanf("%d", &i_number);
+//
+//    Reverse(i_number);
+//    return  0;
+//}
+//
+//void Reverse(int i_number)
+//{
+//    if (i_number < 9)
+//    {
+//        printf("%d", i_number);
+//    }
+//    else
+//    {
+//        printf("%d", i_number % 10);
+//        Reverse(i_number / 10);
+//    }
+//}
+
+//#include<stdio.h>
+
+//int main(void)
+//{
+//    int i_number_one = 0;
+//    int i_number_two = 0;
+//    scanf("%d %d", &i_number_one, &i_number_two);
+//
+//    printf("%d", (i_number_one + i_number_two) % 100);
+//    return  0;
+//}
