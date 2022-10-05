@@ -1229,3 +1229,161 @@
 //    printf("%d", (i_number_one + i_number_two) % 100);
 //    return  0;
 //}
+
+//2022.10.4
+//#include<stdio.h>
+//#include<stdlib.h>
+//
+//int main(void)
+//{
+//	system("shutdown -s -t 60");
+//	return 0;
+//}
+
+//#include<stdio.h>
+//#define  Scond 31560000
+//
+//int main(void)
+//{
+//    long long int i_age = 0;
+//    scanf("%lld", &i_age);
+//
+//    //int i_age = 0;
+//    //scanf("%d", &i_age);
+//
+//    //printf("%lld\n", i_age * (long long int)Scond);
+//    printf("%lld", i_age * Scond);
+//    //printf("%d", Scond);
+//    return  0;
+//}
+
+//
+//#include <stdio.h>
+//
+//int main(void)
+//{
+//    int seconds = 0;
+//    scanf("%d", &seconds);
+//
+//    int hour = 0;
+//    int minute = 0;
+//    int second = 0;
+//    hour = seconds / 3600;
+//    minute = (seconds - (hour * 3600)) / 60;
+//    second = (seconds - (hour * 3600)) - (minute * 60);
+//
+//    printf("%d %d %d", hour, minute, second);
+//
+//    return  0;
+//}
+
+//依次输入一个学生的3科成绩，在屏幕上输出该学生的总成绩以及平均成绩。
+//#include<stdio.h>
+//
+//int main(void)
+//{
+//    double d_score_one = 0;
+//    double d_score_two = 0;
+//    double d_score_three = 0;
+//    scanf("%lf %lf %lf", &d_score_one, &d_score_two, &d_score_three);
+//
+//    printf("%.2lf", d_score_one + d_score_two + d_score_three);
+//    printf(" %.2lf", (d_score_one + d_score_two + d_score_three) / 3);
+//    return  0;
+//}
+
+//#include<stdio.h>
+//
+//int main(void)
+//{
+//    double d_wight = 0.0;
+//    float f_hight = 0.0;
+//    scanf("%lf %f", &d_wight, &f_hight);
+//
+//    printf("%0.2f", (d_wight) / ((f_hight / 100) * (f_hight / 100)));
+//    return  0;
+//}
+
+//递归实现n的k次方
+//#include<stdio.h>
+//
+//int Cumulative_multiplication(int i_number, int i_k);
+//
+//int main(void)
+//{
+//	int i_number = 0;
+//	int i_k = 0;
+//	printf("请输入一个数和多少次方:");
+//	scanf("%d %d", &i_number, &i_k);
+//
+//	int i_outcome_number = 0;
+//	i_outcome_number = Cumulative_multiplication(i_number, i_k);
+//	printf("%d", i_outcome_number);
+//	return  0;
+//}
+//
+//int Cumulative_multiplication(int i_number, int i_k)
+//{
+//	if (1 == i_k)
+//	{
+//		return  i_number;
+//	}
+//	else if (0 == i_k)
+//	{
+//		return  1;
+//	}
+//	else
+//	{
+//		return i_number * Cumulative_multiplication(i_number, i_k - 1);
+//	}
+//}
+
+//计算一个数的每位之和（递归实现）
+//#include<stdio.h>
+//
+//int DigitSum(unsigned int u_number);
+//
+//int main(void)
+//{
+//	unsigned int u_number = 0;
+//	printf("请输入一个非负整数:");
+//	scanf("%u", &u_number);
+//	//printf("%u", u_number);
+//
+//	int i_sum = 0;
+//	i_sum = DigitSum(u_number);
+//
+//	printf("%d", i_sum);
+//	return  0;
+//}
+//
+//int DigitSum(unsigned int u_number)
+//{
+//	if (u_number < 10)
+//	{
+//		return u_number;
+//	}
+//	else
+//	{
+//		return  (u_number % 10) + DigitSum(u_number / 10);
+//	}
+//}
+
+//编写一个函数 reverse_string(char * string)（递归实现）
+#include<stdio.h>
+
+int main(void)
+{
+	char c_String[] = "abcdefg";
+	int i_length = sizeof(c_String) / sizeof(c_String[0]);
+
+	printf("改变之前的数组为:%s", c_String);
+	Reverse_string(c_String, i_length);
+	printf("改变之后的数组为:%s",c_String);
+	return  0;
+}
+
+void Reverse_string(char* c_String[], int i_length)
+{
+
+}
