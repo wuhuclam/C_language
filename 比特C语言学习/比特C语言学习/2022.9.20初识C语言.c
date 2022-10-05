@@ -1370,20 +1370,211 @@
 //}
 
 //编写一个函数 reverse_string(char * string)（递归实现）
-#include<stdio.h>
+//#include<stdio.h>
+//
+//int main(void)
+//{
+//	char c_String[] = "abcdefg";
+//	int i_length = sizeof(c_String) / sizeof(c_String[0]);
+//
+//	printf("改变之前的数组为:%s", c_String);
+//	Reverse_string(c_String, i_length);
+//	printf("改变之后的数组为:%s",c_String);
+//	return  0;
+//}
+//
+//void Reverse_string(char* c_String[], int i_length)
+//{
+//
+//}
 
-int main(void)
-{
-	char c_String[] = "abcdefg";
-	int i_length = sizeof(c_String) / sizeof(c_String[0]);
+//求字符串长度
+//#include <stdio.h>
+//#include <string.h>
+//
+//int main(void)
+//{
+//	char c_string[] = "abc";
+//	int i_length = 0;
+//	i_length = strlen(c_string);
+//	
+//	printf("%d", i_length);
+//	return  0;
+//}
 
-	printf("改变之前的数组为:%s", c_String);
-	Reverse_string(c_String, i_length);
-	printf("改变之后的数组为:%s",c_String);
-	return  0;
-}
+//模拟实现strlen
+//#include <stdio.h>
+//
+//int My_strlen(char*);
+//
+//int main(void)
+//{
+//	char c_string[] = "abc";
+//	int i_length = 0;
+//	i_length = My_strlen(c_string);
+//
+//	printf("%d", i_length);
+//	return  0;
+//}
+//
+//int My_strlen(char* c_string)
+//{
+//	int i_count = 0;
+//
+//	while (*c_string++)
+//	{
+//		i_count++;
+//	}
+//
+//	return  i_count;
+//}
+//编写一个函数不可以创建临时变量，求字符串的长度
+//#include<stdio.h>
+//
+//int My_strlen(char* c_string);
+//
+//int main(void)
+//{
+//	char c_string[] = "abc";
+//	int i_length = 0;
+//	i_length = My_strlen(c_string);
+//
+//	printf("%d", i_length);
+//	return  0;
+//}
+//
+//int My_strlen(char* c_string)
+//{
+//	if (*c_string)
+//	{
+//		return  1 + My_strlen(c_string + 1);
+//	}
+//	else
+//	{
+//		return  0;
+//	}
+//}
 
-void Reverse_string(char* c_String[], int i_length)
-{
+//递归实现求n的阶乘
+//#include <stdio.h>
+//
+//int Factorial(int i_number);
+//
+//int main(void)
+//{
+//	int i_number = 0;
+//	printf("请输入一个你想要求阶乘的整数:");
+//	scanf("%d", &i_number);
+//
+//	int i_factorial = 0;
+//	i_factorial = Factorial(i_number);
+//	printf("%d", i_factorial);
+//
+//	return 0;
+//}
+//
+//int Factorial(int i_number)
+//{
+//	if (1 == i_number)
+//	{
+//		return 1;
+//	}
+//	else
+//	{
+//		return  i_number * Factorial(i_number - 1);
+//	}
+//}
 
-}
+//非递归实现
+//#include <stdio.h>
+//
+//int Factorial(int i_number);
+//
+//int main(void)
+//{
+//	int i_number = 0;
+//	printf("请输入一个你想要求阶乘的数:");
+//	scanf("%d", &i_number);
+//
+//	int i_factorial = 0;
+//	i_factorial = Factorial(i_number);
+//	printf("%d", i_factorial);
+//
+//	return 0;
+//}
+//
+//int Factorial(int i_number)
+//{
+//	int i_factorial = 1;
+//	int i = 1;
+//	for (i = 1; i < i_number + 1; i++)
+//	{
+//		i_factorial *= i;
+//	}
+//
+//	return  i_factorial;
+//}
+
+//递归实现斐波那契数列
+//#include <stdio.h>
+//
+//int Fibonacci(int i_num);
+//
+//int main(void)
+//{
+//	int i_num = 0;
+//	printf("请输入您想要查找的斐波那契数列的位数:");
+//	scanf("%d", &i_num);
+//
+//	int i_number = 0;
+//	i_number = Fibonacci(i_num);
+//	printf("在斐波那契数列中第%d位的数为:%d", i_num, i_number);
+//	return 0;
+//}
+//
+//int Fibonacci(int i_num)
+//{
+//	if (i_num <= 2)
+//	{
+//		return  1;
+//	}
+//	else if (i_num > 2)
+//	{
+//		return  Fibonacci(i_num - 1) + Fibonacci(i_num - 2);
+//	}
+//}
+
+//循环实现
+//#include <stdio.h>
+//
+//int Fibonacci(int i_num);
+//
+//int main(void)
+//{
+//	int i_num = 0;
+//	printf("请输入您想要在斐波那契数列中查找的位数:");
+//	scanf("%d", &i_num);
+//
+//	int i_number = 0;
+//	i_number = Fibonacci(i_num);
+//    printf("%d", i_number);
+//
+//	return 0;
+//}
+//
+//int Fibonacci(int i_num)
+//{
+//	int i_a = 1;
+//	int i_b = 1;
+//	int i_c = 1;
+//
+//	while(i_num > 2)
+//	{
+//		i_c = i_a + i_b;
+//		i_a = i_b;
+//		i_b = i_c;
+//		i_num--;
+//	}
+//
+//	return i_c;
+//}
