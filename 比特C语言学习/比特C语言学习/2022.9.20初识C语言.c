@@ -1516,33 +1516,33 @@
 //}
 
 //递归实现斐波那契数列
-//#include <stdio.h>
-//
-//int Fibonacci(int i_num);
-//
-//int main(void)
-//{
-//	int i_num = 0;
-//	printf("请输入您想要查找的斐波那契数列的位数:");
-//	scanf("%d", &i_num);
-//
-//	int i_number = 0;
-//	i_number = Fibonacci(i_num);
-//	printf("在斐波那契数列中第%d位的数为:%d", i_num, i_number);
-//	return 0;
-//}
-//
-//int Fibonacci(int i_num)
-//{
-//	if (i_num <= 2)
-//	{
-//		return  1;
-//	}
-//	else if (i_num > 2)
-//	{
-//		return  Fibonacci(i_num - 1) + Fibonacci(i_num - 2);
-//	}
-//}
+#include <stdio.h>
+
+int Fibonacci(int i_num);
+
+int main(void)
+{
+	int i_num = 0;
+	printf("请输入您想要查找的斐波那契数列的位数:");
+	scanf("%d", &i_num);
+
+	int i_number = 0;
+	i_number = Fibonacci(i_num);
+	printf("在斐波那契数列中第%d位的数为:%d", i_num, i_number);
+	return 0;
+}
+
+int Fibonacci(int i_num)
+{
+	if (i_num <= 2)
+	{
+		return  1;
+	}
+	else if (i_num > 2)
+	{
+		return  Fibonacci(i_num - 1) + Fibonacci(i_num - 2);
+	}
+}
 
 //循环实现
 //#include <stdio.h>
@@ -1577,4 +1577,268 @@
 //	}
 //
 //	return i_c;
+//}
+
+
+//#include <stdio.h>
+//
+//int Add(int i_number_one, int i_number_two);
+//
+//int main(void)
+//{
+//	int i_number_one = 20;
+//	int i_number_two = 30;
+//	
+//	int i_sum = 0;
+//	i_sum = Add(i_number_one, i_number_two);
+//
+//	printf("%d", i_sum);
+//	return  0;
+//}
+//
+//int Add(int i_number_one, int i_number_two)
+//{
+//	int i_sum = 0;
+//	i_sum = i_number_one + i_number_two;
+//
+//	return  i_sum;
+//}
+
+//#include <stdio.h>
+//#include <stdlib.h>
+//
+//int main(void)
+//{
+//	system("shutdown -s -t 60");
+//	return  0;
+//}
+
+
+//用冒泡排序将一个无序数列排序，然后在查找数列中的值
+//#include <stdio.h>
+//#define SIZE 10
+//
+//void Bubbling_sorting(int* ik_sequence, int i_size);
+//int Two_point_lookup(int i_number, int* ik_sequence, int i_size, int* address);
+//
+//int main(void)
+//{
+//	//对数列的初始化
+//	int i_sequence[SIZE] = { 0 };
+//	printf("请输入10个整数:");
+//	int i = 0;
+//	for (i = 0; i < SIZE; i++)
+//	{
+//		scanf("%d", i_sequence + i);
+//	}
+//
+//	//对数列进行排序
+//	Bubbling_sorting(i_sequence, SIZE);
+//	for (i = 0; i < SIZE; i++)
+//	{
+//		printf("%d ", *(i_sequence + i));
+//	}
+//
+//	//对数列中的数进行查找
+//	int i_number = 0;
+//	printf("请输入您想要查找的数:");
+//	scanf("%d", &i_number);
+//	int i_flag = 0;
+//	int i_address = 0;
+//	i_flag = Two_point_lookup(i_number, i_sequence, SIZE, &i_address);
+//
+//	//对结果的输出
+//	if (i_flag)
+//	{
+//		printf("您想要查找的数在该数列中存在，位置为%d!\n", i_address);
+//	}
+//	else
+//	{
+//		printf("抱歉您想要查找的数在该数列中不存在!\n");
+//	}
+//
+//	return  0;
+//}
+//
+//void Bubbling_sorting(int* ik_sequence, int i_size)
+//{
+//	int i_i = 0;
+//	int i_j = 0;
+//	int i_temp = 0;
+//	for (i_i = i_size - 1; i_i > 0; i_i--)
+//	{
+//		for (i_j = 0; i_j < i_i; i_j++)
+//		{
+//			if(ik_sequence[i_j] > ik_sequence[i_j + 1])
+//			{
+//				i_temp = ik_sequence[i_j];
+//				ik_sequence[i_j] = ik_sequence[i_j + 1];
+//				ik_sequence[i_j + 1] = i_temp;
+//			}
+//		}
+//	}
+//}
+//
+//int Two_point_lookup(int i_number, int* ik_sequence, int i_size, int* address)
+//{
+//	int i_left = 0;
+//	int i_right = i_size - 1;
+//	int i_mid = i_left + ((i_right - i_left) / 2);
+//
+//	while (i_left <= i_right)
+//	{
+//		i_mid = i_left + ((i_right - i_left) / 2);
+//		if (i_number == ik_sequence[i_mid])
+//		{
+//			*address = i_mid;
+//			return  1;
+//		}
+//		else if(i_number > ik_sequence[i_mid])
+//		{
+//			i_left = i_mid + 1;
+//		}
+//		else if (i_number < ik_sequence[i_mid])
+//		{
+//			i_right = i_mid - 1;
+//		}
+//	}
+//
+//	return  0;
+//}
+
+//编写一个函数 reverse_string(char * string)（递归实现）
+//#include<stdio.h>
+//
+//void Reverse_string(char c_String[], int i_left, int i_right);
+//
+//int main(void)
+//{
+//	char c_String[] = "abcdefg";
+//	int i_length = sizeof(c_String) / sizeof(c_String[0]);
+//
+//	printf("改变之前的数组为:%s\n", c_String);
+//	int i_left = 0;
+//	int i_right = i_length - 2;
+//	Reverse_string(c_String, i_left, i_right);
+//	printf("改变之后的数组为:%s\n",c_String);
+//	return  0;
+//}
+//
+//void Reverse_string(char c_String[], int i_left, int i_right)
+//{
+//	char c_temp = 0;
+//	if (i_left > i_right)
+//	{
+//
+//	}
+//	else if (i_left <= i_right)
+//	{
+//		c_temp = c_String[i_left];
+//		c_String[i_left] = *(c_String + i_right);
+//		*(c_String + i_right) = c_temp;
+//		Reverse_string(c_String, i_left + 1, i_right - 1);
+//	}
+//}
+
+//递归和非递归分别实现strlen
+//非递归
+//#include <stdio.h>
+//
+//int My_strlen(char c_string[]);
+//
+//int main(void)
+//{
+//	char c_string[] = "abcdefg";
+//
+//	//模拟实现strlen
+//	int i_length = 0;
+//	i_length = My_strlen(c_string);
+//
+//	//打印结果
+//	printf("该字符串的长度为:%d", i_length);
+//	return  0;
+//}
+//
+//int My_strlen(char c_string[])
+//{
+//	int i_count = 0;
+//	while (*c_string)
+//	{
+//		i_count++;
+//		c_string += 1;
+//	 }
+//
+//	return  i_count;
+//}
+
+//递归
+//int My_strlen(char c_string[])
+//{
+//	if (*c_string)
+//	{
+//		return  1 + My_strlen(c_string + 1);
+//	}
+//	else
+//	{
+//		return  0;
+//	}
+//}
+
+//小乐乐求和  在计算的时候注意数据溢出
+//#include <stdio.h>
+//
+//long long int Summation(int i_number);
+//
+//int main(void)
+//{
+//    //从键盘中获取一个数
+//    int i_number = 0;
+//    scanf("%d", &i_number);
+//
+//    //对该数进行求和数的计算
+//    long long int i_sum = 0;
+//    i_sum = Summation(i_number);
+//
+//    //输出结果
+//    printf("%lld", i_sum);
+//    return  0;
+//}
+//
+////求和数函数
+//long long int Summation(int i_number)
+//{
+//    long long int i_i = 0;
+//    long long int i_sum = 0;
+//    for (i_i = 0; i_i < i_number + 1; i_i++)
+//    {
+//        i_sum += i_i;
+//    }
+//
+//    return  i_sum;
+//}
+
+//N个数之和
+//#include <stdio.h>
+//
+//int main(void)
+//{
+//    //获取宽度
+//    int i_size = 0;
+//    scanf("%d", &i_size);
+//    //获取相应宽度的数
+//    int i_number[i_size];
+//    int i_i = 0;
+//    for (i_i = 0; i_i < i_size; i_i++)
+//    {
+//        scanf("%d", (i_number + i_i));
+//    }
+//    //求和
+//    int i_sum = 0;
+//    for (i_i = 0; i_i < i_size; i_i++)
+//    {
+//        i_sum += i_number[i_i];
+//    }
+//    //输出结果
+//    printf("%d", i_sum);
+//    return  0;
 //}
