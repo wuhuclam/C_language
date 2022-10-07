@@ -1516,33 +1516,33 @@
 //}
 
 //递归实现斐波那契数列
-#include <stdio.h>
-
-int Fibonacci(int i_num);
-
-int main(void)
-{
-	int i_num = 0;
-	printf("请输入您想要查找的斐波那契数列的位数:");
-	scanf("%d", &i_num);
-
-	int i_number = 0;
-	i_number = Fibonacci(i_num);
-	printf("在斐波那契数列中第%d位的数为:%d", i_num, i_number);
-	return 0;
-}
-
-int Fibonacci(int i_num)
-{
-	if (i_num <= 2)
-	{
-		return  1;
-	}
-	else if (i_num > 2)
-	{
-		return  Fibonacci(i_num - 1) + Fibonacci(i_num - 2);
-	}
-}
+//#include <stdio.h>
+//
+//int Fibonacci(int i_num);
+//
+//int main(void)
+//{
+//	int i_num = 0;
+//	printf("请输入您想要查找的斐波那契数列的位数:");
+//	scanf("%d", &i_num);
+//
+//	int i_number = 0;
+//	i_number = Fibonacci(i_num);
+//	printf("在斐波那契数列中第%d位的数为:%d", i_num, i_number);
+//	return 0;
+//}
+//
+//int Fibonacci(int i_num)
+//{
+//	if (i_num <= 2)
+//	{
+//		return  1;
+//	}
+//	else if (i_num > 2)
+//	{
+//		return  Fibonacci(i_num - 1) + Fibonacci(i_num - 2);
+//	}
+//}
 
 //循环实现
 //#include <stdio.h>
@@ -1840,5 +1840,93 @@ int Fibonacci(int i_num)
 //    }
 //    //输出结果
 //    printf("%d", i_sum);
+//    return  0;
+//}
+
+//#include <stdio.h>
+//
+//int main(void)
+//{
+//	//printf("%.2d", 2);
+//	//printf("%.2s", "abcde");
+//	printf("% 2d", -2);
+//	return  0;
+//}
+
+//#include <stdio.h>
+//
+//int Factorial(int i_number); //阶乘函数的声明
+//
+//int main(void)
+//{
+//	//从键盘中获取想要求阶乘的数
+//	int i_number = 0;
+//	scanf("%d", &i_number);
+//
+//	//用Factorial()函数实现对获取的数的求阶乘
+//	int i_factorial = 0;
+//	i_factorial = Factorial(i_number);
+//
+//	//输出结果
+//	printf("%d", i_factorial);
+//
+//	return  0;
+//}
+//
+////求阶乘函数的实现
+//int Factorial(int i_number)
+//{
+//	printf("%d\n", i_number);
+//	return  i_number * Factorial(i_number + 1);
+//}
+
+//2022.10.6
+//#include <stdio.h>
+//#include <stdlib.h>
+//
+//int main(void)
+//{
+//	system("shutdown -s -t 60");
+//	return  0;
+//}
+
+//海伦公式运用
+//#include <stdio.h>
+//#include <math.h>
+//
+//int main(void)
+//{
+//    //获取三角形的三边长
+//    float f_length_a = 0;
+//    float f_length_b = 0;
+//    float f_length_c = 0;
+//    scanf("%f %f %f", &f_length_a, &f_length_b, &f_length_c);
+//
+//    //计算三角形的边长和面积
+//    float f_circumference = f_length_a + f_length_b + f_length_c;
+//    float f_area = 0.0f;
+//    float f_p = 0.0;
+//    f_p = f_circumference / 2;
+//    //float f_x = f_p * (f_p - f_length_a) * (f_p - f_length_b) * (f_p - f_length_c);
+//    f_area = sqrt(f_p * (f_p - f_length_a) * (f_p - f_length_b) * (f_p - f_length_c));
+//    printf("circumference=%.2f area=%.2lf", f_circumference, f_area);
+//    return  0;
+//}
+
+//计算球体的体积
+//#include <stdio.h>
+//#define π 3.1415926
+//
+//int main(void)
+//{
+//    获取球体的半径
+//    double d_radius = 0.0;
+//    scanf("%lf", &d_radius);
+//
+//    计算球体的体积
+//    double d_volume = 0.0;
+//    d_volume = (4.0 / 3.0) * π * (d_radius * d_radius * d_radius);
+//
+//    printf("%.3lf", d_volume);
 //    return  0;
 //}
