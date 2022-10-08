@@ -1930,3 +1930,40 @@
 //    printf("%.3lf", d_volume);
 //    return  0;
 //}
+
+//大小写转换
+//#include <stdio.h>
+//
+//int main(void)
+//{
+//    //获取字符
+//    char c_character = 0;
+//
+//    //获取多行字符
+//    while (scanf("%c", &c_character) != EOF)          // EOF 是明示常量它的预处理指令定义在stdio,h头文件中
+//    {
+//        if (c_character >= 65 && c_character <= 90)
+//        {
+//            printf("%c", c_character + 32);
+//        }
+//        else
+//        {
+//            printf("%c", c_character);
+//        }
+//    }
+//    return  0;
+//}
+
+//不使用累计乘法的基础上，通过移位运算（<<）实现2的n次方的计算。
+//#include <stdio.h>
+//
+//int main(void)
+//{
+//    //获取n次方
+//    int i_num = 0;
+//    scanf("%d", &i_num);
+//
+//    //输出结果
+//    printf("%d", 1 << i_num);
+//    return  0;
+//}
