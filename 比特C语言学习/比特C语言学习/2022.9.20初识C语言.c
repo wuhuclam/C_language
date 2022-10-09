@@ -1967,3 +1967,104 @@
 //    printf("%d", 1 << i_num);
 //    return  0;
 //}
+
+
+//KiKi和酸奶
+//#include <stdio.h>
+//
+//int main(void)
+//{
+//    //声明一箱酸奶的盒数i_n和i_h分钟和经过i_m分钟
+//    int i_n = 0;
+//    int i_h = 0;
+//    int i_m = 0;
+//
+//    //获取数值并计算剩余的盒数
+//    int i_number = 0;
+//    while (scanf("%d %d %d", &i_n, &i_h, &i_m) != EOF)
+//    {
+//        i_number = 0;
+//        if (i_m > i_n * i_h)
+//        {
+//            continue;
+//        }
+//        else
+//        {
+//            i_number = i_m / i_h;
+//            //printf("%d", i_number);
+//            if (i_m % i_h)
+//            {
+//                i_number++;
+//            }
+//        }
+//
+//        //输出结果
+//        //printf("%d", i_m % i_h);
+//        printf("%d", i_n - i_number);
+//    }
+//
+//
+//    return 0;
+//}
+
+//发布信息
+//#include<stdio.h>
+//
+//int main(void)
+//{
+//    printf("I lost my cellphone!");
+//    return  0;
+//}
+
+//输出学生信息
+//#include<stdio.h>
+//int main()
+//{
+//    printf("Name    Age    Gender\n");
+//    printf("---------------------\n");
+//    printf("Jack    18     man");
+//
+//
+//    return 0;
+//}
+
+//计算平均成绩
+//#include<stdio.h>
+//#define numbers 5
+//
+//int main()
+//{
+//    int grades[numbers] = { 0 };
+//    int i = 0;
+//    for (i = 0; i < numbers; i++)
+//    {
+//        scanf("%d", grades + i);
+//    }
+//
+//    int average = 0;
+//    for (i = 0; i < numbers; i++)
+//    {
+//        average += *(grades + i);
+//    }
+//
+//    printf("%.1f", average / 5.0);
+//    return 0;
+//}
+
+//进制A+B
+//#include <stdio.h>
+//
+//int main(void)
+//{
+//    //声明两个变量
+//    int i_number_one = 0;
+//    int i_number_two = 0;
+//
+//    //获取数值
+//    scanf("%x %o", &i_number_one, &i_number_two);
+//
+//    //输出结果
+//    printf("%d", i_number_one + i_number_two);
+//
+//    return  0;
+//}
