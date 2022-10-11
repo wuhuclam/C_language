@@ -2469,3 +2469,104 @@
 //
 //    return 0;
 //}
+
+//#include <stdio.h>
+//#include <stdlib.h>
+//
+//int main(void)
+//{
+//	system("shutdown -s -t 240");
+//	return  0;
+//}
+
+//#include <stdio.h>
+//
+//int main(void)
+//{
+//	printf("abcd\
+//               cde");
+//	return  0;											
+//}
+
+//不允许创建临时变量，交换两个整数的内容
+//#include <stdio.h>
+//
+//int main(void)
+//{
+//	int i_number_one = 20;
+//	int i_number_two = 30;
+//
+//	printf("交换前两个变量分别为:\n");
+//	printf("i_number_one = %d, i_number_two = %d\n", i_number_one,i_number_two);
+//
+//	i_number_one = i_number_one ^ i_number_two;
+//	i_number_two = i_number_one ^ i_number_two;
+//	i_number_one = i_number_one ^ i_number_two;
+//
+//	printf("交换后两个变量分别为:\n");
+//	printf("i_number_one = %d, i_number_two = %d\n", i_number_one, i_number_two);
+//	return  0;
+//}
+
+//#include <stdio.h>
+//
+//int main(void)
+//{
+//    //声明两个变量并获取值
+//    int i_number_one = 0;
+//    int i_number_two = 0;
+//    scanf("%d %d", &i_number_one, &i_number_two);
+//
+//    //计算两个变量中不同位的个数
+//    int i_xor = 0;
+//    i_xor = i_number_one ^ i_number_two;
+//    int i_count = 0;
+//    int i_i = 0;
+//    for (i_i = 0; i_i < 32; i_i++)
+//    {
+//        i_count += (1 & (i_xor >> i_i));
+//    }
+//
+//    printf("%d", i_count);
+//    return  0;
+//}
+
+#include <stdio.h>
+
+int main(void)
+{
+    //声明一个变量用于for循环
+    int i_i = 0;
+
+    //开始判断
+    //声明两个一个用来记录商一个用来记录余数
+    int i_business = 0;
+    int i_residual = 0;
+    //声明一个变量用于内部循环
+    int i_j = 0;
+    //声明一个变量用来记录和
+    int i_sum = 0;
+    for (i_i = 10000; i_i < 100000; i_i++)
+    {
+        //printf("%d ", i_i);
+        //i_i = 1461;
+        i_sum = 0;
+        for (i_j = 10000; i_j > 1; i_j /= 10)
+        {
+            //printf("%d ", i_j);
+            i_business = i_i / i_j;
+            i_residual = i_i % i_j;
+            i_sum += i_business * i_residual;
+            //printf("%d ", i_sum);
+        }
+        //printf("%d", i_sum);
+        //printf("\n");
+
+        if (i_i == i_sum)
+        {
+            printf("%d \n", i_i);
+            //break;
+        }
+    }
+    return  0;
+}
