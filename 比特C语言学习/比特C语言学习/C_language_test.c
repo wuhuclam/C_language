@@ -2531,42 +2531,144 @@
 //    return  0;
 //}
 
-#include <stdio.h>
+//#include <stdio.h>
+//
+//int main(void)
+//{
+//    //声明一个变量用于for循环
+//    int i_i = 0;
+//
+//    //开始判断
+//    //声明两个一个用来记录商一个用来记录余数
+//    int i_business = 0;
+//    int i_residual = 0;
+//    //声明一个变量用于内部循环
+//    int i_j = 0;
+//    //声明一个变量用来记录和
+//    int i_sum = 0;
+//    for (i_i = 10000; i_i < 100000; i_i++)
+//    {
+//        //printf("%d ", i_i);
+//        //i_i = 1461;
+//        i_sum = 0;
+//        for (i_j = 10000; i_j > 1; i_j /= 10)
+//        {
+//            //printf("%d ", i_j);
+//            i_business = i_i / i_j;
+//            i_residual = i_i % i_j;
+//            i_sum += i_business * i_residual;
+//            //printf("%d ", i_sum);
+//        }
+//        //printf("%d", i_sum);
+//        //printf("\n");
+//
+//        if (i_i == i_sum)
+//        {
+//            printf("%d \n", i_i);
+//            //break;
+//        }
+//    }
+//    return  0;
+//}
 
-int main(void)
-{
-    //声明一个变量用于for循环
-    int i_i = 0;
+//冒泡排序的应用
+//#include <stdio.h>
+//
+//void Bubbling_sorting(int* i_score, int i_size);
+//
+//int main(void)
+//{
+//    //创建一个变量用来做变长数组的长度并获取数值
+//    int i_size = 0;
+//    scanf("%d ", &i_size);
+//
+//    //声明一个变量用于for循环
+//    int i_i = 0;
+//    int i_score[i_size];  //变长数组不可以初始化，变长数组的使用一定是要编译器支持c99的
+//    for (i_i = 0; i_i < i_size; i_i++)
+//    {
+//        scanf("%d", i_score + i_i);
+//    }
+//
+//    //排序(冒泡排序)
+//    Bubbling_sorting(i_score, i_size);
+//
+//    //输出前五名的成绩
+//    for (i_i = 0; i_i < 5; i_i++)
+//    {
+//        printf("%d ", i_score[i_i]);
+//    }
+//    return  0;
+//}
+//
+////冒泡排序的实现
+//void Bubbling_sorting(int* i_score, int i_size)
+//{
+//    //声明两个变量用于for循环
+//    int i_i = 0;
+//    int i_j = 0;
+//    int i_temp = 0;
+//    for (i_i = i_size - 1; i_i > 0; i_i--)
+//    {
+//        for (i_j = 0; i_j < i_i; i_j++)
+//        {
+//            if (i_score[i_j] < i_score[i_j + 1])
+//            {
+//                i_temp = i_score[i_j];
+//                i_score[i_j] = i_score[i_j + 1];
+//                i_score[i_j + 1] = i_temp;
+//            }
+//        }
+//    }
+//}
 
-    //开始判断
-    //声明两个一个用来记录商一个用来记录余数
-    int i_business = 0;
-    int i_residual = 0;
-    //声明一个变量用于内部循环
-    int i_j = 0;
-    //声明一个变量用来记录和
-    int i_sum = 0;
-    for (i_i = 10000; i_i < 100000; i_i++)
-    {
-        //printf("%d ", i_i);
-        //i_i = 1461;
-        i_sum = 0;
-        for (i_j = 10000; i_j > 1; i_j /= 10)
-        {
-            //printf("%d ", i_j);
-            i_business = i_i / i_j;
-            i_residual = i_i % i_j;
-            i_sum += i_business * i_residual;
-            //printf("%d ", i_sum);
-        }
-        //printf("%d", i_sum);
-        //printf("\n");
-
-        if (i_i == i_sum)
-        {
-            printf("%d \n", i_i);
-            //break;
-        }
-    }
-    return  0;
-}
+//票数统计
+//#include <stdio.h>
+//
+//#define SIZE 1000
+//
+//int main(void)
+//{
+//    //声明一个投票数组
+//    char c_tickets[SIZE] = { 0 };
+//
+//    //开始投票
+//    char c_ticket = 0;
+//    int i_i = 0;
+//    while ((c_ticket = getchar()) != '0')
+//    {
+//        c_tickets[i_i++] = c_ticket;
+//    }
+//    c_tickets[i_i] = '0';
+//    //统计结果
+//    i_i = 0;
+//    int i_count_A = 0;
+//    int i_count_B = 0;
+//    while (c_tickets[i_i] != '0')
+//    {
+//        if (c_tickets[i_i] == 'A')
+//        {
+//            i_count_A++;
+//        }
+//        else if (c_tickets[i_i] == 'B')
+//        {
+//            i_count_B++;
+//        }
+//        i_i++;
+//    }
+//
+//    //输出结果
+//    if (i_count_A == i_count_B)
+//    {
+//        printf("E");
+//    }
+//    else if (i_count_A < i_count_B)
+//    {
+//        printf("B");
+//    }
+//    else if (i_count_A > i_count_B)
+//    {
+//        printf("A");
+//    }
+//    return  0;
+//}
