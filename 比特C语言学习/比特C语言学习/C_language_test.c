@@ -2813,3 +2813,295 @@
 //        }
 //    }
 //    return 0;
+
+//青蛙跳台阶问题
+//#include <stdio.h>
+//
+//int Manner(int i_number);
+//
+//int main(void)
+//{
+//    //声明一个变量用来获取台阶的总数
+//    int i_number = 0;
+//    scanf("%d", &i_number);
+//
+//    //计算上楼梯的方式的数量
+//    int i_manner = 0;
+//    i_manner = Manner(i_number);
+//
+//    //输出结果
+//    printf("%d", i_manner);
+//    return  0;
+//}
+//
+//int Manner(int i_number)
+//{
+//    if (1 == i_number)
+//    {
+//        return  1;
+//    }
+//    else if (2 == i_number)
+//    {
+//        return 2;
+//    }
+//    else if (i_number > 2)
+//    {
+//        return Manner(i_number - 1) + Manner(i_number - 2);
+//    }
+//}
+
+//删除数组中的指定元素
+//#include <stdio.h>
+//
+//int  Delete(int* i_number, int i_flag, int i_size);
+//void Deletes(int* i_number, int i_i, int i_size);
+//
+//int main(void)
+//{
+//    //声明一个变量用于接受变长数组的长度
+//    int i_size = 0;
+//    scanf("%d", &i_size);
+//
+//    //声明一个变长数组，变长数组不可以初始化，只有支持从c99的编译器才支持变长数组
+//    int i_number[i_size];
+//
+//    //对变长数组赋初值
+//    int i_i = 0;
+//    for (i_i = 0; i_i < i_size; i_i++)
+//    {
+//        scanf("%d", i_number + i_i);
+//    }
+//
+//    //获取想要删除的数值
+//    int i_flag = 0;
+//    scanf("%d", &i_flag);
+//
+//    //删除
+//    int i_count = 0;   //用来表示删除的元素的个数
+//    i_count = Delete(i_number, i_flag, i_size);
+//
+//    //输出删除后的结果
+//    for (i_i = 0; i_i < i_size - i_count; i_i++)
+//    {
+//        printf("%d ", i_number[i_i]);
+//    }
+//
+//    return  0;
+//}
+//
+////删除元素
+//int  Delete(int* i_number, int i_flag, int i_size)
+//{
+//    //声明一个变量用于记录删除元素的个数
+//    int i_count = 0;
+//    int i_i = 0;
+//
+//    //开始判断并执行删除
+//    for (i_i = 0; i_i < i_size; i_i++)
+//    {
+//        if (i_flag == i_number[i_i])
+//        {
+//            Deletes(i_number, i_i, i_size);
+//            i_count++;
+//            i_size--;
+//            i_i--;
+//        }
+//    }
+//
+//    return i_count;
+//}
+//
+////执行删除操作
+//void Deletes(int* i_number, int i_i, int i_size)
+//{
+//    for (; i_i < i_size; i_i++)
+//    {
+//        i_number[i_i] = i_number[i_i + 1];
+//    }
+//}
+
+//对删除函数的优化
+//int  Delete(int* i_number, int i_flag, int i_size)
+//{
+//	int i_count = 0;
+//	int i_i = 0;
+//	for (i_i = 0; i_i < i_size; i_i++)
+//	{
+//		if (i_number[i_i] != i_flag)
+//		{
+//			i_number[i_count++] = i_number[i_i];
+//		}
+//	}
+//
+//	return  i_count;
+//}
+
+//小乐乐与欧几里得
+//#include <stdio.h>
+//
+//int main(void)
+//{
+//    //声明两个变量获取两个整数
+//    long long int ll_number_one = 0;
+//    long long int ll_number_two = 0;
+//    scanf("%lld %lld", &ll_number_one, &ll_number_two);
+//
+//    //计算最小公约数
+//    int ll_common_divisors = 0;
+//    long long int ll_temp = 0;
+//    ll_temp = ll_number_two;
+//    while (1)
+//    {
+//        if (ll_number_one % ll_temp == 0 && ll_number_two % ll_temp == 0)
+//        {
+//            break;
+//        }
+//        ll_temp--;
+//    }
+// 
+//    //计算最大公倍数
+//    long long int ll_common_multiples = 0;
+//    ll_common_multiples = (ll_number_one * ll_number_two) / ll_temp;
+//
+//    //输出结果
+//    printf("%lld", ll_common_multiples + ll_temp);
+//    return  0;
+//}
+
+//进制转换
+//#include <stdio.h>
+//
+//void Six(int i_number);
+//
+//int main(void)
+//{
+//    //声明一个变量用来获取一个十进制数
+//    int i_number = 0;
+//    scanf("%d", &i_number);
+//
+//    //计算该十进制数对应的六进制数
+//    Six(i_number);
+//    return  0;
+//}
+//
+//void Six(int i_number)
+//{
+//    if (i_number > 5)
+//    {
+//        Six(i_number / 6);
+//    }
+//
+//    printf("%d", i_number % 6);
+//}
+
+//上三角矩阵判定
+//#include <stdio.h>
+//
+//int main(void)
+//{
+//    //声明一个变量用来表示二维变长数组的大小
+//    int i_size = 0;
+//    scanf("%d", &i_size);
+//
+//    //声明一个二维变长数组,变长数组不可以初始化，只有支持c99的编译器才可以使用变长数组
+//    int i_number[i_size][i_size];
+//
+//    //多二维数组进行赋值
+//    int i_i = 0;
+//    int i_j = 0;
+//    for (i_i = 0; i_i < i_size; i_i++)
+//    {
+//        for (i_j = 0; i_j < i_size; i_j++)
+//        {
+//            scanf("%d", &i_number[i_i][i_j]);
+//        }
+//    }
+//
+//    //进行判断
+//    int i_flag = 0;
+//    for (i_i = 0; i_i < i_size - 1; i_i++)
+//    {
+//        for (i_j = 0; i_j < i_i + 1; i_j++)
+//        {
+//            if (i_number[i_i + 1][i_j] != 0)
+//            {
+//                i_flag = 1;
+//            }
+//        }
+//    }
+//
+//    // printf("%d", i_flag);
+//     //输出结果
+//    if (i_flag)
+//    {
+//        printf("NO");
+//    }
+//    else
+//    {
+//        printf("YES");
+//    }
+//    return  0;
+//}
+
+//打印整数二进制的奇数位和偶数位
+//#include <stdio.h>
+//
+//#define SIZE 16
+//
+//int main(void)
+//{
+//	//声明一个变量用于获取一个整数
+//	int i_number = 0;
+//	scanf("%d", &i_number);
+//
+//	//声明两个数组分别用于获取一个数的二进制数的奇数位和偶数位的值
+//	int i_odd_number[SIZE] = { 0 };
+//	int i_even_number[SIZE] = { 0 };
+//
+//	//开始获取
+//	int i_i = 0;
+//	int i_e = 0;  //偶数数组的计数器
+//	int i_o = 0;   //奇数数组的计数器
+//	for (i_i = 0; i_i < 32; i_i++)
+//	{
+//		if (!((i_i + 1) % 2 ))
+//		{
+//			i_even_number[i_e] = (1 & (i_number >> i_i));
+//			i_e++;
+//		}
+//		else
+//		{
+//			i_odd_number[i_o] = (1 & (i_number >> i_i));
+//			i_o++;
+//		}
+//	}
+//
+//
+//	//输出结果
+//	for (i_i = 0; i_i < 16; i_i++)
+//	{
+//		printf("%d ", i_even_number[i_i]);
+//	}
+//	printf("\n");
+//	for (i_i = 0; i_i < 16; i_i++)
+//	{
+//		printf("%d ", i_odd_number[i_i]);
+//	}
+//	return  0;
+//}
+
+#include <stdio.h>
+int i;
+int main()
+{
+    i--;
+    if (i > sizeof(i))
+    {
+        printf(">\n");
+    }
+    else
+    {
+        printf("<\n");
+    }
+    return 0;
+}
