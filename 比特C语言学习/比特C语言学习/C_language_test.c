@@ -2672,3 +2672,144 @@
 //    }
 //    return  0;
 //}
+
+//你是天才吗？
+//#include <stdio.h>
+//
+//int main(void)
+//{
+//    //声明一个变量用于接收智商的数值
+//    int i_uotient = 0;
+//    scanf("%d", &i_uotient);
+//
+//    //进行判断
+//    if (140 <= i_uotient)
+//    {
+//        printf("Genius");
+//    }
+//
+//    return  0;
+//}
+
+//完美成绩
+//#include <stdio.h>
+//
+//int main(void)
+//{
+//    //声明一个变量来表示成绩
+//    int i_score = 0;
+//    scanf("%d", &i_score);
+//
+//    //进行判断
+//    if (i_score >= 90 && i_score <= 100)
+//    {
+//        printf("Perfect");
+//    }
+//
+//    return  0;
+//}
+
+//及格分数
+//#include <stdio.h>
+//
+//int main(void)
+//{
+//    //声明一个变量用来接收成绩
+//    int i_score = 0;
+//
+//    //多行输入并判断
+//    while ((scanf("%d", &i_score)) != EOF)
+//    {
+//        if (60 <= i_score)
+//        {
+//            printf("Pass\n");
+//        }
+//        else
+//        {
+//            printf("Fail\n");
+//        }
+//    }
+//    return  0;
+//}
+
+//判断整数奇偶性
+//#include <stdio.h>
+//
+//int main(void)
+//{
+//    //声明一个变量用于接收数值
+//    int i_number = 0;
+//
+//    //多行输入并判断
+//    while ((scanf("%d", &i_number)) != EOF)
+//    {
+//        if (0 == (i_number % 2))
+//        {
+//            printf("Even\n");
+//        }
+//        else
+//        {
+//            printf("Odd\n");
+//        }
+//    }
+//    return  0;
+//}
+
+//最高分数
+//#include <stdio.h>
+//
+//int main(void)
+//{
+//    //声明三个变量用来接收各科的成绩
+//    int i_score_one = 0;
+//    int i_score_two = 0;
+//    int i_score_three = 0;
+//    scanf("%d %d %d", &i_score_one, &i_score_two, &i_score_three);
+//
+//    //声明一个变量表三科成绩中的最大值
+//    int i_max = i_score_one;
+//
+//    //进行判断
+//    //声明一个变量用来是实现两个值的交换
+//    int i_temp = 0;
+//    if (i_max < i_score_two)
+//    {
+//        i_max = i_score_two;
+//    }
+//
+//    if (i_max < i_score_three)
+//    {
+//        i_max = i_score_three;
+//    }
+//
+//    //输出结果
+//    printf("%d", i_max);
+//    return  0;
+//}
+
+//
+//#include<stdio.h>
+//int main()
+//{
+//    int temp = 0;
+//    char crr;
+//    char vowel[10] = { 'a','A','e','E','i','I','o','O','u','U' };
+//    while (scanf("%c", &crr) != EOF)
+//    {
+//        if (crr != '\n')
+//        {
+//            for (temp = 0; temp < 10; temp++)
+//            {
+//                if (crr == vowel[temp])
+//                {
+//                    printf("Vowel\n");
+//                    break;
+//                }
+//            }
+//            if (temp == 10)
+//            {
+//                printf("Consonant\n");
+//            }
+//        }
+//    }
+//    return 0;
