@@ -3090,18 +3090,405 @@
 //	return  0;
 //}
 
-#include <stdio.h>
-int i;
-int main()
-{
-    i--;
-    if (i > sizeof(i))
-    {
-        printf(">\n");
-    }
-    else
-    {
-        printf("<\n");
-    }
-    return 0;
-}
+// 获得月份天数
+//#include <stdio.h>
+//int i;
+//int main()
+//{
+//    i--;
+//    if (i > sizeof(i))
+//    {
+//        printf(">\n");
+//    }
+//    else
+//    {
+//        printf("<\n");
+//    }
+//    return 0;
+//}
+
+//#include <stdio.h>
+//
+//int Leap_year(int i_year);
+//void Days(int i_flag, int i_month);
+//
+//int main(void)
+//{
+//    //声明两个变量用于获取年和月份
+//    int i_year = 0;
+//    int i_month = 0;
+//
+//    //输出当月天数
+//    //判断闰年
+//    int i_flag = 0;
+//
+//    while (scanf("%d %d", &i_year, &i_month) != EOF)
+//    {
+//        i_flag = Leap_year(i_year);
+//
+//        //输出天数
+//        Days(i_flag, i_month);
+//    }
+//
+//    return  0;
+//}
+//
+////判断闰年
+//int Leap_year(int i_year)
+//{
+//    if (i_year % 4 == 0 && i_year % 100 != 0 || i_year % 400 == 0)
+//    {
+//        return 1;
+//    }
+//
+//    return  0;
+//}
+//
+////输出天数
+//void Days(int i_flag, int i_month)
+//{
+//    if (1 == i_month || 3 == i_month || 5 == i_month || 7 == i_month || 8 == i_month || 10 == i_month || 12 == i_month)
+//    {
+//        printf("31\n");
+//    }
+//    else if (1 == i_flag && 2 == i_month)
+//    {
+//        printf("29\n");
+//    }
+//    else if (0 == i_flag && 2 == i_month)
+//
+//    {
+//        printf("28\n");
+//    }
+//    else
+//    {
+//        printf("30\n");
+//    }
+//}
+
+
+//BC47-判断是不是字母
+//#include <stdio.h>
+//
+//int main(void)
+//{
+//    //声明一个变量用来获取一个字符
+//    char c_character = 0;
+//
+//    //多行输入并完成判断
+//    while ((scanf("%c", &c_character)) != EOF)
+//    {
+//        if (c_character == '\n')
+//        {
+//            continue;
+//        }
+//        else if (c_character >= 65 && c_character <= 90 || c_character >= 97 && c_character <= 122)
+//        {
+//            printf("%c is an alphabet.\n", c_character);
+//        }
+//        else
+//        {
+//            printf("%c is not an alphabet.\n", c_character);
+//        }
+//    }
+//    return  0;
+//}
+
+//字母大小写转换
+//#include <stdio.h>
+//
+//int main() {
+//    //声明一个变量用于获取一个字母
+//    int i_character = 0;
+//
+//    while ((i_character = getchar()) != EOF)
+//    {
+//        if (i_character == '\n')
+//        {
+//            continue;
+//        }
+//        else if (i_character >= 97 && i_character <= 122)
+//        {
+//            printf("%c\n", i_character - 32);
+//        }
+//        else if (i_character >= 65 && i_character <= 90)
+//        {
+//            printf("%c\n", i_character + 32);
+//        }
+//    }
+//    return 0;
+//}
+
+//网购
+//#include <stdio.h>
+//
+//float Compute(float f_price, int i_month, int i_day, int i_flag);
+//
+//int main(void)
+//{
+//    //声明四个变量并完成获取
+//    float f_price = 0.0f;
+//    int i_month = 0;
+//    int i_day = 0;
+//    int i_flag = 0;
+//    scanf("%f %d %d %d", &f_price, &i_month, &i_day, &i_flag);
+//
+//    //计算最终消费的价格
+//    float f_prices = 0.0;
+//    f_price = Compute(f_price, i_month, i_day, i_flag);
+//
+//    //输出结果
+//    if (f_price <= 0)
+//    {
+//        printf("0.00");
+//    }
+//    else
+//    {
+//        printf("%.2f", f_price);
+//    }
+//
+//    return  0;
+//}
+//
+//float Compute(float f_price, int i_month, int i_day, int i_flag)
+//{
+//    if (i_month == i_day && 11 == i_day)
+//    {
+//        return  (f_price * 0.7) - (i_flag * 50.0);
+//    }
+//    else if (i_month == i_day && 12 == i_day)
+//    {
+//        return  (f_price * 0.8) - (i_flag * 50.0);
+//    }
+//    else
+//    {
+//        return f_price;
+//    }
+//}
+
+//统计一个整数的二进制数中1的个数
+//1.利用位操作符来计算
+//#include <stdio.h>
+//
+//void Count(unsigned int i_number);
+//
+//int main(void)
+//{
+//	//获取一个数
+//	int i_number = 0;
+//	scanf("%d", &i_number);
+//
+//	//统计打印
+//	//Count(i_number);
+//	Count((unsigned int)i_number);
+//	return  0;
+//}
+//
+////void Count(int i_number)
+////{
+////	//计数
+////	int i_count = 0;
+////	int i_i = 0;
+////	for (i_i = 0; i_i < 32; i_i++)
+////	{
+////		if ((1 & (i_number >> i_i)))
+////		{
+////			i_count++;
+////		}
+////	}
+////
+////	//打印结果
+////	printf("%d", i_count);
+////}
+//
+////2.通过除法和求余来做
+////void Count(unsigned int i_number)
+////{
+////	//计数器
+////	int i_count = 0;
+////
+////	while (i_number)
+////	{
+////		if (i_number % 2)
+////		{
+////			i_count++;
+////		}
+////		i_number /= 2;
+////	}
+////
+////	//输出结果
+////	printf("%d", i_count);
+////}
+//
+////3.通过与操作符和减法来做
+//void Count(unsigned int i_number)
+//{
+//	//计数器
+//	int i_count = 0;
+//
+//	while (i_number)
+//	{
+//		i_number &= (i_number - 1);
+//		i_count++;
+//	}
+//
+//	//输出结果
+//	printf("%d", i_count);
+//}
+
+//利用辗转相除法求最大公约数和最小公倍数
+//#include <stdio.h>
+//
+//int main(void)
+//{
+//	//获取两个个数
+//	int i_number_one = 0;
+//	int i_number_two = 0;
+//	scanf("%d %d", &i_number_one, &i_number_two);
+//
+//	//计算最大公约数
+//	int i_number_one_backup = i_number_one;
+//	int i_number_two_backup = i_number_two;
+//	int i_max_common_divisors = 0;
+//	int i_r = 0;
+//	while (i_r = i_number_one_backup % i_number_two_backup)
+//	{
+//		i_number_one_backup = i_number_two_backup;
+//		i_number_two_backup = i_r;
+//	}
+//	i_max_common_divisors = i_number_two_backup;
+//	//计算最小公倍数
+//	int i_min_common_multiples = 0;
+//	i_min_common_multiples = (i_number_one * i_number_two) / i_max_common_divisors;
+//
+//	//输出结果
+//	printf("%d %d", i_max_common_divisors, i_min_common_multiples);
+//	return  0;
+//}
+
+//不用求余操作符判断一个数是不是2的倍数
+//#include <stdio.h>
+//
+//int main(void)
+//{
+//	//获取一个数
+//	int i_number = 0;
+//	scanf("%d", &i_number);
+//
+//	//判断
+//	int i_count = 0;
+//	while (i_number)
+//	{
+//		i_number &= (i_number - 1);
+//		i_count++;
+//	}
+//
+//	if (1 == i_count)
+//	{
+//		printf("Yes");
+//	}
+//	else
+//	{
+//		printf("No");
+//	}
+//	return 0;
+//}
+
+//计算单位阶跃函数
+//#include <stdio.h>
+//
+//int main(void)
+//{
+//    //获取一个数
+//    int i_number = 0;
+//
+//    while ((scanf("%d", &i_number)) != EOF)
+//    {
+//        if (0 == i_number)
+//        {
+//            printf("0.5\n");
+//        }
+//        else if (i_number > 0)
+//        {
+//            printf("1\n");
+//        }
+//        else if (i_number < 0)
+//        {
+//            printf("0\n");
+//        }
+//    }
+//    return  0;
+//}
+
+//判断三角形
+//#include <stdio.h>
+//
+//int main(void)
+//{
+//    //获取三角形的三边长
+//    int i_number_one = 0;
+//    int i_number_two = 0;
+//    int i_number_three = 0;
+//
+//    while ((scanf("%d %d %d", &i_number_one, &i_number_two, &i_number_three)) != EOF)
+//    {
+//        if ((i_number_one + i_number_two > i_number_three) && (i_number_one - i_number_two < i_number_three))
+//        {
+//            if (i_number_one == i_number_two && i_number_one == i_number_three)
+//            {
+//                printf("Equilateral triangle!\n");
+//            }
+//            else if ((i_number_one == i_number_two && i_number_one != i_number_three) || (i_number_one == i_number_three && i_number_one != i_number_two) || (i_number_three == i_number_two && i_number_one != i_number_two))
+//            {
+//                printf("Isosceles triangle!\n");
+//            }
+//            else
+//            {
+//                printf("Ordinary triangle!\n");
+//            }
+//        }
+//        else
+//        {
+//            printf("Not a triangle!\n");
+//        }
+//    }
+//    return  0;
+//}
+
+//衡量人体胖瘦程度
+//#include <stdio.h>
+//
+//void sum(int zhong, int gao)
+////定义一个函数用来计算
+//{
+//	double a = 0;
+//	a = zhong / (gao * gao / 10000.0);
+//	//计算BMI值并把它存在变量a中
+//	if (a < 18.5)
+//	{
+//		printf("Underweight\n");
+//	}
+//	else if (a >= 18.5 && a <= 23.9)
+//	{
+//		printf("Normal\n");
+//	}
+//	else if (a > 23.9 && a <= 27.9)
+//	{
+//		printf("Overweight\n");
+//	}
+//	else if (a > 27.9)
+//	{
+//		printf("Obese\n");
+//	}
+//}
+//
+//int main()
+//{
+//	int c, d;
+//	while ((scanf("%d%d", &c, &d)) != EOF)
+//		//循环输入身高和体重
+//	{
+//		sum(c, d);
+//	}
+//	return 0;
+//}
