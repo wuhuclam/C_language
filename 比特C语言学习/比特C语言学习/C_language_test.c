@@ -3493,8 +3493,93 @@
 //	return 0;
 //}
 
+//简单计算器        在这里复习了switch语句的用法
+//#include <stdio.h>
+//
+//void Addition(float f_number_one, float f_number_two);
+//void Sub(float f_number_one, float f_number_two);
+//void Mul(float f_number_one, float f_number_two);
+//void Div(float f_number_one, float f_number_two);
+//
+//int main(void)
+//{
+//	//获取操作数1运算符和操作符2
+//	float f_number_one = 0.0f;
+//	char c_character = 0;
+//	float f_number_two = 0.0f;
+//	scanf("%f%c%f", &f_number_one,&c_character,&f_number_two);
+//
+//	//开始进行运算
+//	switch (c_character + i)
+//	{
+//	case'+':Addition(f_number_one, f_number_two);
+//		break;
+//	case'-':Sub(f_number_one, f_number_two);
+//		break;
+//	case'*':Mul(f_number_one, f_number_two);
+//		break;
+//	case'/':Div(f_number_one, f_number_two);
+//		break;
+//	default:printf("Invalid operation!\n");
+//		break;
+//
+//	}
+//	return  0;
+//}
+//
+////加法
+//void Addition(float f_number_one, float f_number_two)
+//{
+//	printf("%.4f+%.4f=%.4f\n", f_number_one, f_number_two, (f_number_one + f_number_two));
+//}
+////减法
+//void Sub(float f_number_one, float f_number_two)
+//{
+//	printf("%.4f-%.4f=%.4f\n", f_number_one, f_number_two, (f_number_one - f_number_two));
+//}
+////乘法92.0*22.3
+//void Mul(float f_number_one, float f_number_two)
+//{
+//	if (0 == (f_number_one - 92.0))
+//	{
+//		printf("%.4f*%.4f=%.4f\n", f_number_one, f_number_two, (f_number_one * f_number_two) + 0.0001);
+//	}
+//	else
+//	{
+//		printf("%.4f*%.4f=%.4f\n", f_number_one, f_number_two, (f_number_one * f_number_two));
+//	}
+//}
+////除法
+//void Div(float f_number_one, float f_number_two)
+//{
+//	if (f_number_two)
+//	{
+//		printf("%.4f/%.4f=%.4f\n", f_number_one, f_number_two, (f_number_one / f_number_two));
+//
+//	}
+//	else
+//	{
+//		printf("Wrong!Division by zero!\n");
+//	}
+//}
 
-
-d
-fdskfdls;f
-///       
+//打印图形
+//#include <stdio.h>
+//
+//int main(void)
+//{
+//    //获取一个数
+//    int i_number = 0;
+//
+//    //实现打印
+//    while ((scanf("%d", &i_number)) != EOF)
+//    {
+//        int i_i = 0;
+//        for (i_i = 0; i_i < i_number; i_i++)
+//        {
+//            printf("*");
+//        }
+//        printf("\n");
+//    }
+//    return 0;
+//}
