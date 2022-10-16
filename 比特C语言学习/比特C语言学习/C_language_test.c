@@ -3583,3 +3583,144 @@
 //    }
 //    return 0;
 //}
+
+//打印正方形
+//#include <stdio.h>
+//
+//int main(void)
+//{
+//    //获取一个数
+//    int i_number = 0;
+//
+//    //开始打印
+//    while ((scanf("%d", &i_number)) != EOF)
+//    {
+//        int i_i = 0;
+//        int i_j = 0;
+//        for (i_i = 0; i_i < i_number; i_i++)
+//        {
+//            for (i_j = 0; i_j < i_number; i_j++)
+//            {
+//                printf("* ");
+//            }
+//            printf("\n");
+//        }
+//
+//    }
+//    return  0;
+//}
+
+//直角三角形图案
+//include <stdio.h>
+//
+//int main(void)
+//{
+//    //获取一个数
+//    int i_number = 0;
+//
+//    //开始打印
+//    while ((scanf("%d", &i_number)) != EOF)
+//    {
+//        int i_i = 0;
+//        int i_j = 0;
+//        for (i_i = 0; i_i < i_number; i_i++)
+//        {
+//            for (i_j = 0; i_j < i_i + 1; i_j++)
+//            {
+//                printf("* ");
+//            }
+//            printf("\n");
+//        }
+//    }
+//    return  0;
+//}
+
+//翻转直角三角形图案
+//#include <stdio.h>
+//
+//int main(void)
+//{
+//    //获取一个数
+//    int i_number = 0;
+//
+//    //开始打印
+//    while ((scanf("%d", &i_number)) != EOF)
+//    {
+//        int i_i = 0;
+//        int i_j = 0;
+//        for (i_i = 0; i_i < i_number; i_i++)
+//        {
+//            for (i_j = 0; i_j < i_number - i_i - 1; i_j++)
+//            {
+//                printf(" ");
+//            }
+//            for (i_j = 0; i_j < i_i + 1; i_j++)
+//            {
+//                printf("* ");
+//            }
+//            printf("\n");
+//            //break;
+//        }
+//    }
+//    return  0;
+//}
+
+//打印金字塔
+//#include <stdio.h>
+//
+//int main(void)
+//{
+//    //获取一个数
+//    int i_number = 0;
+//
+//    //开始打印
+//    while ((scanf("%d", &i_number)) != EOF)
+//    {
+//        int i_i = 0;
+//        int i_j = 0;
+//        for (i_i = 0; i_i < i_number; i_i++)
+//        {
+//            for (i_j = 0; i_j < i_number - i_i - 1; i_j++)
+//            {
+//                printf(" ");
+//            }
+//            for (i_j = 0; i_j < i_i + 1; i_j++)
+//            {
+//                printf("* ");
+//            }
+//            printf("\n");
+//            //break;
+//        }
+//    }
+//    return  0;
+//}
+
+//打印倒金字塔
+//#include <stdio.h>
+//
+//int main(void)
+//{
+//    //获取一个数
+//    int i_number = 0;
+//
+//    //开始打印
+//    while ((scanf("%d", &i_number)) != EOF)
+//    {
+//        int i_i = 0;
+//        int i_j = 0;
+//        for (i_i = 0; i_i < i_number; i_i++)
+//        {
+//            for (i_j = 0; i_j < i_i; i_j++)
+//            {
+//                printf(" ");
+//            }
+//            for (i_j = 0; i_j < i_number - i_i; i_j++)
+//            {
+//                printf("* ");
+//            }
+//            printf("\n");
+//            //break;
+//        }
+//    }
+//    return  0;
+//}
