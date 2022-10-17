@@ -3868,5 +3868,245 @@
 //        }
 //    }
 //    return  0;
-//}                            
-smnd,masnd
+//}     
+
+//正斜线形图案
+//#include <stdio.h>
+//
+//int main(void)
+//{
+//    //获取一个数
+//    int i_number = 0;
+//
+//    //打印结果
+//    while ((scanf("%d", &i_number)) != EOF)
+//    {
+//        int i_i = 0;
+//        int i_j = 0;
+//        for (i_i = 0; i_i < i_number; i_i++)
+//        {
+//            for (i_j = 0; i_j < i_number - i_i - 1; i_j++)
+//            {
+//                printf(" ");
+//            }
+//            printf("*\n");
+//        }
+//    }
+//    return  0;
+//}
+
+//打印x形
+//#include <stdio.h>
+//
+//#define SIZE 20
+//
+//int main(void)
+//{
+//    //获取一个数
+//    int i_number = 0;
+//
+//    //声明一个数组
+//    char c_character[SIZE] = { 0 };
+//
+//    //打印结果
+//    while ((scanf("%d", &i_number)) != EOF)
+//    {
+//        int i_i = 0;
+//        int i_j = 0;
+//        for (i_i = 0; i_i < i_number; i_i++)
+//        {
+//            if (0 == i_i || (i_number - 1) == i_i)
+//            {
+//                c_character[i_i] = '*';
+//            }
+//            else
+//            {
+//                c_character[i_i] = ' ';
+//            }
+//        }
+//
+//        for (i_i = 0; i_i < i_number; i_i++)
+//        {
+//            printf("%c", c_character[i_i]);
+//        }
+//        printf("\n");
+//
+//        int i_left = 1;
+//        int i_right = i_number - 2;
+//        //printf("%c\n", c_character[i_right]);
+//        char c_temp = 0;
+//        while (i_left <= i_right)
+//        {
+//            //printf("%d %d\n", i_left, i_right);
+//            c_temp = c_character[i_left];
+//            c_character[i_left] = c_character[i_left - 1];
+//            c_character[i_left - 1] = c_temp;
+//            c_temp = c_character[i_right];
+//            c_character[i_right] = c_character[i_right + 1];
+//            c_character[i_right + 1] = c_temp;
+//
+//            if (i_right == i_left)
+//            {
+//                c_character[i_right + 1] = ' ';
+//            }
+//
+//            for (i_i = 0; i_i < i_number; i_i++)
+//            {
+//                printf("%c", c_character[i_i]);
+//            }
+//            printf("\n");
+//            i_left++;
+//            i_right--;
+//        }
+//
+//        i_left--;
+//        i_right++;
+//        //printf("%d %d\n", i_left, i_right);
+//        if (i_number % 2 == 0)
+//        {
+//            for (i_i = 0; i_i < i_number; i_i++)
+//            {
+//                printf("%c", c_character[i_i]);
+//            }
+//            printf("\n");
+//        }
+//
+//        while (i_number != ((i_right - i_left) + 1))
+//        {
+//            c_temp = c_character[i_left];
+//            c_character[i_left] = c_character[i_left - 1];
+//            c_character[i_left - 1] = c_temp;
+//            c_temp = c_character[i_right];
+//            c_character[i_right] = c_character[i_right + 1];
+//            c_character[i_right + 1] = c_temp;
+//            if (i_right == i_left)
+//            {
+//                c_character[i_right + 1] = '*';
+//            }
+//            for (i_i = 0; i_i < i_number; i_i++)
+//            {
+//                printf("%c", c_character[i_i]);
+//            }
+//            printf("\n");
+//            i_left--;
+//            i_right++;
+//        }
+//    }
+//    return  0;
+//}
+
+//打印正方形
+//#include <stdio.h>
+//
+//int main(void)
+//{
+//    //获取一个数
+//    int i_number = 0;
+//
+//    //开始打印 
+//    while ((scanf("%d", &i_number)) != EOF)
+//    {
+//        int i_i = 0;
+//        int i_j = 0;
+//        for (i_i = 0; i_i < i_number; i_i++)
+//        {
+//            for (i_j = 0; i_j < i_number; i_j++)
+//            {
+//                if (i_i == 0 || i_i == (i_number - 1))
+//                {
+//                    printf("* ");
+//                }
+//                else
+//                {
+//                    if (0 == i_j || (i_number - 1) == i_j)
+//                    {
+//                        printf("* ");
+//                    }
+//                    else
+//                    {
+//                        printf("  ");
+//                    }
+//                }
+//            }
+//            printf("\n");
+//        }
+//    }
+//    return  0;
+//}
+
+//打印空心三角形
+//#include <stdio.h>
+//
+//int main(void)
+//{
+//    //获取一个数
+//    int i_number = 0;
+//
+//    //开始打印
+//    while ((scanf("%d", &i_number)) != EOF)
+//    {
+//        int i_i = 0;
+//        int i_j = 0;
+//        for (i_i = 0; i_i < i_number; i_i++)
+//        {
+//            for (i_j = 0; i_j < i_i + 1; i_j++)
+//            {
+//                if (i_i < 2 || (i_number - 1) == i_i)
+//                {
+//                    printf("* ");
+//                }
+//                else
+//                {
+//                    if (0 == i_j || i_i == i_j)
+//                    {
+//                        printf("* ");
+//                    }
+//                    else
+//                    {
+//                        printf("  ");
+//                    }
+//                }
+//            }
+//            printf("\n");
+//        }
+//    }
+//    return  0;
+//}
+
+//打印新年快乐
+//#include <stdio.h>
+//
+//int main(void)
+//{
+//    printf("Happy New Year*2019*");
+//    return  0;
+//}
+
+//计算平均成绩
+//#include <stdio.h>
+//
+//#define SIZE 5
+//
+//int main(void)
+//{
+//    //声明一个数组用于接受身高
+//    float f_height[SIZE] = { 0.0f };
+//
+//    //接受数值
+//    int i_i = 0;
+//    for (i_i = 0; i_i < SIZE; i_i++)
+//    {
+//        scanf("%f", &f_height[i_i]);
+//    }
+//
+//    //计算平均值
+//    float f_avg = 0.0f;
+//    for (i_i = 0; i_i < SIZE; i_i++)
+//    {
+//        f_avg += f_height[i_i];
+//    }
+//
+//    //打印结果
+//    printf("%.2f", f_avg / SIZE);
+//    return 0;
+//}
