@@ -4109,4 +4109,202 @@
 //    //打印结果
 //    printf("%.2f", f_avg / SIZE);
 //    return 0;
-//}scscscscsc
+//}
+
+//计算求和
+//#include <stdio.h>
+//
+//#define NUMBER 5
+//
+//int main(void)
+//{
+//	//获取一个数
+//	int i_number = 0;
+//	scanf("%d", &i_number);
+//
+//	//开始计算
+//	int i_i = 0;
+//	int i_sum = 0;
+//	int i_temp = i_number;
+//	for (i_i = 0; i_i < NUMBER; i_i++)
+//	{
+//		i_sum += i_number;
+//		i_number = (i_number * 10) + i_temp;
+//	}
+//
+//	//打印结果
+//	printf("%d", i_sum);
+//	return  0;
+//}
+
+//打印水仙花数
+//#include <stdio.h>
+//
+//int Number_of_digits(int i_number);
+//int Number_of_daffodils(int i_number, int i_number_of_digits);
+//
+//int main(void)
+//{
+//	//设置一个循环用于判断0——100000之间的水仙花数
+//	int i_number = 0;
+//	for (i_number = 0; i_number < 100001; i_number++)
+//	{
+//		//判断一个数的位数
+//		int i_number_of_digits = 0;
+//		i_number_of_digits = Number_of_digits(i_number);
+//		/*printf("%d", i_number_of_digits);
+//		break;*/
+//
+//		//开始判断
+//		int i_flag = 0;
+//		i_flag = Number_of_daffodils(i_number, i_number_of_digits);
+//		//printf("%d", i_flag);
+//		
+//		//输出结果
+//		if (i_flag)
+//		{
+//			printf("%d ", i_number);
+//		}
+//	}
+//	return  0;
+//}
+//
+//int Number_of_digits(int i_number)
+//{
+//	if (i_number < 10)
+//	{
+//		return  1;
+//	}
+//	else
+//	{
+//		return  1 + Number_of_digits(i_number / 10);
+//	}
+//}
+//
+//int Number_of_daffodils(int i_number, int i_number_of_digits)
+//{
+//	int i_sum = 0;
+//	int i_i = 0;
+//	int i_temp = i_number;
+//	for (i_i = 0; i_i < i_number_of_digits; i_i++)
+//	{
+//		i_sum += (i_number % 10) * (i_number % 10) * (i_number % 10);
+//		i_number /= 10;
+//	}
+//
+//	return (i_sum == i_temp) ? 1 : 0;
+//}
+
+//#include <stdio.h>
+//
+//int main(void)
+//{
+//	int i_i = 0;
+//	int i_j = 0;
+//	for (i_i = 1; i_i < 15; i_i += 2)
+//	{
+//		for (i_j = 0; i_j < 15 - i_i - 2; i_j++)
+//		{
+//			printf(" ");
+//		}
+//		for (i_j = 0; i_j < i_i; i_j++)
+//		{
+//			printf("* ");
+//		}
+//		printf("\n");
+//	}
+//
+//	for (i_i = 0; i_i < 12; i_i += 2)
+//	{
+//		for (i_j = 0; i_j < i_i + 2; i_j++)
+//		{
+//			printf(" ");
+//		}
+//		for (i_j = 0; i_j < 13 - i_i - 2; i_j++)
+//		{
+//			printf("* ");
+//		}
+//		printf("\n");
+//	}
+//	return  0;
+//}
+
+//字符串逆序
+//#include <stdio.h>
+//#include <string.h>
+//
+//#define SIZE 10001
+//
+//void Reverse(char* c_string, int i_left, int i_right);
+//
+//int main(void)
+//{
+//    //定义一个字符串
+//    char c_string[SIZE] = { 0 };
+//
+//    //获取字符串
+//    int i_i = 0;
+//    char c_character = 0;
+//    while ((c_character = getchar()) != EOF)
+//    {
+//        if (c_character != '\n')
+//        {
+//            c_string[i_i++] = c_character;
+//        }
+//    }
+//
+//    //计算字符串的长度
+//    int i_length = 0;
+//    i_length = strlen(c_string);
+//    int i_left = 0;
+//    int i_right = i_length - 1;
+//
+//    //开始逆序
+//    Reverse(c_string, i_left, i_right);
+//
+//    //打印结果
+//    printf("%s", c_string);
+//    return  0;
+//}
+//
+//void Reverse(char* c_string, int i_left, int i_right)
+//{
+//    char c_temp = 0;
+//    if (i_left < i_right)
+//    {
+//        c_temp = c_string[i_left];
+//        c_string[i_left] = c_string[i_right];
+//        c_string[i_right] = c_temp;
+//        Reverse(c_string, i_left + 1, i_right - 1);
+//    }
+//}
+
+//用指针打印数组中的内容
+//#include <stdio.h>
+//
+//#define SIZE 10
+//
+//int main(void)
+//{
+//	//定义一个数组
+//	int i_number[SIZE] = { 0 };
+//
+//	//获取数组的值
+//	int i_i = 0;
+//	for (i_i = 0; i_i < SIZE; i_i++)
+//	{
+//		scanf("%d", i_number + i_i);
+//	}
+//
+//	//定义指针变量
+//	int* p_i_number = NULL;
+//	p_i_number = i_number;
+//
+//	//打印结果
+//	for (i_i = 0; i_i < SIZE; i_i++)
+//	{
+//		printf("%d ", *(p_i_number + i_i));
+//	}
+//
+//	return  0;
+//}
