@@ -4109,4 +4109,4 @@
 //    //´òÓ¡½á¹û
 //    printf("%.2f", f_avg / SIZE);
 //    return 0;
-//}
+//}scscscscsc
