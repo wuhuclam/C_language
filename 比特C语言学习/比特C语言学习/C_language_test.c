@@ -4308,3 +4308,98 @@
 //
 //	return  0;
 //}
+
+//挂科危险
+//#include <stdio.h>
+//
+//int main(void)
+//{
+//    //获取累计所挂学分
+//    int i_score = 0;
+//    scanf("%d", &i_score);
+//
+//    if (i_score >= 10)
+//    {
+//        printf("Danger++");
+//    }
+//    else if (i_score >= 4 && i_score <= 9)
+//    {
+//        printf("Danger");
+//    }
+//    else
+//    {
+//        printf("Good");
+//    }
+//    return  0;
+//}
+
+//针对每组输入的HTTP状态，输出该状态码对应的含义，具体对应如下：
+
+//#include <stdio.h>
+//
+//int main(void)
+//{
+//    //获取一个状态码
+//    int i_number = 0;
+//
+//    //开始判断
+//    while ((scanf("%d", &i_number)) != EOF)
+//    {
+//        switch (i_number)
+//        {
+//        case 200:printf("OK");
+//            break;
+//        case 202: printf("Accepted");
+//            break;
+//        case 400: printf("Bad Request");
+//            break;
+//        case 403: printf("Forbidden");
+//            break;
+//        case 404: printf("Not Found");
+//            break;
+//        case 500: printf("Internal Server Error");
+//            break;
+//        case 502: printf("Bad Gateway");
+//            break;
+//        default:printf("啥也没有");
+//            break;
+//
+//        }
+//    }
+//    return  0;
+//}
+
+//喝汽水，1瓶汽水1元，2个空瓶可以换一瓶汽水，给20元，可以多少汽水
+#include <stdio.h>
+
+int main(void)
+{
+	//获取此时的钱数
+	int i_money = 0;
+	scanf("%d", &i_money);
+
+	//开始计算可以喝的瓶数
+	//可以买的瓶数
+	int i_sum = i_money;
+
+	//可以换的瓶数
+	int i_number = 0;
+	int i_temp = i_money;
+	while (i_temp != 1)
+	{
+		i_number += i_temp / 2;
+		if (i_temp % 2)
+		{
+			i_temp = (i_temp / 2) + 1;
+		}
+		else
+		{
+			i_temp /= 2;
+		}
+	}
+	
+	printf("%d", i_sum + i_number);
+	
+	//printf("%d", i_sum);
+	return  0;
+}
