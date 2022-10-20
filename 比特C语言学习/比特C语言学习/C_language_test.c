@@ -4370,36 +4370,302 @@
 //}
 
 //喝汽水，1瓶汽水1元，2个空瓶可以换一瓶汽水，给20元，可以多少汽水
-#include <stdio.h>
+//#include <stdio.h>
+//
+//int main(void)
+//{
+//	//获取此时的钱数
+//	int i_money = 0;
+//	scanf("%d", &i_money);
+//
+//	//开始计算可以喝的瓶数
+//	//可以买的瓶数
+//	int i_sum = i_money;
+//
+//	//可以换的瓶数
+//	int i_number = 0;
+//	int i_temp = i_money;
+//	while (i_temp != 1)
+//	{
+//		i_number += i_temp / 2;
+//		if (i_temp % 2)
+//		{
+//			i_temp = (i_temp / 2) + 1;
+//		}
+//		else
+//		{
+//			i_temp /= 2;
+//		}
+//	}
+//	
+//	printf("%d", i_sum + i_number);
+//	
+//	//printf("%d", i_sum);
+//	return  0;
+//}
 
-int main(void)
-{
-	//获取此时的钱数
-	int i_money = 0;
-	scanf("%d", &i_money);
+//最高分和最低分只差
+//#include <stdio.h>
+//
+//int Max_score(const int* i_score, int i_size);
+//int Min_score(const int* i_score, int i_size);
+//
+//
+//int main(void)
+//{
+//    //获取变长数组的长度
+//    int i_size = 0;
+//    scanf("%d", &i_size);
+//
+//    //定义变长数组,只有支持c99的编译器才支持变长数组,变长数组不可以初始化
+//    int i_score[i_size];
+//
+//    //获取成绩
+//    int i_i = 0;
+//    for (i_i = 0; i_i < i_size; i_i++)
+//    {
+//        scanf("%d", i_score + i_i);
+//    }
+//
+//    //获取最高分
+//    int i_max = 0;
+//    i_max = Max_score(i_score, i_size);
+//
+//    //获取最低分
+//    int i_min = 0;
+//    i_min = Min_score(i_score, i_size);
+//
+//    //输出差值
+//    printf("%d", i_max - i_min);
+//    return  0;
+//}
+//
+////获取最高分
+//int Max_score(const int* i_score, int i_size)
+//{
+//    int i_max = 0;
+//
+//    int i_i = 0;
+//    for (i_i = 0; i_i < i_size; i_i++)
+//    {
+//        if (i_max < *(i_score + i_i))
+//        {
+//            i_max = *(i_score + i_i);
+//        }
+//    }
+//    return  i_max;
+//}
+////获取最低分
+//int Min_score(const int* i_score, int i_size)
+//{
+//    int i_min = *(i_score);
+//
+//    int i_i = 0;
+//    for (i_i = 0; i_i < i_size; i_i++)
+//    {
+//        if (i_min > *(i_score + i_i))
+//        {
+//            i_min = *(i_score + i_i);
+//        }
+//    }
+//    return  i_min;
+//}
 
-	//开始计算可以喝的瓶数
-	//可以买的瓶数
-	int i_sum = i_money;
+//判断升序还是降序
+//#include <stdio.h>
+//
+//int Judgement(const int* i_number, int i_size);
+//
+//int main(void)
+//{
+//    //获取变长数组的长度
+//    int i_size = 0;
+//    scanf("%d", &i_size);
+//
+//    //定义变长数组，只有支持c99的编译器才支持变长数组，变长数组不可以初始化
+//    int i_number[i_size];
+//
+//    //获取变长数组的数值
+//    int i_i = 0;
+//    for (i_i = 0; i_i < i_size; i_i++)
+//    {
+//        scanf("%d", (i_number + i_i));
+//    }
+//
+//    //判断数组是否有序
+//    int i_flag = 0;
+//    i_flag = Judgement(i_number, i_size);
+//
+//    //输出结果
+//    if (i_flag)
+//    {
+//        printf("sorted");
+//    }
+//    else
+//    {
+//        printf("unsorted");
+//    }
+//    return  0;
+//}
 
-	//可以换的瓶数
-	int i_number = 0;
-	int i_temp = i_money;
-	while (i_temp != 1)
-	{
-		i_number += i_temp / 2;
-		if (i_temp % 2)
-		{
-			i_temp = (i_temp / 2) + 1;
-		}
-		else
-		{
-			i_temp /= 2;
-		}
-	}
-	
-	printf("%d", i_sum + i_number);
-	
-	//printf("%d", i_sum);
-	return  0;
-}
+//判断数组是否有序
+//int Judgement(const int* i_number, int i_size)
+//{
+//    int i_i = 0;
+//    int i_flag = 0;
+//
+//    //判断升序还是降序
+//    i_flag = (i_number[0] - i_number[1]) > 0 ? 1 : 0;
+//
+//    if (i_flag)
+//    {
+//        for (i_i = 0; i_i < i_size - 1; i_i++)
+//        {
+//            if ((i_number[i_i] - i_number[i_i + 1]) < 0)
+//            {
+//                return 0;
+//            }
+//        }
+//    }
+//    else
+//    {
+//        for (i_i = 0; i_i < i_size - 1; i_i++)
+//        {
+//            if ((i_number[i_i] - i_number[i_i + 1]) > 0)
+//            {
+//                return  0;
+//            }
+//        }
+//    }
+//
+//    return  1;
+//}
+
+//模拟实现库函数strlen
+//#include <stdio.h>
+//#include <assert.h>
+//
+//int My_strlen(const char* c_string);
+//
+//int main(void)
+//{
+//	//定义一个字符串
+//	char c_string[] = "abcdefg";
+//
+//	//开始模拟
+//	int i_length = 0;
+//	i_length = My_strlen(c_string);
+//
+//	//输出结果
+//	printf("%d", i_length);
+//	return  0;
+//}
+//
+////模拟实现strlen
+//int My_strlen(const char* c_string)
+//{
+//	//使用断言保证c_string不为空
+//	assert(c_string);
+//
+//	int i_length = 0;
+//	while (*c_string++)
+//	{
+//		i_length++;
+//	}
+//
+//	return i_length;
+//}
+
+//模拟实现库函数strcpy
+//#include <stdio.h>
+//#include <assert.h>
+//
+//#define SIZE 20
+//
+//char* strcpy(char* c_string_two, const char* c_string_one);
+//
+//int main(void)
+//{
+//	//定义两个字符串
+//	char c_string_one[SIZE] = "abbcdefg";
+//	char c_string_two[SIZE] = "xxxxxxxxxxxxxxxxxxx";
+//
+//	//在复制前c_string_two为
+//	printf("%s\n", c_string_two);
+//
+//	//模拟实现strcpy
+//	strcpy(c_string_two, c_string_one);
+//
+//	//复制后为
+//	printf("%s\n", c_string_two);
+//	return  0;
+//}
+//
+////模拟实现strcpy
+//char* strcpy(char* c_string_two, const char* c_string_one)
+//{
+//	//使用断言
+//	assert(c_string_two && c_string_one);
+//
+//	char* c_temp = c_string_two;
+//	
+//	//开始复制
+//	while (*c_string_two++ = *c_string_one++)
+//		;
+//
+//	return c_temp;
+//}
+
+//调整数组使奇数全部都位于偶数前面。
+//#include <stdio.h>
+//#include <assert.h>
+//
+//#define SIZE 10
+//
+//void Adjust(int* i_number);
+//
+//int main(void)
+//{
+//	//获取数组的值
+//	int i_number[SIZE] = { 0 };
+//	int i_i = 0;
+//	for (i_i = 0; i_i < SIZE; i_i++)
+//	{
+//		scanf("%d", (i_number + i_i));
+//	}
+//
+//	//调整前
+//	for (i_i = 0; i_i < SIZE; i_i++)
+//	{
+//		printf("%d ", i_number[i_i]);
+//	}
+//
+//	//调整
+//	Adjust(i_number);
+//
+//	//调整后
+//	printf("\n");
+//	for (i_i = 0; i_i < SIZE; i_i++)
+//	{
+//		printf("%d ", i_number[i_i]);
+//	}
+//
+//	return  0;
+//}
+//
+//void Adjust(int* i_number)
+//{
+//	int i_i = 0;
+//	int i_j = 0;
+//	int i_temp = 0;
+//	for (i_i = 0; i_i < SIZE; i_i++)
+//	{
+//		if (i_number[i_i] % 2)
+//		{
+//			i_temp = i_number[i_j];
+//			i_number[i_j] = i_number[i_i];
+//			i_number[i_i] = i_temp;
+//			i_j++;
+//		}
+//	}
+//}
