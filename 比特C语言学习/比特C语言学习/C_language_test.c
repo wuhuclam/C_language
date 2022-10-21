@@ -4669,3 +4669,98 @@
 //		}
 //	}
 //}
+ 
+//#include <stdio.h>
+//
+//int main(void)
+//{
+//	goto a;
+//a: printf("shjdkasd");
+//	return  0;
+//}
+
+//#include <stdio.h>
+//
+//int main(void)
+//{
+//    //声明一个变量用来接受行数
+//    int i_number = 0;
+//
+//    //开始打印
+//    int i_i = 0;
+//    int i_j = 0;
+//    while ((scanf("%d", &i_number)) != EOF)
+//    {
+//        for (i_i = 1; i_i < i_number + 1; i_i++)
+//        {
+//            for (i_j = 1; i_j < i_i + 1; i_j++)
+//            {
+//                printf("%d ", i_j);
+//            }
+//            printf("\n");
+//        }
+//    }
+//    return  0;
+//}
+
+#include <stdio.h>
+
+#define SIZE 7
+
+int main(void)
+{
+    //定义数组用来接收成绩
+    int i_score[SIZE] = { 0 };
+
+    //开始接收成绩
+    int i_i = 0;
+    // for(i_i = 0; i_i < SIZE; i_i++)
+    // {
+    //     scanf("%d", (i_score + i_i));
+    // }
+    int i_count = 0;
+    while ((scanf("%d", i_score + ((i_i++) % SIZE)) != EOF))
+    {
+
+        if (i_count != 6)
+        {
+            i_count = (i_count + 1) % 7;
+        }
+        else {
+            //寻找最大值
+            int i_max_score = 0;
+            for (i_i = 0; i_i < SIZE; i_i++)
+            {
+                if (i_max_score < i_score[i_i])
+                {
+                    i_max_score = i_score[i_i];
+                }
+            }
+
+            //寻找最小值
+            int i_min_score = i_score[0];
+            for (i_i = 0; i_i < SIZE; i_i++)
+            {
+                if (i_min_score > i_score[i_i])
+                {
+                    i_min_score = i_score[i_i];
+                }
+            }
+
+            //求和
+            int i_sum = 0;
+            for (i_i = 0; i_i < SIZE; i_i++)
+            {
+                i_sum += i_score[i_i];
+            }
+            i_sum -= (i_max_score + i_min_score);
+
+            //输出结果
+            printf("%.2f\n", (i_sum) / 5.0);
+            i_count = 0;
+        }
+    }
+
+
+    return  0;
+}
