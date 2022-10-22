@@ -4765,5 +4765,150 @@
 //    return  0;
 //}
 
+//向一个数组中插入数值
+//#include <stdio.h>
+//
+//#define SIZE 50
+//
+//void Insert(int* i_number, int i_num, int i_flag);
+//
+//int main(void)
+//{
+//    //声明一个数组
+//    int i_number[SIZE] = { 0 };
+//
+//    //声明一个变量用来接收每次数组要接受数值的个数
+//    int i_num = 0;
+//    scanf("%d", &i_num);
+//
+//    //接收数值
+//    int i_i = 0;
+//    for (i_i = 0; i_i < i_num; i_i++)
+//    {
+//        scanf("%d", (i_number + i_i));
+//    }
+//
+//    //输入想要插入的值
+//    int i_flag = 0;
+//    scanf("%d", &i_flag);
+//
+//    //开始插入
+//    Insert(i_number, i_num, i_flag);
+//
+//    //输出结果
+//    for (i_i = 0; i_i < i_num + 1; i_i++)
+//    {
+//        printf("%d ", i_number[i_i]);
+//    }
+//    return  0;
+//}
+//
+////插入函数
+//void Insert(int* i_number, int i_num, int i_flag)
+//{
+//    int i_address = 0;
+//    int i_i = 0;
+//    int i_count = 0;
+//    if (1 == i_num)
+//    {
+//        if (i_flag > *i_number)
+//        {
+//            i_address++;
+//        }
+//    }
+//    else
+//    {
+//        for (i_i = 0; i_i < i_num; i_i++)
+//        {
+//            if (i_flag < *(i_number + i_i))
+//            {
+//                i_address = i_i;
+//
+//                break;
+//            }
+//            i_count++;
+//        }
+//        printf("%d\n", i_count);
+//        if (i_num == i_count)
+//        {
+//            i_address = i_num;
+//        }
+//
+//    }
+//    for (i_i = i_num; i_i > i_address; i_i--)
+//    {
+//        i_number[i_i] = i_number[i_i - 1];
+//    }
+//
+//    i_number[i_address] = i_flag;
+//}
 
-//#jdshbfkashdf
+//
+//#include <stdio.h>
+//
+//#define SIZE 100
+//
+//void Zero(int* i_number, int i_num);
+//
+//int main(void)
+//{
+//    //获取n数值
+//    int i_num = 0;
+//    scanf("%d", &i_num);
+//
+//    //定义一个数组用来接数值
+//    int i_number[SIZE] = { 0 };
+//
+//    //向数组中插入数值
+//    int i_i = 0;
+//    for (i_i = 2; i_i < i_num; i_i++)
+//    {
+//        i_number[i_i - 2] = i_i;
+//    }
+//
+//    //对数组中的数值经行偶数去除
+//    //int i_i = 0;
+//    int i_j = 0;
+//    for (i_i = 2; i_i < i_num; i_i++)
+//    {
+//        for (i_j = i_i - 1; i_j < i_num - 2; i_j++)
+//        {
+//            if (0 == (i_number[i_j] % i_i))
+//            {
+//                i_number[i_j] = 0;
+//            }
+//        }
+//    }
+//
+//    //输出结果
+//    int i_count = 0;
+//    for (i_i = 0; i_i < i_num - 2; i_i++)
+//    {
+//        if (i_number[i_i])
+//        {
+//            printf("%d ", i_number[i_i]);
+//            i_count++;
+//        }
+//    }
+//
+//    printf("\n");
+//
+//    printf("%d", i_num - 1 - i_count);
+//    return  0;
+//}
+//
+//void Zero(int* i_number, int i_num)
+//{
+//    int i_i = 0;
+//    int i_j = 0;
+//    for (i_i = 2; i_i < i_num; i_i++)
+//    {
+//        for (i_j =  i_i - 1; i_j < i_num - 2; i_j++)
+//        {
+//            if (0 == (i_number[i_j] % i_i))
+//            {
+//                i_number[i_i] = 0;
+//            }
+//        }
+//    }
+//}
