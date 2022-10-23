@@ -4913,8 +4913,163 @@
 //    }
 //}
 
+//#include <stdio.h>
+//
+//int main(void)
+//{
+//    //定义变长数组的宽度
+//    int i_size_one = 0;
+//    int i_size_two = 0;
+//    scanf("%d %d", &i_size_one, &i_size_two);
+//
+//    //声明变长数组，只有支持c99的编译器才可以使用变长数组，变长数组不可以初始化
+//    int i_number_one[i_size_one];
+//    int i_number_two[i_size_two];
+//
+//    //获取两个数组的数值
+//    int i_i = 0;
+//    for (i_i = 0; i_i < i_size_one; i_i++)
+//    {
+//        scanf("%d", (i_number_one + i_i));
+//    }
+//    for (i_i = 0; i_i < i_size_two; i_i++)
+//    {
+//        scanf("%d", (i_number_two + i_i);
+//    }
+//
+//    //声明一个整合数组
+//    int i_sum = i_size_one + i_size_two;
+//    int i_number_sum[i_sum];
+//
+//    //开始整合
+//    int i_one = 0;
+//    int i_two = 0;
+//    int i_three = 0;
+//    while ((i_one < i_size_one) && (i_two < i_size_two))
+//    {
+//        i_number_sum[i_three++] = (i_number_one[i_one] < i_number_two[i_two]) ? i_number_one[i_one++] : i_number_two[i_two++];
+//    }
+//    if (i_size_one - i_one)
+//    {
+//        for (i_i = i_one; i_i < i_size_one; i_i++)
+//        {
+//            i_number_sum[i_three++] = i_number_one[i_i];
+//        }
+//    }
+//    else if (i_size_two - i_two)
+//    {
+//        for (i_i = i_two; i_i < i_size_two; i_i++)
+//        {
+//            i_number_sum[i_three++] = i_number_two[i_i];
+//        }
+//    }
+//
+//    //输出结果
+//    for (i_i = 0; i_i < i_sum; i_i++)
+//    {
+//        printf("%d ", i_number_sum[i_i]);
+//    }
+//    return  0;
+//}
 
 
+//计算相似度
+//#include <stdio.h>
+//
+//int main(void)
+//{
+//    //声明两幅画的尺寸
+//    int i_size_weight = 0;
+//    int i_size_hight = 0;
+//    scanf("%d %d", &i_size_weight, &i_size_hight);
+//
+//    //声明二维变长数组,只有支持c99的编译器才支持变长数组，变长数组不可以初始化
+//    int i_number_one[i_size_weight][i_size_hight];
+//    int i_number_two[i_size_weight][i_size_hight];
+//
+//    //获取两幅画的数值
+//    int i_i = 0;
+//    int i_j = 0;
+//    for (i_i = 0; i_i < i_size_weight; i_i++)
+//    {
+//        for (i_j = 0; i_j < i_size_hight; i_j++)
+//        {
+//            scanf("%d", &i_number_one[i_i][i_j]);
+//        }
+//    }
+//    for (i_i = 0; i_i < i_size_weight; i_i++)
+//    {
+//        for (i_j = 0; i_j < i_size_hight; i_j++)
+//        {
+//            scanf("%d", &i_number_two[i_i][i_j]);
+//        }
+//    }
+//
+//    //开始判断
+//    int i_count = 0;
+//    for (i_i = 0; i_i < i_size_weight; i_i++)
+//    {
+//        for (i_j = 0; i_j < i_size_hight; i_j++)
+//        {
+//            if (i_number_one[i_i][i_j] == i_number_two[i_i][i_j])
+//            {
+//                i_count++;
+//            }
+//        }
+//    }
+//
+//    //输出结果
+//    printf("%.2f", (i_count * 1.0) / (i_size_hight * i_size_weight) * 100);
+//    return  0;
+//}
 
+//验证用户登入
+//#include <stdio.h>
+//#include <string.h>
+//
+//#define SIZE 10
+//
+//int main(void)
+//{
+//    //声明两个数组用来接受用户名和密码
+//    char c_string_name[SIZE] = { 0 };
+//    char c_string_passward[SIZE] = { 0 };
+//
+//    //用户开始输入
+//    while ((scanf("%s %s", c_string_name, c_string_passward)) != EOF)
+//    {
+//        if (!(strcmp(c_string_name, "admin")) && !(strcmp(c_string_passward, "admin")))
+//        {
+//            printf("Login Success!");
+//        }
+//        else
+//        {
+//            printf("Login Fail!");
+//        }
+//    }
+//    return  0;
+//}
 
-asasas
+//学好c++
+//#include <stdio.h>
+//
+//int main(void)
+//{
+//    printf("I will learn C++ well!");
+//    return  0;
+//}
+
+//#include <stdio.h>
+//#include <stdlib.h>
+//
+//int main(void)
+//{
+//    int a = 0;
+//    int b = 0;
+//    int c = 0;
+//    int d = 0;
+//    scanf("%d %d %d %d", &a, &b, &c, &d);
+//
+//    printf("%d", ((a + b - c) * d));
+//    exit(0);
+//}
