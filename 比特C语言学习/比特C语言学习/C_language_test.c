@@ -5073,3 +5073,105 @@
 //    printf("%d", ((a + b - c) * d));
 //    exit(0);
 //}
+
+//将一个十进制数转换为6进制数
+//#include <stdio.h>
+//
+//void Change(int i_number);
+//
+//int main(void)
+//{
+//	//获取一个十进制数
+//	int i_number = 0;
+//	scanf("%d", &i_number);
+//
+//	//开始转换
+//	Change(i_number);
+//	return  0;
+//}
+//
+//void Change(int i_number)
+//{
+//	if (i_number > 5)
+//	{
+//		Change(i_number / 6);
+//	}
+//	printf("%d", i_number % 6);
+//}
+
+//判断能否被5整除
+//#include <stdio.h>
+//
+//int main(void)
+//{
+//    //获取一个整数
+//    int i_number = 0;
+//    scanf("%d", &i_number);
+//
+//    //开始判断
+//    if (i_number % 5)
+//    {
+//        printf("NO");
+//    }
+//    else
+//    {
+//        printf("YES");
+//    }
+//    return  0;
+//}
+
+//已知一个函数y=f(x)，当x < 0时，y = 1；当x = 0时，y = 0；当x > 0时，y = -1。 
+//#include <stdio.h>
+//
+//int main(void)
+//{
+//    //声明一个变量，用来接受x的值
+//    int i_x = 0;
+//    scanf("%d", &i_x);
+//
+//    //开始输出
+//    if (i_x > 0)
+//    {
+//        printf("-1");
+//    }
+//    else if (i_x == 0)
+//    {
+//        printf("0");
+//    }
+//    else if (i_x < 0)
+//    {
+//        printf("1");
+//    }
+//
+//    return  0;
+//}
+
+//包含数字9的数
+//#include <stdio.h>
+//
+//int main(void)
+//{
+//    //制造一个循环
+//    int i_i = 0;
+//    int i_count = 0;
+//    for (i_i = 1; i_i < 2020; i_i++)
+//    {
+//        int i_temp = i_i;
+//        //判断该数值中是否含有9
+//        while (i_temp)
+//        {
+//            if ((i_temp % 10) == 9)
+//            {
+//                i_count++;
+//                break;
+//            }
+//            else
+//            {
+//                i_temp /= 10;
+//            }
+//        }
+//    }
+//
+//    printf("%d", i_count);
+//    return  0;
+//}
