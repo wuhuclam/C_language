@@ -5175,3 +5175,316 @@
 //    printf("%d", i_count);
 //    return  0;
 //}
+
+//#include <stdio.h>
+//#include <math.h>
+//
+//
+//
+//int Number_of_digits(int i_number);
+//
+//int Number_of_daffodils(int i_number, int i_number_of_digits);
+//
+//
+//
+//int main(void)
+//
+//{
+//
+//	//设置一个循环用于判断0——100000之间的水仙花数
+//
+//	int i_number = 0;
+//
+//	for (i_number = 0; i_number < 100001; i_number++)
+//
+//	{
+//
+//		//判断一个数的位数
+//
+//		int i_number_of_digits = 0;
+//
+//		i_number_of_digits = Number_of_digits(i_number);
+//
+//		/*printf("%d", i_number_of_digits);
+//
+//		break;*/
+//
+//
+//
+//		//开始判断
+//
+//		int i_flag = 0;
+//
+//		i_flag = Number_of_daffodils(i_number, i_number_of_digits);
+//
+//		//printf("%d", i_flag);
+//
+//
+//
+//		//输出结果
+//
+//		if (i_flag)
+//
+//		{
+//
+//			printf("%d ", i_number);
+//			//break;
+//
+//		}
+//
+//	}
+//
+//	return 0;
+//
+//}
+//
+//
+//
+//int Number_of_digits(int i_number)
+//
+//{
+//
+//	if (i_number < 10)
+//
+//	{
+//
+//		return 1;
+//
+//	}
+//
+//	else
+//
+//	{
+//
+//		return 1 + Number_of_digits(i_number / 10);
+//
+//	}
+//
+//}
+//
+//
+//
+//int Number_of_daffodils(int i_number, int i_number_of_digits)
+//
+//{
+//
+//	int i_sum = 0;
+//
+//	int i_i = 0;
+//
+//	int i_temp = i_number;
+//
+//	while (i_number)
+//	{
+//		i_sum += pow((i_number % 10), i_number_of_digits);
+//		i_number /= 10;
+//	}
+//
+//
+//
+//	return (i_sum == i_temp) ? 1 : 0;
+//
+//}
+
+//判断奇数的数量和偶数的数量
+//#include <stdio.h>
+//
+//int main(void)
+//{
+//    //获取一个正整数
+//    int i_number = 0;
+//    scanf("%d", &i_number);
+//
+//    //判断奇数偶数
+//    int i_i = 0;
+//    int i_count = 0;
+//    for (i_i = 1; i_i < (i_number + 1); i_i++)
+//    {
+//        if ((i_i % 2))
+//        {
+//            i_count++;
+//        }
+//    }
+//
+//    //输出结果
+//    printf("%d %d", i_count, i_number - i_count);
+//    return 0;
+//}
+
+//统计成绩
+//#include <stdio.h>
+//
+//int main(void)
+//{
+//    //获取变长数组的长度
+//    int i_size = 0;
+//    scanf("%d", &i_size);
+//
+//    //声明变长数组,只有支持c99的编译器才支持变长数组，变长数组不可以初始化
+//    float f_score[i_size];
+//
+//    //获取成绩
+//    int i_i = 0;
+//    for (i_i = 0; i_i < i_size; i_i++)
+//    {
+//        scanf("%f", (f_score + i_i));
+//    }
+//
+//    //获取最高成绩
+//    float f_max = 0.0f;
+//    for (i_i = 0; i_i < i_size; i_i++)
+//    {
+//        if (f_max < f_score[i_i])
+//        {
+//            f_max = f_score[i_i];
+//        }
+//    }
+//
+//    //获取最低成绩
+//    float f_min = 0.0f;
+//    int i_min = 0;
+//    for (i_i = 1; i_i < i_size; i_i++)
+//    {
+//        if (f_score[i_min] > f_score[i_i])
+//        {
+//            i_min = i_i;
+//        }
+//    }
+//    f_min = f_score[i_min];
+//
+//    //计算平均成绩
+//    float f_avg = 0.0f;
+//    float f_sum = 0;
+//    for (i_i = 0; i_i < i_size; i_i++)
+//    {
+//        f_sum += f_score[i_i];
+//    }
+//    f_avg = (f_sum / i_size);
+//
+//    //输出结果
+//    printf("%.2f %.2f %.2f", f_max, f_min, f_avg);
+//    return  0;
+//}
+
+//插入数据
+//#include <stdio.h>
+//
+//#define SIZE 50
+//
+//void Insert(int* i_number, int i_size, int i_flag);
+//
+//int main(void)
+//{
+//    //声明一个数组
+//    int i_number[SIZE] = { 0 };
+//
+//    //声明一个变量用来接收有序数组的长度
+//    int i_size = 0;
+//    scanf("%d", &i_size);
+//
+//    //获取有序数组
+//    int i_i = 0;
+//    for (i_i = 0; i_i < i_size; i_i++)
+//    {
+//        scanf("%d", &i_number[i_i]);
+//    }
+//
+//    //获取想要插入的值
+//    int i_flag = 0;
+//    scanf("%d", &i_flag);
+//
+//    //调用插入函数
+//    Insert(i_number, i_size, i_flag);
+//
+//    //输出结果
+//    for (i_i = 0; i_i < i_size + 1; i_i++)
+//    {
+//        printf("%d ", i_number[i_i]);
+//    }
+//    return  0;
+//}
+//
+//void Insert(int* i_number, int i_size, int i_flag)
+//{
+//    //判断要插入的位置
+//    int i_i = 0;
+//    int i_address = 0;
+//    int i_count = 0;
+//    for (i_i = 0; i_i < i_size; i_i++)
+//    {
+//        if (i_flag < *(i_number + i_i))
+//        {
+//            i_address = i_i;
+//            break;
+//        }
+//        i_count++;
+//    }
+//    //printf("%d\n", i_address);
+//    if (i_size == i_count)
+//    {
+//        i_address = i_size;
+//    }
+//
+//    //挪出空位
+//    int i_temp = 0;
+//    for (i_i = i_size; i_i > i_address; i_i--)
+//    {
+//        i_temp = i_number[i_i];
+//        i_number[i_i] = i_number[i_i - 1];
+//        i_number[i_i - 1] = i_temp;
+//    }
+//
+//    //插入数据
+//    i_number[i_address] = i_flag;
+//
+//}
+
+//验证密码
+//#include <stdio.h>
+//#include <string.h>
+//
+//#define SIZE 20
+//
+//int main(void)
+//{
+//    //声明两个字符数组用来接收两个字符串
+//    char c_password_one[SIZE] = { 0 };
+//    char c_password_two[SIZE] = { 0 };
+//
+//    //获取密码
+//    scanf("%s %s", c_password_one, c_password_two);
+//
+//    //判断是否相同
+//    if (!strcmp(c_password_one, c_password_two))
+//    {
+//        printf("same");
+//    }
+//    else
+//    {
+//        printf("different");
+//    }
+//    return  0;
+//}
+
+//打印数组
+//#include <stdio.h>
+//
+//int main(void)
+//{
+//    //声明数组
+//    int i_number[10] = { 0 };
+//
+//    //获取数组的值
+//    int i_i = 0;
+//    for (i_i = 0; i_i < 10; i_i++)
+//    {
+//        scanf("%d", (i_number + i_i));
+//    }
+//
+//    //输出结果
+//    for (i_i = 0; i_i < 10; i_i++)
+//    {
+//        printf("%d ", i_number[i_i]);
+//    }
+//    return 0;
+//}
