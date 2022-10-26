@@ -5488,3 +5488,158 @@
 //    }
 //    return 0;
 //}
+
+//#include <stdio.h>
+//
+//int main(void)
+//{
+//	int i_a = -20;
+//	unsigned int i_b = 10;
+//	printf("%d", i_a + i_b);
+//	return  0;
+//}
+
+//猜排名
+//5位运动员参加了10米台跳水比赛，有人让他们预测比赛结果：
+//A选手说：B第二，我第三；
+//B选手说：我第二，E第四；
+//C选手说：我第一，D第二；
+//D选手说：C最后，我第三；
+//E选手说：我第四，A第一；
+//比赛结束后，每位选手都说对了一半，请编程确定比赛的名次。
+
+//#include <stdio.h>
+//#include <stdlib.h>
+//#include <time.h>
+//
+//#define SIZE 6
+//
+//void Outcome(char* c_ranking, int size);
+//int Judgement(char* c_ranking, int size);
+
+//int main(void)
+//{
+//	//声明一个数组用表示选手的名次
+//	char c_ranking[SIZE] = { 0 };
+//
+//	//重置随机数的触发器
+//	srand((unsigned int)time(NULL));
+//
+//	while (1)
+//	{
+//		//重置排名
+//		int i_i = 0;
+//		for (i_i = 0; i_i < SIZE; i_i++)
+//		{
+//			c_ranking[i_i] = 0;
+//		}
+//
+//		//产生一个随机的排名
+//		Outcome(c_ranking, SIZE);
+//		/*for (i_i = 0; i_i < SIZE; i_i++)
+//		{
+//			printf("%c ", c_ranking[i_i]);
+//		}
+//		break;*/
+//		//判断排名是否正确
+//		int i_flag = 0;
+//		i_flag = Judgement(c_ranking, SIZE);
+//
+//		//输出结果
+//		if (i_flag)
+//		{
+//			//printf("正确的选手排名为:\n");
+//			for (i_i = 0; i_i < SIZE - 1; i_i++)
+//			{
+//				printf("%c ", c_ranking[i_i]);
+//			}
+//			break;
+//		}
+//		/*else
+//		{
+//			printf("猜错了重新猜吧!");
+//		}*/
+//	}
+//	return  0;
+//}
+//
+//void Outcome(char* c_ranking, int size)
+//{
+//	char c_i = 0;
+//	int i_j = 0;
+//	for (c_i = 'A'; c_i < 'F'; c_i++)
+//	{
+//		i_j = (rand() % 5);
+//		if (!c_ranking[i_j])
+//		{
+//			c_ranking[i_j++] = c_i;
+//		}
+//		else
+//		{
+//			c_i--;
+//		}
+//	}
+//}
+//
+//int Judgement(char* c_ranking, int size)
+//{
+//	if (('B' == c_ranking[1]) || ('A' == c_ranking[2]))
+//	{
+//		if (('B' == c_ranking[1]) || ('E' == c_ranking[3]))
+//		{
+//			if (('C' == c_ranking[0] )|| ('D' == c_ranking[1]))
+//			{
+//				if (('C' == c_ranking[4]) || ('D' == c_ranking[2]))
+//				{
+//					if (('E' == c_ranking[3]) || ('A' == c_ranking[0]))
+//					{
+//						return 1;
+//					}
+//					else
+//					{
+//						return 0;
+//					}
+//				}
+//				else
+//				{
+//					return 0;
+//				}
+//			}
+//			else
+//			{
+//				return  0;
+//			}
+//		}
+//		else
+//		{
+//			return 0;
+//		}
+//	}
+//	else
+//	{
+//		return  0;
+//	}
+//}
+
+// 逆序输出
+//#include <stdio.h>
+//
+//int main(void)
+//{
+//    //声明一个数组用来接收10个整数
+//    int i_number[10] = { 0 };
+//
+//    //接受数值
+//    int i_i = 0;
+//    for (i_i = 0; i_i < 10; i_i++)
+//    {
+//        scanf("%d", &i_number[i_i]);
+//    }
+//
+//    //逆序打印
+//    for (i_i = 10; i_i > 0; i_i--)
+//    {
+//        printf("%d ", i_number[i_i - 1]);
+//    }
+//    return 0;
+//}
