@@ -5903,4 +5903,137 @@
 //	}
 //	return  0;
 //}
-sjdakljsd
+
+//杨氏矩阵
+//#include <stdio.h>
+//
+//int main(void)
+//{
+//	//获取杨氏矩阵的大小
+//	int i_size = 0;
+//	scanf("%d", &i_size);
+//
+//	//打印杨氏矩阵
+//	int i_i = 0;
+//	int i_j = 0;
+//	for (i_i = 0; i_i < i_size; i_i++)
+//	{
+//		for (i_j = i_i; i_j < i_size + i_i; i_j++)
+//		{
+//			printf("%3d ", i_j);
+//		}
+//		printf("\n");
+//	}
+//	return  0;
+//}
+
+//字符串左旋
+//#include <stdio.h>
+//#include <string.h>
+//
+//#define SIZE 100
+//
+//void Levorotation(char* c_string, int i_length, int i_number);
+//
+//int main(void)
+//{
+//	//声明一个字符数组并获取一个字符串
+//	char c_string[100] = { 0 };
+//	scanf("%s", c_string);
+//
+//	//计算字符串的长度
+//	int i_length = 0;
+//	i_length = strlen(c_string);
+//	//printf("%d\n", i_length);
+//
+//	//获取想要左旋的字符串的个数
+//	int i_number = 0;
+//	scanf("%d", &i_number);
+//
+//	//开始左旋
+//	Levorotation(c_string, i_length, i_number);
+//
+//	//输出结果
+//	printf("%s", c_string);
+//	return 0;
+//}
+//
+////左旋函数
+//void Levorotation(char* c_string, int i_length, int i_number)
+//{
+//	int i_i = 0;
+//	int i_j = 0;
+//	char c_temp = 0;
+//	
+//	for (i_i = 0; i_i < i_number; i_i++)
+//	{
+//		c_temp = *(c_string + i_i);
+//		for (i_j = 1; i_j < i_length; i_j++)
+//		{
+//			*(c_string + i_j - 1) = *(c_string + i_j);
+//		}
+//		*(c_string + i_j - 1) = c_temp;
+//	}
+//}
+
+//字符串旋转结果
+//#include <stdio.h>
+//#include <string.h>
+//
+//#define SIZE 100
+//
+//void Levorotation(char* c_string, int i_length, int i_number);
+//
+//int main(void)
+//{
+//	//声明两个数组用来接收两个字符串
+//	char c_string_one[SIZE] = { 0 };
+//	char c_string_two[SIZE] = { 0 };
+//	scanf("%s", c_string_one);
+//	scanf("%s", c_string_two);
+//
+//	//计算长度
+//	int i_length = 0;
+//	i_length = strlen(c_string_one);
+//
+//	//开始判断
+//	int i_flag = 0;
+//	int i_i = 0;
+//	//外循环是控制每次左旋一个字符一共左旋多少次
+//	for (i_i = 0; i_i < i_length; i_i++)
+//	{
+//		Levorotation(c_string_one, i_length, 1);
+//		i_flag = strcmp(c_string_one, c_string_two);
+//		if (!i_flag)
+//		{
+//			printf("字符串1和字符串2是旋转字符串！\n");
+//			break;
+//		}
+//	}
+//
+//	if (i_flag)
+//	{
+//		printf("字符串1和字符串2不是旋转字符串！\n");
+//	}
+//	return  0;
+//}
+//
+////左旋函数
+//void Levorotation(char* c_string, int i_length, int i_number)
+//{
+//	int i_i = 0;
+//	int i_j = 0;
+//	char c_temp = 0;
+//	
+//	for (i_i = 0; i_i < i_number; i_i++)
+//	{
+//		c_temp = *(c_string + i_i);
+//		for (i_j = 1; i_j < i_length; i_j++)
+//		{
+//			*(c_string + i_j - 1) = *(c_string + i_j);
+//		}
+//		*(c_string + i_j - 1) = c_temp;
+//	}
+//}
+
+//#include <assert.h>
