@@ -5516,7 +5516,7 @@
 //
 //void Outcome(char* c_ranking, int size);
 //int Judgement(char* c_ranking, int size);
-
+//
 //int main(void)
 //{
 //	//声明一个数组用表示选手的名次
@@ -5831,4 +5831,75 @@
 //
 //    printf("%d", i_number[x - 1][y - 1]);
 //    return 0;
+//}
+
+//猜凶手
+//#include <stdio.h>
+//
+//int main(void)
+//{
+//	//声明一个变量用来表示凶手
+//	int i_man = 0;
+//
+//	//开始判断
+//	for (i_man = 'A'; i_man < 'E'; i_man++)
+//	{
+//		if (((i_man != 'A') + ('C' == i_man) + ('D' == i_man) + ('D' != i_man)) == 3)
+//		{
+//			printf("%c", i_man);
+//		}
+//	}
+//	return  0;
+//}
+
+//杨辉三角
+//#include <stdio.h>
+//
+//#define SIZE_X 100
+//#define SZIE_Y 100
+//
+//int main(void)
+//{
+//	//声明一个二维数组
+//	int i_number[SIZE_X][SZIE_Y] = { 0 };
+//
+//	//获取想打印的杨辉三角的层数
+//	int i_num = 0;
+//	scanf("%d", &i_num);
+//
+//	//向数组中添加数值
+//	int i_i = 0;
+//	int i_j = 0;
+//	for (i_i = 0; i_i < i_num; i_i++)
+//	{
+//		for (i_j = 0; i_j < i_i + 1; i_j++)
+//		{
+//			if (0 == i_j)
+//			{
+//				i_number[i_i][i_j] = 1;
+//			}
+//			else
+//			{
+//				i_number[i_i][i_j] = i_number[i_i - 1][i_j] + i_number[i_i - 1][i_j - 1];
+//			}
+//		}
+//	}
+//
+//	//打印结果
+//	for (i_i = 0; i_i < i_num; i_i++)
+//	{
+//		for (i_j = i_num; i_j > i_i; i_j--)
+//		{
+//			printf("   ");
+//		}
+//		for (i_j = 0; i_j < i_num; i_j++)
+//		{
+//			if (0 != i_number[i_i][i_j])
+//			{
+//				printf("%6d", i_number[i_i][i_j]);
+//			}
+//		}
+//		printf("\n");
+//	}
+//	return  0;
 //}
