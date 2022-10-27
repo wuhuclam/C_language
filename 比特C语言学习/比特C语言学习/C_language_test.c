@@ -5643,3 +5643,192 @@
 //    }
 //    return 0;
 //}
+
+//判断数组中正数和负数的个数
+//#include <stdio.h>
+//
+//#define SIZE 10
+//
+//int main(void)
+//{
+//    //声明一个数组，用来接收数值
+//    int i_number[SIZE] = { 0 };
+//
+//    //接收数值
+//    int i_i = 0;
+//    for (i_i = 0; i_i < SIZE; i_i++)
+//    {
+//        scanf("%d", &i_number[i_i]);
+//    }
+//
+//    //计算数组中正数和负数的个数
+//    int i_positsive = 0;
+//    int i_negative = 0;
+//    for (i_i = 0; i_i < SIZE; i_i++)
+//    {
+//        if (i_number[i_i] < 0)
+//        {
+//            i_negative++;
+//        }
+//    }
+//
+//    //输出结果
+//    printf("positive:%d\n", (SIZE - i_negative));
+//    printf("negative:%d\n", i_negative);
+//    return  0;
+//}
+
+
+//序列中整数去重
+//#include <stdio.h>
+//
+//void Delete(int* i_number, int i_size, int i_address);
+//int Deduplication(int* i_number, int i_size);
+//
+//int main(void)
+//{
+//    //声明变长数组的长度
+//    int i_size = 0;
+//    scanf("%d", &i_size);
+//
+//    //声明变长数组，只有支持c99的编译器才支持变长数组，变长数组不可以进行初始化
+//    int i_number[i_size];
+//
+//    //获取数值
+//    int i_i = 0;
+//    for (i_i = 0; i_i < i_size; i_i++)
+//    {
+//        scanf("%d", &i_number[i_i]);
+//    }
+//
+//    //开始去重
+//    int i_length = 0;
+//    i_length = Deduplication(i_number, i_size);
+//
+//    //输出结果
+//    for (i_i = 0; i_i < i_length; i_i++)
+//    {
+//        printf("%d ", i_number[i_i]);
+//    }
+//    return  0;
+//}
+//
+////判断重复并去重
+//int Deduplication(int* i_number, int i_size)
+//{
+//    int i_flag = 0;
+//    int i_i = 0;
+//    int i_j = 0;
+//
+//    for (i_i = 0; i_i < i_size; i_i++)
+//    {
+//        i_flag = *(i_number + i_i);
+//        for (i_j = 0; i_j < i_size; i_j++)
+//        {
+//            if (i_i == i_j)
+//            {
+//                continue;
+//            }
+//            else
+//            {
+//                if (i_flag == *(i_number + i_j))
+//                {
+//                    Delete(i_number, i_size, i_j);
+//                    i_size--;
+//                    i_j--;
+//                }
+//            }
+//        }
+//    }
+//
+//    return  i_size;
+//}
+//
+////去重
+//void Delete(int* i_number, int i_size, int i_address)
+//{
+//    int i_i = 0;
+//
+//    for (i_i = i_address; i_i < i_size - 1; i_i++)
+//    {
+//        *(i_number + i_i) = *(i_number + i_i + 1);
+//    }
+//}
+
+//计算成绩
+//#include <stdio.h>
+//
+//#define SIZE_X 5 
+//#define SIZE_Y 6
+//
+//int main(void)
+//{
+//    //声明一个二维数组用来接收成绩
+//    float f_number[SIZE_X][SIZE_Y] = { 0 };
+//
+//    //获取成绩并计算平均分
+//    int i_i = 0;
+//    int i_j = 0;
+//    int i_x = 0;
+//    float f_sum = 0;
+//    for (i_i = 0; i_i < SIZE_X; i_i++)
+//    {
+//        f_sum = 0;
+//        for (i_j = 0; i_j < SIZE_Y - 1; i_j++)
+//        {
+//            scanf("%f", &f_number[i_i][i_j]);
+//        }
+//
+//        for (i_x = 0; i_x < SIZE_Y - 1; i_x++)
+//        {
+//            f_sum += f_number[i_i][i_x];
+//        }
+//
+//        f_number[i_i][i_j] = f_sum;
+//    }
+//
+//    //输出结果
+//    for (i_i = 0; i_i < SIZE_X; i_i++)
+//    {
+//        for (i_j = 0; i_j < SIZE_Y; i_j++)
+//        {
+//            printf("%.1f ", f_number[i_i][i_j]);
+//        }
+//        printf("\n");
+//    }
+//
+//    return  0;
+//}
+
+//打印某位置的数值
+//#include <stdio.h>
+//
+//int main(void)
+//{
+//    //声明变长二维数组的长度
+//    int i_size_x = 0;
+//    int i_size_y = 0;
+//    scanf("%d %d", &i_size_x, &i_size_y);
+//
+//    //声明变长数组,只有支持c99的编译器才支持变长数组，变长数组不可以初始化
+//    int i_number[i_size_x][i_size_y];
+//
+//    //获取数值
+//    int i_i = 0;
+//    int i_j = 0;
+//    for (i_i = 0; i_i < i_size_x; i_i++)
+//    {
+//        for (i_j = 0; i_j < i_size_y; i_j++)
+//        {
+//            scanf("%d", &i_number[i_i][i_j]);
+//        }
+//    }
+//
+//    //声明一组坐标用来接收想查找的位置
+//    int x = 0;
+//    int y = 0;
+//    scanf("%d %d", &x, &y);
+//
+//    printf("%d", i_number[x - 1][y - 1]);
+//    return 0;
+//}
