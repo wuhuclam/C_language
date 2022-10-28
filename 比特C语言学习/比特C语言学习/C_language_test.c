@@ -6036,4 +6036,82 @@
 //	}
 //}
 
-//#include <assert.h>
+//序列重组矩阵
+//#include <stdio.h>
+//
+//int main(void)
+//{
+//    //获取变长二维数组的大小
+//    int i_size_x = 0;
+//    int i_size_y = 0;
+//    scanf("%d %d", &i_size_x, &i_size_y);
+//
+//    //声明变长数组，只有支持c99的编译器才支持变长数组，，变长数组不可以初始化
+//    int i_number[i_size_x][i_size_y];
+//
+//    //获取值
+//    int i_i = 0;
+//    int i_j = 0;
+//    for (i_i = 0; i_i < i_size_x; i_i++)
+//    {
+//        for (i_j = 0; i_j < i_size_y; i_j++)
+//        {
+//            scanf("%d", &i_number[i_i][i_j]);
+//        }
+//    }
+//
+//    //输出结果
+//    for (i_i = 0; i_i < i_size_x; i_i++)
+//    {
+//        for (i_j = 0; i_j < i_size_y; i_j++)
+//        {
+//            printf("%d ", i_number[i_i][i_j]);
+//        }
+//        printf("\n");
+//    }
+//    return  0;
+//}
+
+//判断最大值的位置
+//#include <stdio.h>
+//
+//int main(void)
+//{
+//    //获取变长二维数组的大小
+//    int i_size_x = 0;
+//    int i_size_y = 0;
+//    scanf("%d %d", &i_size_x, &i_size_y);
+//
+//    //声明变长数组，只有支持c99的编译器才支持变长数组，，变长数组不可以初始化
+//    int i_number[i_size_x][i_size_y];
+//
+//    //获取值
+//    int i_i = 0;
+//    int i_j = 0;
+//    for (i_i = 0; i_i < i_size_x; i_i++)
+//    {
+//        for (i_j = 0; i_j < i_size_y; i_j++)
+//        {
+//            scanf("%d", &i_number[i_i][i_j]);
+//        }
+//    }
+//
+//    //获取最大值的位置
+//    int i_max_x = 0;
+//    int i_max_y = 0;
+//    for (i_i = 0; i_i < i_size_x; i_i++)
+//    {
+//        for (i_j = 0; i_j < i_size_y; i_j++)
+//        {
+//            if (i_number[i_max_x][i_max_y] < i_number[i_i][i_j])
+//            {
+//                i_max_x = i_i;
+//                i_max_y = i_j;
+//            }
+//        }
+//    }
+//
+//    //输出结果
+//    printf("%d %d", i_max_x + 1, i_max_y + 1);
+//    return  0;
+//}
