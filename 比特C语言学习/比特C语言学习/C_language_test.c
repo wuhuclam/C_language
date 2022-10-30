@@ -6221,4 +6221,110 @@
 //    return 0;
 //}
 
-sdsds
+//统计目标字符串中的目标子串的个数
+// //时间复杂度过大
+//#include <stdio.h>
+//#include <string.h>
+//
+//#define SIZE_M 8000
+//#define SZIE_S 3
+//
+//int Statistics(char* c_string, int i_length);
+//
+//int main(void)
+//{
+//    //声明一个数组用来接受字符串
+//    char c_string[SIZE_M] = { 0 };
+//    scanf("%s", c_string);
+//
+//    //计算获取的字符串的长度
+//    int i_length = 0;
+//    i_length = strlen(c_string);
+//
+//    //获取字符串中目标子串的个数
+//    int i_count = 0;
+//    i_count = Statistics(c_string, i_length);
+//
+//    //输出结果
+//    printf("%d", i_count);
+//
+//    return  0;
+//}
+//
+////统计目标子串的个数
+//int Statistics(char* c_string, int i_length)
+//{
+//    //声明一个数组用来记录获取的子串的下标
+//    //int i_address[SZIE_S] = { 0 };
+//
+//    int i_count = 0;
+//    int i_i = 0;
+//    int i_j = 0;
+//    int i_z = 0;
+//    int i_a = 0;
+//
+//    //开始计算
+//    for (i_i = 0; i_i < i_length; i_i++)
+//    {
+//        if ('C' == c_string[i_i])
+//        {
+//            for (i_j = i_i + 1; i_j < i_length; i_j++)
+//            {
+//                if ('H' == c_string[i_j])
+//                {
+//                    for (i_z = i_j + 1; i_z < i_length; i_z++)
+//                    {
+//                        if ('N' == c_string[i_z])
+//                        {
+//                            i_count++;
+//                        }
+//                    }
+//                }
+//            }
+//        }
+//    }
+//
+//    return  i_count;
+//}
+
+//优化
+//#include <stdio.h>
+//#include <string.h>
+//
+//#define SIZE 8001
+//
+//int main(void)
+//{
+//    //声明一个数组用来获取目标字符串
+//    char c_string[SIZE] = { 0 };
+//    scanf("%s", c_string);
+//
+//    //计算目标字符串的长度
+//    int i_length = 0;
+//    i_length = strlen(c_string);
+//
+//    //统计目标子串的个数
+//    int i_i = 0;
+//    long long int lli_count_c = 0;
+//    long long int lli_count_ch = 0;
+//    long long int lli_count = 0;
+//    for (i_i = 0; i_i < i_length; i_i++)
+//    {
+//        if ('C' == c_string[i_i])
+//        {
+//            lli_count_c++;
+//        }
+//        else if ('H' == c_string[i_i])
+//        {
+//            lli_count_ch += lli_count_c;
+//        }
+//        else if ('N' == c_string[i_i])
+//        {
+//            lli_count += lli_count_ch;
+//        }
+//    }
+//
+//    //输出结果
+//    printf("%lld", lli_count);
+//    return 0;
+//}sadasdasd
