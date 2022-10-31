@@ -6446,142 +6446,204 @@
 //    return 0;
 //}
 
-#include <stdio.h>
+//#include <stdio.h>
+//
+//#define SIZE_X 3
+//#define SIZE_Y 3
+//
+//char Judgment(char c_chessman[SIZE_X][SIZE_Y], int i_row, int i_col);
+//int main(void)
+//{
+//	//声明井字棋的棋盘
+//	char c_chessboard[SIZE_X][SIZE_Y] = { 0 };
+//
+//	//获取棋子
+//	int i_i = 0;
+//	int i_j = 0;
+//	char c_c = 0;
+//	for (i_i = 0; i_i < SIZE_X; i_i++)
+//	{
+//		for (i_j = 0; i_j < SIZE_Y; i_j++)
+//		{
+//			scanf(" %c", &c_c);
+//			if (c_c == '\n')
+//			{
+//				i_j--;
+//				continue;
+//			}
+//			else
+//			{
+//				c_chessboard[i_i][i_j] = c_c;
+//			}
+//		}
+//	}
+//	//打印
+//	/*for (i_i = 0; i_i < SIZE_X; i_i++)
+//	{
+//		for (i_j = 0; i_j < SIZE_Y; i_j++)
+//		{
+//			printf("%c ", c_chessboard[i_i][i_j]);
+//		}
+//		printf("\n");
+//	}*/
+//
+//	//判断
+//	char c_flag = 0;
+//	c_flag = Judgment(c_chessboard, SIZE_X, SIZE_Y);
+//	//printf("%c\n", c_flag);
+//
+//	//打印结果
+//	if (c_flag == 's')
+//	{
+//		printf("No winner!\n");
+//	}
+//	else if (c_flag == '*')
+//	{
+//		printf("KiKi wins!\n");
+//	}
+//	else if (c_flag == '#')
+//	{
+//		printf("BoBo wins!\n");
+//	}
+//
+//	return 0;
+//}
+//
+//char Judgment(char c_chessman[SIZE_X][SIZE_Y], int i_row, int i_col)
+//{
+//	//Display_chessboard(c_chessman, ROW, COL);
+//	//声明两个变量用于对二维数组的访问
+//	int i_i = 0;
+//	int i_j = 0;
+//
+//	//对棋盘情况判断的实现
+//	//玩家或电脑赢得胜利
+//	//行胜利
+//	for (i_i = 0; i_i < i_row; i_i++)
+//	{
+//		if (c_chessman[i_i][0] == c_chessman[i_i][1]
+//			&& c_chessman[i_i][0] == c_chessman[i_i][2]
+//			&& c_chessman[i_i][0] != ' ' && c_chessman[i_i][0] == 'K')
+//		{
+//			return  '*';
+//		}
+//		else if (c_chessman[i_i][0] == c_chessman[i_i][1]
+//			&& c_chessman[i_i][0] == c_chessman[i_i][2]
+//			&& c_chessman[i_i][0] == 'B')
+//		{
+//			return  '#';
+//		}
+//	}
+//
+//	//列胜利
+//	for (i_j = 0; i_j < i_col; i_j++)
+//	{
+//		if (c_chessman[0][i_j] == c_chessman[1][i_j]
+//			&& c_chessman[1][i_j] == c_chessman[2][i_j]
+//			&& c_chessman[1][i_j] == 'K')
+//		{
+//			return '*';
+//		}
+//		else if (c_chessman[0][i_j] == c_chessman[1][i_j]
+//			&& c_chessman[1][i_j] == c_chessman[2][i_j]
+//			&& c_chessman[1][i_j] == 'B')
+//		{
+//			return  '#';
+//		}
+//	}
+//
+//	//对角线满足
+//	if (c_chessman[0][0] == c_chessman[1][1]
+//		&& c_chessman[1][1] == c_chessman[2][2]
+//		&& c_chessman[2][2] == 'K'
+//		|| c_chessman[0][2] == c_chessman[1][1]
+//		&& c_chessman[1][1] == c_chessman[2][0]
+//		&& c_chessman[2][0] == 'K')
+//	{
+//		return  '*';
+//	}
+//	else if (c_chessman[0][0] == c_chessman[1][1]
+//		&& c_chessman[1][1] == c_chessman[2][2]
+//		&& c_chessman[2][2] == 'B'
+//		|| c_chessman[0][2] == c_chessman[1][1]
+//		&& c_chessman[1][1] == c_chessman[2][0]
+//		&& c_chessman[2][0] == 'B')
+//	{
+//		return '#';
+//	}
+//
+//	//和棋的判断
+//	for (i_i = 0; i_i < i_row; i_i++)
+//	{
+//		for (i_j = 0; i_j < i_col; i_j++)
+//		{
+//			if (c_chessman[i_i][i_j] == ' ')
+//			{
+//				return 'c';
+//			}
+//		}
+//	}
+//	return 's';
+//}
 
-#define SIZE_X 3
-#define SIZE_Y 3
+//BC77-有序序列插入一个数
+//#include <stdio.h>
+//
+//#define SIZE 50
+//
+//void Insert(int* i_number, int i_size, int i_flag);
+//
+//int main(void)
+//{
+//	//声明一个数组用来接收一个有序序列
+//	int i_size = 0;
+//	scanf("%d", &i_size);
+//	int i_number[SIZE] = { 0 };
+//
+//	//获取有序序列
+//	int i_i = 0;
+//	for (i_i = 0; i_i < i_size; i_i++)
+//	{
+//		scanf("%d", &i_number[i_i]);
+//	}
+//
+//	//获取想要插入的数值
+//	int i_flag = 0;
+//	scanf("%d", &i_flag);
+//
+//	//开始插入
+//	Insert(i_number, i_size, i_flag);
+//
+//	//输出结果
+//	for (i_i = 0; i_i < i_size + 1; i_i++)
+//	{
+//		printf("%d ", i_number[i_i]);
+//	}
+//	return  0;
+//}
+//
+////插入函数
+//void Insert(int* i_number, int i_size, int i_flag)
+//{
+//	int i_i = 0;
+//	for (i_i = i_size; i_i > 0; i_i--)
+//	{
+//		//完成移位操作
+//		if (i_number[i_i - 1] > i_flag)
+//		{
+//			i_number[i_i] = i_number[i_i - 1];
+//		}//如果大于所有数值，完成插入操作
+//		else
+//		{
+//			i_number[i_i] = i_flag;
+//			break;
+//		}
+//	}
+//
+//	//如果小于所有数值，插入数值
+//	if (0 == i_i)
+//	{
+//		i_number[i_i] = i_flag;
+//	}
+//}
 
-char Judgment(char c_chessman[SIZE_X][SIZE_Y], int i_row, int i_col);
-int main(void)
-{
-	//声明井字棋的棋盘
-	char c_chessboard[SIZE_X][SIZE_Y] = { 0 };
-
-	//获取棋子
-	int i_i = 0;
-	int i_j = 0;
-	char c_c = 0;
-	for (i_i = 0; i_i < SIZE_X; i_i++)
-	{
-		for (i_j = 0; i_j < SIZE_Y; i_j++)
-		{
-			scanf(" %c", &c_c);
-			if (c_c == '\n')
-			{
-				i_j--;
-				continue;
-			}
-			else
-			{
-				c_chessboard[i_i][i_j] = c_c;
-			}
-		}
-	}
-	//打印
-	/*for (i_i = 0; i_i < SIZE_X; i_i++)
-	{
-		for (i_j = 0; i_j < SIZE_Y; i_j++)
-		{
-			printf("%c ", c_chessboard[i_i][i_j]);
-		}
-		printf("\n");
-	}*/
-
-	//判断
-	char c_flag = 0;
-	c_flag = Judgment(c_chessboard, SIZE_X, SIZE_Y);
-	//printf("%c\n", c_flag);
-
-	//打印结果
-	if (c_flag == 's')
-	{
-		printf("No winner!\n");
-	}
-	else if (c_flag == '*')
-	{
-		printf("KiKi wins!\n");
-	}
-	else if (c_flag == '#')
-	{
-		printf("BoBo wins!\n");
-	}
-
-	return 0;
-}
-
-char Judgment(char c_chessman[SIZE_X][SIZE_Y], int i_row, int i_col)
-{
-	//Display_chessboard(c_chessman, ROW, COL);
-	//声明两个变量用于对二维数组的访问
-	int i_i = 0;
-	int i_j = 0;
-
-	//对棋盘情况判断的实现
-	//玩家或电脑赢得胜利
-	//行胜利
-	for (i_i = 0; i_i < i_row; i_i++)
-	{
-		if (c_chessman[i_i][0] == c_chessman[i_i][1]
-			&& c_chessman[i_i][0] == c_chessman[i_i][2]
-			&& c_chessman[i_i][0] != ' ' && c_chessman[i_i][0] == 'K')
-		{
-			return  '*';
-		}
-		else if (c_chessman[i_i][0] == c_chessman[i_i][1]
-			&& c_chessman[i_i][0] == c_chessman[i_i][2]
-			&& c_chessman[i_i][0] == 'B')
-		{
-			return  '#';
-		}
-	}
-
-	//列胜利
-	for (i_j = 0; i_j < i_col; i_j++)
-	{
-		if (c_chessman[0][i_j] == c_chessman[1][i_j]
-			&& c_chessman[1][i_j] == c_chessman[2][i_j]
-			&& c_chessman[1][i_j] == 'K')
-		{
-			return '*';
-		}
-		else if (c_chessman[0][i_j] == c_chessman[1][i_j]
-			&& c_chessman[1][i_j] == c_chessman[2][i_j]
-			&& c_chessman[1][i_j] == 'B')
-		{
-			return  '#';
-		}
-	}
-
-	//对角线满足
-	if (c_chessman[0][0] == c_chessman[1][1]
-		&& c_chessman[1][1] == c_chessman[2][2]
-		&& c_chessman[2][2] == 'K'
-		|| c_chessman[0][2] == c_chessman[1][1]
-		&& c_chessman[1][1] == c_chessman[2][0]
-		&& c_chessman[2][0] == 'K')
-	{
-		return  '*';
-	}
-	else if (c_chessman[0][0] == c_chessman[1][1]
-		&& c_chessman[1][1] == c_chessman[2][2]
-		&& c_chessman[2][2] == 'B'
-		|| c_chessman[0][2] == c_chessman[1][1]
-		&& c_chessman[1][1] == c_chessman[2][0]
-		&& c_chessman[2][0] == 'B')
-	{
-		return '#';
-	}
-
-	//和棋的判断
-	for (i_i = 0; i_i < i_row; i_i++)
-	{
-		for (i_j = 0; i_j < i_col; i_j++)
-		{
-			if (c_chessman[i_i][i_j] == ' ')
-			{
-				return 'c';
-			}
-		}
-	}
-	return 's';
-}
