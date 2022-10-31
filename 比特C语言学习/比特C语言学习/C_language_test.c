@@ -6327,4 +6327,261 @@
 //    //输出结果
 //    printf("%lld", lli_count);
 //    return 0;
-//}sadasdasd
+//}
+
+//排序去重打印
+//时间复杂多过高
+//#include <stdio.h>
+//
+//int Deduplication(int* i_number, int i_size);
+//void Delete(int* i_number, int i_size, int i_address);
+//void Bubbling_sort(int* i_number, int i_length);
+//
+//int main(void)
+//{
+//    //获取变长数组的长度
+//    int i_size = 0;
+//    scanf("%d", &i_size);
+//
+//    //声明变长数组，只有支持c99的编译器才支持变长数组，变长数组不可以进行初始化
+//    int i_number[i_size];
+//
+//    //获取数值
+//    int i_i = 0;
+//    for (i_i = 0; i_i < i_size; i_i++)
+//    {
+//        scanf("%d", &i_number[i_i]);
+//    }
+//
+//    //开始进行打印和去重操作
+//    int i_length = 0;
+//    i_length = Deduplication(i_number, i_size);
+//    //printf("%d\n", i_length);
+//
+//    //排序--冒泡排序
+//    Bubbling_sort(i_number, i_length);
+//
+//    //打印结果
+//    for (i_i = 0; i_i < i_length; i_i++)
+//    {
+//        printf("%d ", i_number[i_i]);
+//    }
+//
+//    return  0;
+//}
+////去重判断
+//int Deduplication(int* i_number, int i_size)
+//{
+//    int i_flag = 0;
+//    int i_i = 0;
+//    int i_j = 0;
+//    for (i_i = 0; i_i < i_size; i_i++)
+//    {
+//        i_flag = i_number[i_i];
+//        for (i_j = i_i + 1; i_j < i_size; i_j++)
+//        {
+//            if (i_flag == i_number[i_j])
+//            {
+//                Delete(i_number, i_size, i_j);
+//                i_size--;
+//                i_j--;
+//            }
+//        }
+//    }
+//
+//    return  i_size;
+//}
+////删除
+//void Delete(int* i_number, int i_size, int i_address)
+//{
+//    int i_i = 0;
+//    for (i_i = i_address; i_i < i_size - 1; i_i++)
+//    {
+//        i_number[i_address] = i_number[i_i + 1];
+//    }
+//}
+////冒泡排序
+//void Bubbling_sort(int* i_number, int i_length)
+//{
+//    int i_i = 0;
+//    int i_j = 0;
+//    int i_temp = 0;
+//    for (i_j = 0; i_j < i_length - 1; i_j++)
+//    {
+//        for (i_i = 0; i_i < i_length - i_j - 1; i_i++)
+//        {
+//            if (i_number[i_i] > i_number[i_i + 1])
+//            {
+//                i_temp = i_number[i_i];
+//                i_number[i_i] = i_number[i_i + 1];
+//                i_number[i_i + 1] = i_temp;
+//            }
+//        }
+//    }
+//}
+
+//优化
+//#include <stdio.h>
+//
+//int main()
+//{
+//    int n = 0;
+//    int arr[100000] = { 0 };
+//    scanf("%d", &n);
+//    int i = 0;
+//    int tmp = 0;
+//    for (i = 1; i <= n; i++)
+//    {
+//        scanf("%d", &tmp);
+//        arr[tmp] = tmp;
+//    }
+//    for (i = 0; i < n; i++)
+//    {
+//        if (arr[i] != 0)
+//        {
+//            printf("%d ", arr[i]);
+//        }
+//    }
+//
+//    return 0;
+//}
+
+#include <stdio.h>
+
+#define SIZE_X 3
+#define SIZE_Y 3
+
+char Judgment(char c_chessman[SIZE_X][SIZE_Y], int i_row, int i_col);
+int main(void)
+{
+	//声明井字棋的棋盘
+	char c_chessboard[SIZE_X][SIZE_Y] = { 0 };
+
+	//获取棋子
+	int i_i = 0;
+	int i_j = 0;
+	char c_c = 0;
+	for (i_i = 0; i_i < SIZE_X; i_i++)
+	{
+		for (i_j = 0; i_j < SIZE_Y; i_j++)
+		{
+			scanf(" %c", &c_c);
+			if (c_c == '\n')
+			{
+				i_j--;
+				continue;
+			}
+			else
+			{
+				c_chessboard[i_i][i_j] = c_c;
+			}
+		}
+	}
+	//打印
+	/*for (i_i = 0; i_i < SIZE_X; i_i++)
+	{
+		for (i_j = 0; i_j < SIZE_Y; i_j++)
+		{
+			printf("%c ", c_chessboard[i_i][i_j]);
+		}
+		printf("\n");
+	}*/
+
+	//判断
+	char c_flag = 0;
+	c_flag = Judgment(c_chessboard, SIZE_X, SIZE_Y);
+	//printf("%c\n", c_flag);
+
+	//打印结果
+	if (c_flag == 's')
+	{
+		printf("No winner!\n");
+	}
+	else if (c_flag == '*')
+	{
+		printf("KiKi wins!\n");
+	}
+	else if (c_flag == '#')
+	{
+		printf("BoBo wins!\n");
+	}
+
+	return 0;
+}
+
+char Judgment(char c_chessman[SIZE_X][SIZE_Y], int i_row, int i_col)
+{
+	//Display_chessboard(c_chessman, ROW, COL);
+	//声明两个变量用于对二维数组的访问
+	int i_i = 0;
+	int i_j = 0;
+
+	//对棋盘情况判断的实现
+	//玩家或电脑赢得胜利
+	//行胜利
+	for (i_i = 0; i_i < i_row; i_i++)
+	{
+		if (c_chessman[i_i][0] == c_chessman[i_i][1]
+			&& c_chessman[i_i][0] == c_chessman[i_i][2]
+			&& c_chessman[i_i][0] != ' ' && c_chessman[i_i][0] == 'K')
+		{
+			return  '*';
+		}
+		else if (c_chessman[i_i][0] == c_chessman[i_i][1]
+			&& c_chessman[i_i][0] == c_chessman[i_i][2]
+			&& c_chessman[i_i][0] == 'B')
+		{
+			return  '#';
+		}
+	}
+
+	//列胜利
+	for (i_j = 0; i_j < i_col; i_j++)
+	{
+		if (c_chessman[0][i_j] == c_chessman[1][i_j]
+			&& c_chessman[1][i_j] == c_chessman[2][i_j]
+			&& c_chessman[1][i_j] == 'K')
+		{
+			return '*';
+		}
+		else if (c_chessman[0][i_j] == c_chessman[1][i_j]
+			&& c_chessman[1][i_j] == c_chessman[2][i_j]
+			&& c_chessman[1][i_j] == 'B')
+		{
+			return  '#';
+		}
+	}
+
+	//对角线满足
+	if (c_chessman[0][0] == c_chessman[1][1]
+		&& c_chessman[1][1] == c_chessman[2][2]
+		&& c_chessman[2][2] == 'K'
+		|| c_chessman[0][2] == c_chessman[1][1]
+		&& c_chessman[1][1] == c_chessman[2][0]
+		&& c_chessman[2][0] == 'K')
+	{
+		return  '*';
+	}
+	else if (c_chessman[0][0] == c_chessman[1][1]
+		&& c_chessman[1][1] == c_chessman[2][2]
+		&& c_chessman[2][2] == 'B'
+		|| c_chessman[0][2] == c_chessman[1][1]
+		&& c_chessman[1][1] == c_chessman[2][0]
+		&& c_chessman[2][0] == 'B')
+	{
+		return '#';
+	}
+
+	//和棋的判断
+	for (i_i = 0; i_i < i_row; i_i++)
+	{
+		for (i_j = 0; i_j < i_col; i_j++)
+		{
+			if (c_chessman[i_i][i_j] == ' ')
+			{
+				return 'c';
+			}
+		}
+	}
+	return 's';
+}
