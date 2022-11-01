@@ -6647,3 +6647,148 @@
 //	}
 //}
 
+//小乐乐改数字
+//#include <stdio.h>
+//#include <math.h>
+//
+//int Judgement(int i_number);
+//int Conversion(int i_number, int i_length);
+//
+//int main(void)
+//{
+//    //获取一个数值
+//    int i_number = 0;
+//    scanf("%d", &i_number);
+//
+//    //计算该数值的位数
+//    int i_length = 0;
+//    i_length = Judgement(i_number);
+//    //printf("%d\n", i_length);
+//
+//    //开始转换
+//    int i_outcome = 0;
+//    i_outcome = Conversion(i_number, i_length);
+//
+//    //输出结果
+//    printf("%d", i_outcome);
+//    return  0;
+//}
+//
+////计算位数
+//int Judgement(int i_number)
+//{
+//    if (i_number < 10)
+//    {
+//        return 1;
+//    }
+//    else
+//    {
+//        return  1 + Judgement(i_number / 10);
+//    }
+//}
+//
+////转换
+//int Conversion(int i_number, int i_length)
+//{
+//    int i_num = pow(10, i_length - 1);
+//    //printf("%d\n", i_num);
+//    int i_i = 0;
+//    int i_sum = 0;
+//    int i_temp = 0;
+//    for (i_i = 0; i_i < i_length; i_i++)
+//    {
+//        i_temp = (i_number / i_num);
+//        //printf("%d\n", i_temp);
+//        if (0 == (i_temp % 2))
+//        {
+//            i_number %= i_num;
+//            i_num /= 10;
+//        }
+//        else
+//        {
+//            i_sum += i_num;
+//            i_number %= i_num;
+//            i_num /= 10;
+//        }
+//    }
+//
+//    return i_sum;
+//}
+
+//判断一个数是不是二段数
+#include <stdio.h>
+#include <math.h>
+
+#define SIZE 10000
+
+long long int Digits(long long int i_number);
+void Insert(int* i_numbers, long long int i_number, int i_digits);
+
+int main(void)
+{
+	//获取一个数值
+	long long int lli_number = 0;
+	scanf("%lld", &lli_number);
+
+	if (lli_number < 10)
+	{
+		printf("该数不是一个二段数!");
+	}
+	else
+	{
+		//计算该数值的位数
+		long long int lli_digits = 0;
+		lli_digits = Digits(lli_number);
+		printf("%lld\n", lli_digits);
+
+		//声明一个数组用来接收数值
+		int i_numbers[SIZE] = { 0 };
+
+		//开始接收
+		Insert(i_numbers, lli_number, lli_digits);
+		int i_i = 0;
+		for (i_i = 0; i_i < lli_digits; i_i++)
+		{
+			printf("%d ", i_numbers[i_i]);
+		}
+
+		//判断是不是一个二段数
+		//int i_flag = 0;
+		//i_flag = Judgement(i_numbers, i_digits);
+
+		////输出结果
+		//if (i_flag)
+		//{
+		//	printf("该数是一个二段数!\n");
+		//}
+		//else
+		//{
+		//	printf("该数不是一个二段数!\n");
+		//}
+	}
+	return  0;
+}
+
+long long int Digits(long long int lli_number)
+{
+	if (lli_number < 10)
+	{
+		return 1;
+	}
+	else
+	{
+		return  1 + Digits(lli_number / 10);
+	}
+}
+
+void Insert(int* i_numbers, long long int lli_number, int i_digits)
+{
+	int i_i = 0;
+	long long int lli_num = (long long int)pow(10, i_digits - 1);
+	for (i_i = 0; i_i < i_digits; i_i++)
+	{
+		*(i_numbers + i_i) = lli_number / lli_num;
+		lli_number %= lli_num;
+		lli_num /= 10;
+	}
+}
