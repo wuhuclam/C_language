@@ -6716,6 +6716,109 @@
 //}
 
 //判断一个数是不是二段数
+//#include <stdio.h>
+//#include <math.h>
+//
+//#define SIZE 10000
+//
+//long long int Digits(long long int i_number);
+//void Insert(int* i_numbers, long long int i_number, int i_digits);
+//int Judgement(int* i_numbers, long long int lli_digits);
+//
+//int main(void)
+//{
+//	//获取一个数值
+//	long long int lli_number = 0;
+//	scanf("%lld", &lli_number);
+//
+//	if (lli_number < 10)
+//	{
+//		printf("该数不是一个二段数!");
+//	}
+//	else
+//	{
+//		//计算该数值的位数
+//		long long int lli_digits = 0;
+//		lli_digits = Digits(lli_number);
+//		printf("%lld\n", lli_digits);
+//
+//		//声明一个数组用来接收数值
+//		int i_numbers[SIZE] = { 0 };
+//
+//		//开始接收
+//		Insert(i_numbers, lli_number, lli_digits);
+//		int i_i = 0;
+//		for (i_i = 0; i_i < lli_digits; i_i++)
+//		{
+//			printf("%d ", i_numbers[i_i]);
+//		}
+//		printf("\n");
+//
+//		//判断是不是一个二段数
+//		int i_flag = 0;
+//		i_flag = Judgement(i_numbers, lli_digits);
+//		printf("%d\n", i_flag);
+//
+//		//输出结果
+//		if (i_flag)
+//		{
+//			printf("该数是一个二段数!\n");
+//		}
+//		else
+//		{
+//			printf("该数不是一个二段数!\n");
+//		}
+//	}
+//	return  0;
+//}
+//
+//long long int Digits(long long int lli_number)
+//{
+//	if (lli_number < 10)
+//	{
+//		return 1;
+//	}
+//	else
+//	{
+//		return  1 + Digits(lli_number / 10);
+//	}
+//}
+//
+//void Insert(int* i_numbers, long long int lli_number, int i_digits)
+//{
+//	int i_i = 0;
+//	long long int lli_num = (long long int)pow(10, i_digits - 1);
+//	for (i_i = 0; i_i < i_digits; i_i++)
+//	{
+//		*(i_numbers + i_i) = lli_number / lli_num;
+//		lli_number %= lli_num;
+//		lli_num /= 10;
+//	}
+//}
+//
+//int Judgement(int* i_numbers, long long int lli_digits)
+//{
+//	int i_i = 0;
+//	//int i_flag = 1;
+//	int i_temp = i_numbers[0];
+//	int i_j = 0;
+//	for (i_i = 1; i_i < lli_digits; i_i++)
+//	{
+//		if (i_temp != i_numbers[i_i] && 0 == i_j)
+//		{
+//			i_temp = i_numbers[i_i];
+//			i_j++;
+//		}
+//		else if (i_temp != i_numbers[i_i] && 1 == i_j)
+//		{
+//			return  0;
+//		}
+//	}
+//
+//	return  1;
+//}
+
+//寻找二段数
 #include <stdio.h>
 #include <math.h>
 
@@ -6723,48 +6826,72 @@
 
 long long int Digits(long long int i_number);
 void Insert(int* i_numbers, long long int i_number, int i_digits);
+int Judgement(int* i_numbers, long long int lli_digits);
 
 int main(void)
 {
 	//获取一个数值
 	long long int lli_number = 0;
-	scanf("%lld", &lli_number);
+	
 
-	if (lli_number < 10)
+	while ((scanf("%lld", &lli_number)))
 	{
-		printf("该数不是一个二段数!");
-	}
-	else
-	{
-		//计算该数值的位数
-		long long int lli_digits = 0;
-		lli_digits = Digits(lli_number);
-		printf("%lld\n", lli_digits);
-
-		//声明一个数组用来接收数值
-		int i_numbers[SIZE] = { 0 };
-
-		//开始接收
-		Insert(i_numbers, lli_number, lli_digits);
-		int i_i = 0;
-		for (i_i = 0; i_i < lli_digits; i_i++)
+		if (!lli_number)
 		{
-			printf("%d ", i_numbers[i_i]);
+			break;
 		}
+		else  
+		{
+			long long int lli_i = lli_number;
+			long long int lli_j = 1;
+			while (1)
+			{
+				//printf("%lld\n", lli_j);
+				if (lli_i < 10)
+				{
+					lli_j++;
+					lli_i = lli_number * lli_j;
+					continue;
+				}
+				//计算该数值的位数
+				long long int lli_digits = 0;
+				lli_digits = Digits(lli_i);
+				/*printf("%lld\n", lli_digits);
+				Sleep(1000);*/
 
-		//判断是不是一个二段数
-		//int i_flag = 0;
-		//i_flag = Judgement(i_numbers, i_digits);
+				//声明一个数组用来接收数值
+				int i_numbers[SIZE] = { 0 };
 
-		////输出结果
-		//if (i_flag)
-		//{
-		//	printf("该数是一个二段数!\n");
-		//}
-		//else
-		//{
-		//	printf("该数不是一个二段数!\n");
-		//}
+				//开始接收
+				Insert(i_numbers, lli_i, lli_digits);
+				/*int i_i = 0;
+				for (i_i = 0; i_i < lli_digits; i_i++)
+				{
+					printf("%d ", i_numbers[i_i]);
+				}
+				printf("\n");*/
+
+				//判断是不是一个二段数
+				int i_flag = 0;
+				i_flag = Judgement(i_numbers, lli_digits);
+				//printf("%d\n", i_flag);
+
+				//输出结果
+				if (i_flag)
+				{
+					printf("%lld:%lld",lli_number, lli_i);
+					break;
+				}
+				/*else
+				{
+					printf("该数不是一个二段数!\n");
+				}*/
+				lli_j++;
+				lli_i =lli_number * lli_j;
+				//printf("%lld\n", lli_i);
+				//break;
+			}
+		}
 	}
 	return  0;
 }
@@ -6791,4 +6918,26 @@ void Insert(int* i_numbers, long long int lli_number, int i_digits)
 		lli_number %= lli_num;
 		lli_num /= 10;
 	}
-}sdsdsadas
+}
+
+int Judgement(int* i_numbers, long long int lli_digits)
+{
+	int i_i = 0;
+	//int i_flag = 1;
+	int i_temp = i_numbers[0];
+	int i_j = 0;
+	for (i_i = 1; i_i < lli_digits; i_i++)
+	{
+		if (i_temp != i_numbers[i_i] && 0 == i_j)
+		{
+			i_temp = i_numbers[i_i];
+			i_j++;
+		}
+		else if (i_temp != i_numbers[i_i] && 1 == i_j)
+		{
+			return  0;
+		}
+	}
+
+	return  1;
+}
