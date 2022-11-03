@@ -6819,125 +6819,251 @@
 //}
 
 //寻找二段数
-#include <stdio.h>
-#include <math.h>
+//#include <stdio.h>
+//#include <math.h>
+//
+//#define SIZE 10000
+//
+//long long int Digits(long long int i_number);
+//void Insert(int* i_numbers, long long int i_number, int i_digits);
+//int Judgement(int* i_numbers, long long int lli_digits);
+//
+//int main(void)
+//{
+//	//获取一个数值
+//	long long int lli_number = 0;
+//	
+//
+//	while ((scanf("%lld", &lli_number)))
+//	{
+//		if (!lli_number)
+//		{
+//			break;
+//		}
+//		else  
+//		{
+//			long long int lli_i = lli_number;
+//			long long int lli_j = 1;
+//			while (1)
+//			{
+//				//printf("%lld\n", lli_j);
+//				if (lli_i < 10)
+//				{
+//					lli_j++;
+//					lli_i = lli_number * lli_j;
+//					continue;
+//				}
+//				//计算该数值的位数
+//				long long int lli_digits = 0;
+//				lli_digits = Digits(lli_i);
+//				/*printf("%lld\n", lli_digits);
+//				Sleep(1000);*/
+//
+//				//声明一个数组用来接收数值
+//				int i_numbers[SIZE] = { 0 };
+//
+//				//开始接收
+//				Insert(i_numbers, lli_i, lli_digits);
+//				/*int i_i = 0;
+//				for (i_i = 0; i_i < lli_digits; i_i++)
+//				{
+//					printf("%d ", i_numbers[i_i]);
+//				}
+//				printf("\n");*/
+//
+//				//判断是不是一个二段数
+//				int i_flag = 0;
+//				i_flag = Judgement(i_numbers, lli_digits);
+//				//printf("%d\n", i_flag);
+//
+//				//输出结果
+//				if (i_flag)
+//				{
+//					printf("%lld:%lld",lli_number, lli_i);
+//					break;
+//				}
+//				/*else
+//				{
+//					printf("该数不是一个二段数!\n");
+//				}*/
+//				lli_j++;
+//				lli_i =lli_number * lli_j;
+//				//printf("%lld\n", lli_i);
+//				//break;
+//			}
+//		}
+//	}
+//	return  0;
+//}
+//
+//long long int Digits(long long int lli_number)
+//{
+//	if (lli_number < 10)
+//	{
+//		return 1;
+//	}
+//	else
+//	{
+//		return  1 + Digits(lli_number / 10);
+//	}
+//}
+//
+//void Insert(int* i_numbers, long long int lli_number, int i_digits)
+//{
+//	int i_i = 0;
+//	long long int lli_num = (long long int)pow(10, i_digits - 1);
+//	for (i_i = 0; i_i < i_digits; i_i++)
+//	{
+//		*(i_numbers + i_i) = lli_number / lli_num;
+//		lli_number %= lli_num;
+//		lli_num /= 10;
+//	}
+//}
+//
+//int Judgement(int* i_numbers, long long int lli_digits)
+//{
+//	int i_i = 0;
+//	//int i_flag = 1;
+//	int i_temp = i_numbers[0];
+//	int i_j = 0;
+//	for (i_i = 1; i_i < lli_digits; i_i++)
+//	{
+//		if (i_temp != i_numbers[i_i] && 0 == i_j)
+//		{
+//			i_temp = i_numbers[i_i];
+//			i_j++;
+//		}
+//		else if (i_temp != i_numbers[i_i] && 1 == i_j)
+//		{
+//			return  0;
+//		}
+//	}
+//
+//	return  1;
+//}
 
-#define SIZE 10000
+//学编程
+//#include <stdio.h>
+//
+//int main(void)
+//{
+//    printf("Practice makes perfect!");
+//    return 0;
+//}
 
-long long int Digits(long long int i_number);
-void Insert(int* i_numbers, long long int i_number, int i_digits);
-int Judgement(int* i_numbers, long long int lli_digits);
+//获取最大值
+//#include <stdio.h>
+//
+//#define SIZE 3
+//
+//int Judgement(int* i_score, int i_size);
+//
+//int main(void)
+//{
+//    //声明一个变长数组的大小
+//    int i_size = 0;
+//    scanf("%d", &i_size);
+//
+//    //声明一个数组用来接收成绩,只有支持c99的编译器才支持变长数组，
+//    //变长数组在c11中变为可选项，变长数组不可以进行初始化
+//    int i_score[i_size];
+//
+//    //接收成绩
+//    int i_i = 0;
+//    for (i_i = 0; i_i < i_size; i_i++)
+//    {
+//        scanf("%d", &i_score[i_i]);
+//    }
+//
+//    //判断最大值
+//    int i_max = 0;
+//    i_max = Judgement(i_score, i_size);
+//
+//    //输出结果
+//    printf("%d", i_max);
+//
+//    return  0;
+//}
+//
+////判断最大值函数
+//int Judgement(int* i_score, int i_size)
+//{
+//    int i_i = 0;
+//    int i_temp = 0;
+//    for (i_i = 0; i_i < i_size - 1; i_i++)
+//    {
+//        if (i_score[i_i] > i_score[i_i + 1])
+//        {
+//            i_temp = i_score[i_i];
+//            i_score[i_i] = i_score[i_i + 1];
+//            i_score[i_i + 1] = i_temp;
+//        }
+//    }
+//
+//    return i_score[i_size - 1];
+//}
 
-int main(void)
-{
-	//获取一个数值
-	long long int lli_number = 0;
-	
+//计算阶乘和
+//#include <stdio.h>
+//
+//int main(void)
+//{
+//    //声明变量用来接收n的大小
+//    int i_n = 0;
+//    scanf("%d", &i_n);
+//
+//    //开始计算
+//    int i_i = 0;
+//    int i_j = 1;
+//    int i_sum = 0;
+//    for (i_i = 1; i_i < i_n + 1; i_i++)
+//    {
+//        i_j *= i_i;
+//        i_sum += i_j;
+//    }
+//
+//    //输出结果
+//    printf("%d", i_sum);
+//    return  0;
+//}
 
-	while ((scanf("%lld", &lli_number)))
-	{
-		if (!lli_number)
-		{
-			break;
-		}
-		else  
-		{
-			long long int lli_i = lli_number;
-			long long int lli_j = 1;
-			while (1)
-			{
-				//printf("%lld\n", lli_j);
-				if (lli_i < 10)
-				{
-					lli_j++;
-					lli_i = lli_number * lli_j;
-					continue;
-				}
-				//计算该数值的位数
-				long long int lli_digits = 0;
-				lli_digits = Digits(lli_i);
-				/*printf("%lld\n", lli_digits);
-				Sleep(1000);*/
+//计算目标数值的数量
+//#include <stdio.h>
+//
+//int main(void)
+//{
+//    //声明变量用来接收变长数组的大小
+//    int i_size = 0;
+//    scanf("%d", &i_size);
+//
+//    //声明变长数组用来接收序列，只有支持c99的编译器才支持变长数组，
+//    //变长数组不可以进行初始化，变长数组在c11中变为可选项
+//    int i_number[i_size];
+//
+//    //获取数组中的数值
+//    int i_i = 0;
+//    for (i_i = 0; i_i < i_size; i_i++)
+//    {
+//        scanf("%d", &i_number[i_i]);
+//    }
+//
+//    //输入目标数值
+//    int i_flag = 0;
+//    scanf("%d", &i_flag);
+//
+//    //记录数量
+//    int i_count = 0;
+//    for (i_i = 0; i_i < i_size; i_i++)
+//    {
+//        if (i_flag == i_number[i_i])
+//        {
+//            i_count++;
+//        }
+//    }
+//
+//    //输出结果
+//    printf("%d", i_count);
+//    return  0;
+//}
 
-				//声明一个数组用来接收数值
-				int i_numbers[SIZE] = { 0 };
-
-				//开始接收
-				Insert(i_numbers, lli_i, lli_digits);
-				/*int i_i = 0;
-				for (i_i = 0; i_i < lli_digits; i_i++)
-				{
-					printf("%d ", i_numbers[i_i]);
-				}
-				printf("\n");*/
-
-				//判断是不是一个二段数
-				int i_flag = 0;
-				i_flag = Judgement(i_numbers, lli_digits);
-				//printf("%d\n", i_flag);
-
-				//输出结果
-				if (i_flag)
-				{
-					printf("%lld:%lld",lli_number, lli_i);
-					break;
-				}
-				/*else
-				{
-					printf("该数不是一个二段数!\n");
-				}*/
-				lli_j++;
-				lli_i =lli_number * lli_j;
-				//printf("%lld\n", lli_i);
-				//break;
-			}
-		}
-	}
-	return  0;
-}
-
-long long int Digits(long long int lli_number)
-{
-	if (lli_number < 10)
-	{
-		return 1;
-	}
-	else
-	{
-		return  1 + Digits(lli_number / 10);
-	}
-}
-
-void Insert(int* i_numbers, long long int lli_number, int i_digits)
-{
-	int i_i = 0;
-	long long int lli_num = (long long int)pow(10, i_digits - 1);
-	for (i_i = 0; i_i < i_digits; i_i++)
-	{
-		*(i_numbers + i_i) = lli_number / lli_num;
-		lli_number %= lli_num;
-		lli_num /= 10;
-	}
-}
-
-int Judgement(int* i_numbers, long long int lli_digits)
-{
-	int i_i = 0;
-	//int i_flag = 1;
-	int i_temp = i_numbers[0];
-	int i_j = 0;
-	for (i_i = 1; i_i < lli_digits; i_i++)
-	{
-		if (i_temp != i_numbers[i_i] && 0 == i_j)
-		{
-			i_temp = i_numbers[i_i];
-			i_j++;
-		}
-		else if (i_temp != i_numbers[i_i] && 1 == i_j)
-		{
-			return  0;
-		}
-	}
-
-	return  1;
-}
+//
