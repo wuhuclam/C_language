@@ -7066,4 +7066,250 @@
 //    return  0;
 //}
 
+//qsort使用练习
+//基于快速排序
+//qsort在头文件stdlib.h中
+//void qsort(void* base, int num, int size, int (*cmp)(const void * ,const void *));
+//#include <stdio.h>
+//#include <stdlib.h>
+//#include <string.h>
 //
+//void Test_int();
+//void Print(void* i_number, int ,int);
+//int int_Cmp(const void* e1, const void* e2);
+//void Test_float();
+//int float_Cmp(const void* e1, const void* e2);
+//
+//
+//int main(void)
+//{
+//	//Test_int();
+//	Test_float();
+//	return  0;
+//}
+//
+////对整数数组进行排序
+//void Test_int()
+//{
+//	//声明数组
+//	int i_number[] = { 9,8,7,6,5,4,3,2,1,0 };
+//
+//	//对数组进行排序
+//	qsort(i_number,
+//		(sizeof(i_number) / sizeof(i_number[0])),
+//		sizeof(i_number[0]),
+//		int_Cmp);
+//
+//	//输出结果
+//	Print(i_number, 
+//		(sizeof(i_number) / sizeof(i_number[0])), 
+//		sizeof(i_number[0]));
+//}
+//
+////自定义输出函数
+//void Print(void* i_number, int i_num, int i_size)
+//{
+//	int i_i = 0;
+//	for (i_i = 0; i_i < i_num; i_i++)
+//	{
+//		printf("%.1f ", *((float *)((char *)i_number + (i_i * i_size))));
+//	}
+//	printf("\n");
+//}
+//
+////判断大小
+//int int_Cmp(const void* e1, const void* e2)
+//{
+//	return (*(int*)(e1)-*(int*)(e2));
+//}
+//
+////浮点数数组排序
+//void Test_float()
+//{
+//	//声明一个浮点数数组
+//	float f_number[] = { 9.0,8.0,7.0,6.0,5.0,4.0,3.0,2.0,1.0,0.0 };
+//
+//	//开始排序
+//	qsort(f_number,
+//		(sizeof(f_number) / sizeof(f_number[0])),
+//		(sizeof(f_number[0])),
+//		float_Cmp);
+//
+//	//输出结果
+//	Print(f_number,
+//		(sizeof(f_number) / sizeof(f_number[0])),
+//		(sizeof(f_number[0])));
+//}
+//
+////浮点数判断大小
+//int float_Cmp(const void* e1, const void* e2)
+//{
+//	if (0 == (*((float*)e1) - *((float*)e2)))
+//	{
+//		return 0;
+//	}
+//	else if ((*((float*)e1) - *((float*)e2)) > 0)
+//	{
+//		return 1;
+//	}
+//	else if ((*((float*)e1) - *((float*)e2)) < 0)
+//	{
+//		return  -1;
+//	}
+//}
+
+//#include <stdio.h>
+//
+//int main(void)
+//{
+//	goto a;
+//a:printf("a");
+//	return 0;
+//}
+
+//计算平均数
+//#include <stdio.h>
+//
+//int main(void)
+//{
+//    //声明便量用来获取3科成绩
+//    float f_score = 0.0f;
+//    float f_sum = 0.0;
+//
+//    //开始接收
+//    int i_i = 0;
+//    for (i_i = 0; i_i < 3; i_i++)
+//    {
+//        scanf("%f", &f_score);
+//        f_sum += f_score;
+//    }
+//
+//    //输出结果
+//    printf("%.2f %.2f", f_sum, f_sum / 3);
+//    return  0;
+//}
+
+//转换成绩
+//#include <stdio.h>
+//
+//int main(void)
+//{
+//    //声明变量获取成绩
+//    int i_score = 0;
+//    scanf("%d", &i_score);
+//
+//    //开始判断
+//    if (i_score >= 90 && i_score <= 100)
+//    {
+//        printf("A");
+//    }
+//    else if (i_score >= 80 && i_score <= 89)
+//    {
+//        printf("B");
+//    }
+//    else if (i_score >= 70 && i_score <= 79)
+//    {
+//        printf("C");
+//    }
+//    else if (i_score >= 60 && i_score <= 69)
+//    {
+//        printf("D");
+//    }
+//    else if (i_score <= 59 && i_score >= 0)
+//    {
+//        printf("E");
+//    }
+//    else
+//    {
+//        printf("F");
+//    }
+//    return 0;
+//}
+
+//小乐乐算多少人被请家长
+//#include <stdio.h>
+//
+//int main(void)
+//{
+//    //声明变量用来表示二位变长数组的长度
+//    int i_size = 0;
+//    scanf("%d", &i_size);
+//
+//    //声明二维变长数组，只有支持c99的编译器才支持变长数组，
+//    //在c11中变长数组变长可选项了，变长数组不可以初始化
+//    int i_weight = 3;
+//    int i_score[i_size][i_weight];
+//
+//    //获取成绩
+//    int i_i = 0;
+//    int i_j = 0;
+//    for (i_i = 0; i_i < i_size; i_i++)
+//    {
+//        for (i_j = 0; i_j < i_weight; i_j++)
+//        {
+//            scanf("%d", &i_score[i_i][i_j]);
+//        }
+//    }
+//
+//    //判断是否会被叫家长
+//    float f_score_avg = 0.0f;
+//    int i_sum = 0;
+//    int i_count = 0;
+//    for (i_i = 0; i_i < i_size; i_i++)
+//    {
+//        i_sum = 0;
+//        for (i_j = 0; i_j < i_weight; i_j++)
+//        {
+//            i_sum += i_score[i_i][i_j];
+//        }
+//        f_score_avg = i_sum / (i_weight * 1.0);
+//
+//        if (f_score_avg < 60)
+//        {
+//            i_count++;
+//        }
+//    }
+//
+//    //输出结果
+//    printf("%d", i_count);
+//    return  0;
+//}
+
+//#include<stdio.h>
+//int main() {
+//    printf("printf(\"Hello world!\\n\");\n");
+//    printf("cout << \"Hello world!\" << endl;");
+//    return 0;
+//}
+
+//#include<iostream>
+//using namespace std;
+//int main()
+//{
+//    int a, b, c;
+//    cin >> a >> b >> c;
+//    int max = 0;
+//    int arr[3] = { a,b,c };
+//    for (int i = 0; i < 3; i++)
+//    {
+//        if (arr[i] > max)
+//        {
+//            max = arr[i];
+//        }
+//    }cout << max << endl;
+//}
+
+//#include <stdio.h>
+//
+//int main(void)
+//{
+//    //声明三个变量用来接收
+//    int i_year = 0;
+//    int i_moth = 0;
+//    int i_day = 0;
+//    scanf("%d %d %d", &i_year, &i_moth, &i_day);
+//
+//    //输出结果
+//    printf("%d/%d/%d", i_day, i_moth, i_year);
+//    return  0;
+//}
