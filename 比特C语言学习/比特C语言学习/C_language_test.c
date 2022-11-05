@@ -7313,3 +7313,119 @@
 //    printf("%d/%d/%d", i_day, i_moth, i_year);
 //    return  0;
 //}
+
+//判断素数
+//#include <stdio.h>
+//#include <math.h>
+//
+//int main(void)
+//{
+//    //声明一个常量用来记录素数的个数
+//    int i_count = 0;
+//
+//    //开始判断
+//    int i_i = 0;
+//    int i_j = 0;
+//    for (i_i = 100; i_i < 1000; i_i++)
+//    {
+//        for (i_j = 2; i_j < sqrt(i_i); i_j++)
+//        {
+//            if (0 == (i_i % i_j))
+//            {
+//                break;
+//            }
+//        }
+//
+//        if (i_j >= sqrt(i_i))
+//        {
+//            i_count++;
+//        }
+//    }
+//
+//    printf("%d", i_count);
+//    return 0;
+//}
+
+//#include <stdio.h>
+//
+//void Sort(int* i_number, int i_size);
+//void Delete(int* i_number, int i_size);
+//
+//int main(void)
+//{
+//    //声明变量用来获取变长数组的长度
+//    int i_size = 0;
+//    scanf("%d", &i_size);
+//
+//    //声明变长数组，只有支持c99的编译器才支持变长数组，
+//    //c11中变为可选项了，变长数组不可以进行初始化
+//    int i_number[i_size];
+//
+//    //初始化 
+//    int i_i = 0;
+//    for (i_i = 0; i_i < i_size; i_i++)
+//    {
+//        i_number[i_i] = 0;
+//    }
+//
+//    //获取数值
+//    for (i_i = 0; i_i < i_size; i_i++)
+//    {
+//        scanf("%d", &i_number[i_i]);
+//    }
+//
+//    //排序
+//    Sort(i_number, i_size);
+//
+//    //去重
+//    Delete(i_number, i_size);
+//
+//    //输出结果
+//    for (i_i = 0; i_i < i_size; i_i++)
+//    {
+//        if (0 != i_number[i_i])
+//        {
+//            printf("%d ", i_number[i_i]);
+//        }
+//    }
+//    return  0;
+//}
+//
+////排序
+//void Sort(int* i_number, int i_size)
+//{
+//    int i_i = 0;
+//    int i_j = 0;
+//    int i_temp = 0;
+//    for (i_i = 0; i_i < i_size - 1; i_i++)
+//    {
+//        for (i_j = 0; i_j < i_size - i_i - 1; i_j++)
+//        {
+//            if (i_number[i_j] > i_number[i_j + 1])
+//            {
+//                i_temp = i_number[i_j];
+//                i_number[i_j] = i_number[i_j + 1];
+//                i_number[i_j + 1] = i_temp;
+//            }
+//        }
+//    }
+//}
+//
+////去重
+//void Delete(int* i_number, int i_size)
+//{
+//    int i_i = 0;
+//    int i_j = 0;
+//    int i_flag = 0;
+//    for (i_i = 0; i_i < i_size; i_i++)
+//    {
+//        i_flag = i_number[i_i];
+//        for (i_j = i_i + 1; i_j < i_size; i_j++)
+//        {
+//            if (i_flag == i_number[i_j])
+//            {
+//                i_number[i_j] = 0;
+//            }
+//        }
+//    }
+//}
