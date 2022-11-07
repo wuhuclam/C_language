@@ -7429,3 +7429,94 @@
 //        }
 //    }
 //}
+
+//判断上三角
+//#include <stdio.h>
+//
+//#define SIZE 10
+//
+//int Judgement(int(*i_number)[SIZE], int i_size);
+//
+//int main(void)
+//{
+//    //声明变量用来获取二维变长数组的大小
+//    int i_size = 0;
+//    scanf("%d", &i_size);
+//
+//    //声明变长二维数组，只有支持c99的编译器才支持变长数组，
+//    //c11变为可选项，变长数组不可以进行初始化
+//    int i_number[SIZE][SIZE];
+//
+//    //获取数值
+//    int i_i = 0;
+//    int i_j = 0;
+//    for (i_i = 0; i_i < i_size; i_i++)
+//    {
+//        for (i_j = 0; i_j < i_size; i_j++)
+//        {
+//            scanf("%d", &i_number[i_i][i_j]);
+//        }
+//    }
+//
+//    //判断是否为上三角矩阵
+//    int i_flag = 0;
+//    i_flag = Judgement(i_number, i_size);
+//
+//    //输出结果
+//    if (i_flag)
+//    {
+//        printf("YES");
+//    }
+//    else
+//    {
+//        printf("NO");
+//    }
+//    return  0;
+//}
+//
+//int Judgement(int(*i_number)[SIZE], int i_size)
+//{
+//    int i_i = 0;
+//    int i_j = 0;
+//    for (i_i = 1; i_i < i_size; i_i++)
+//    {
+//        for (i_j = 0; i_j < i_i; i_j++)
+//        {
+//            if (i_number[i_i][i_j] != 0)
+//            {
+//                return  0;
+//            }
+//        }
+//    }
+//
+//    return  1;
+//}
+
+//#include <stdio.h>
+//
+//int Add(int i_number_one, int i_number_two); //求和函数的声明
+//
+//int main(void)
+//{
+//	//声明两个变量
+//	int i_number_one = 20;
+//	int i_number_two = 30;
+//	int i_sum = 0;
+//
+//	//调用求和函数
+//	i_sum = Add(i_number_one, i_number_two);
+//
+//	//打印结果
+//	printf("%d", i_sum);
+//	getchar();
+//	return  0;
+//}
+//
+////Add函数的实现
+//int Add(int i_number_one, int i_number_two)
+//{
+//	int i_sum = 0;
+//	i_sum = i_number_one + i_number_two;
+//
+//	return i_sum;
+//}
