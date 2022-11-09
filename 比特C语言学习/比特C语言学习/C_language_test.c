@@ -7520,3 +7520,131 @@
 //
 //	return i_sum;
 //}
+
+//模拟实现qsort(冒泡排序)
+//#include <stdio.h>
+//
+//#define SIZE 10
+//
+//void Test_int();
+//void Test_float();
+//
+//void Print(int* i_number, int i_size);
+//int Cmp_int(const void* e1, const void* e2);
+//void Swap(char* e1, char* e2, int i_size);
+//void Qsort(void* i_number, int i_num, int i_size, int (*Cmp)(const void* e1, const* e2));
+//
+//int Cmp_float(const void* e1, const void* e2);
+//void Print_float(float* f_number, int i_size);
+//
+//
+//int main(void)
+//{
+//	Test_int();
+//	printf("\n");
+//	Test_float();
+//	return  0;
+//}
+//
+////int测试
+//void Test_int()
+//{
+//	//声明一个数组
+//	int i_number[SIZE] = { 9,8,7,6,5,4,3,2,1,0 };
+//
+//	//模拟实现qsort
+//	Qsort(i_number,
+//		SIZE,
+//		sizeof(i_number[0]),
+//		Cmp_int);
+//
+//	//输出结果
+//	Print(i_number, SIZE);
+//}
+//
+////测试浮点数
+//void Test_float()
+//{
+//	float f_number[SIZE] = { 9.0, 8.0, 7.0, 6.0, 5.0, 4.0, 3.0, 2.0, 1.0, 0.0 };
+//
+//	Qsort(f_number,
+//		SIZE,
+//		sizeof(f_number[0]),
+//		Cmp_float);
+//
+//	Print_float(f_number, 
+//		        SIZE);
+//}
+//
+////float比较函数
+//int Cmp_float(const void* e1, const void* e2)
+//{
+//	if ((*((float*)e1) - *((float*)e2)) > 0)
+//	{
+//		return  1;
+//	}
+//	else
+//	{
+//		return  0;
+//	}
+//}
+//
+////输出函数
+//void Print(int* i_number, int i_size)
+//{
+//	int i_i = 0;
+//	for (i_i = 0; i_i < i_size; i_i++)
+//	{
+//		printf("%d ", i_number[i_i]);
+//	}
+//}
+//
+//void Print_float(float* f_number, int i_size)
+//{
+//	int i_i = 0;
+//	for (i_i = 0; i_i < i_size; i_i++)
+//	{
+//		printf("%.1f ", f_number[i_i]);
+//	}
+//}
+//
+////整形比较函数
+//int Cmp_int(const void* e1, const void* e2)
+//{
+//	return  *((int*)e1) - *((int*)e2);
+//}
+//
+////交换函数
+//void Swap(char* e1, char* e2, int i_size)
+//{
+//	int i_i = 0;
+//	char c_temp = 0;
+//	for (i_i = 0; i_i < i_size; i_i++)
+//	{
+//		c_temp = *(e1 + i_i);
+//		*(e1 + i_i) = *(e2 + i_i);
+//		*(e2 + i_i) = c_temp;
+//	}
+//}
+//
+////模拟实现qsort
+//void Qsort(void* i_number, int i_num, int i_size, int (*Cmp)(const void* e1, const* e2))
+//{
+//	//冒泡排序
+//	int i_i = 0;
+//	int i_j = 0;
+//	for (i_i = 0; i_i < i_num; i_i++)
+//	{
+//		for (i_j = 0; i_j < i_num - i_i - 1; i_j++)
+//		{
+//			if (Cmp(((char*)i_number + (i_j * i_size)), 
+//				((char*)i_number + ((i_j + 1) * i_size))))
+//			{
+//				Swap(((char*)i_number + (i_j * i_size)),
+//					((char*)i_number + ((i_j + 1) * i_size)),
+//					i_size);
+//			}
+//		}
+//	}
+//}
+
