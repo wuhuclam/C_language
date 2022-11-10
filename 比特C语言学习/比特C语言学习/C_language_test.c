@@ -7648,3 +7648,251 @@
 //	}
 //}
 
+//#include <stdio.h>
+//
+//int main(void)
+//{
+//	//size_t a = sizeof(int);
+//	//一维数组
+//	//int a[] = { 1,2,3,4 };
+//	//printf("%zd\n", sizeof(a));  //16
+//	//printf("%zd\n", sizeof(a + 0)); //8
+//	//printf("%zd\n", sizeof(*a)); //4
+//	//printf("%zd\n", sizeof(a + 1)); //8
+//	//printf("%zd\n", sizeof(a[1])); //4
+//	//printf("%zd\n", sizeof(&a)); //8
+//	//printf("%zd\n", sizeof(*&a)); //16
+//	//printf("%zd\n", sizeof(&a + 1)); //8
+//	//printf("%zd\n", sizeof(&a[0])); //8
+//	//printf("%zd\n", sizeof(&a[0] + 1)); //8
+//	//字符数组
+//	//char arr[] = { 'a','b','c','d','e','f' };
+//	//printf("%zd\n", sizeof(arr)); //6
+//	//printf("%zd\n", sizeof(arr + 0)); //8
+//	//printf("%zd\n", sizeof(*arr)); //1
+//	//printf("%zd\n", sizeof(arr[1])); //1
+//	//printf("%zd\n", sizeof(&arr)); //8
+//	//printf("%zd\n", sizeof(&arr + 1)); //8
+//	//printf("%zd\n", sizeof(&arr[0] + 1)); //8
+//
+//	//printf("%zd\n", strlen(arr)); //随机数，因为字符串没有结尾，字符串的结尾是‘\0’Ascall码为0
+//	//printf("%zd\n", strlen(arr + 0)); //随机数
+//	////printf("%d\n", strlen(*arr));  //错误
+//	////printf("%d\n", strlen(arr[1])); //错误
+//	//printf("%zd\n", strlen(&arr)); //随机数
+//	//printf("%zd\n", strlen(&arr + 1)); //随机数
+//	//printf("%zd\n", strlen(&arr[0] + 1)); //随机数
+//
+//	/*char arr[] = "abcdef";
+//	printf("%d\n", sizeof(arr));
+//	printf("%d\n", sizeof(arr + 0));
+//	printf("%d\n", sizeof(*arr));
+//	printf("%d\n", sizeof(arr[1]));
+//	printf("%d\n", sizeof(&arr));
+//	printf("%d\n", sizeof(&arr + 1));
+//	printf("%d\n", sizeof(&arr[0] + 1));
+//
+//	printf("%d\n", strlen(arr));
+//	printf("%d\n", strlen(arr + 0));
+//	printf("%d\n", strlen(*arr));
+//	printf("%d\n", strlen(arr[1]));
+//	printf("%d\n", strlen(&arr));
+//	printf("%d\n", strlen(&arr + 1));
+//	printf("%d\n", strlen(&arr[0] + 1));*/
+//
+//	//char* p = "abcdef";
+//	//printf("%d\n", sizeof(p)); //8
+//	//printf("%d\n", sizeof(p + 1)); //8
+//	//printf("%d\n", sizeof(*p)); //1
+//	//printf("%d\n", sizeof(p[0])); //1
+//	//printf("%d\n", sizeof(&p)); //8
+//	//printf("%d\n", sizeof(&p + 1)); //8
+//	//printf("%d\n", sizeof(&p[0] + 1)); //8
+//
+//	//printf("%d\n", strlen(p)); //6
+//	//printf("%d\n", strlen(p + 1)); //5
+//	////printf("%d\n", strlen(*p)); //错误
+//	////printf("%d\n", strlen(p[0])); //错误
+//	//printf("%d\n", strlen(&p)); //随机数
+//	//printf("%p\n", p);
+//	//printf("%p\n", &p);
+//	//printf("%d\n", strlen(&p + 1)); //随机数
+//	//printf("%d\n", strlen(&p[0] + 1)); //5
+//
+//	//二维数组
+//	//int a[3][4] = { 0 };
+//	//printf("%d\n", sizeof(a)); //48
+//	//printf("%d\n", sizeof(a[0][0])); //4
+//	//printf("%d\n", sizeof(a[0])); //16
+//	//printf("%d\n", sizeof(a[0] + 1)); //8
+//	//printf("%d\n", sizeof(*(a[0] + 1))); //4
+//	//printf("%d\n", sizeof(a + 1)); //8
+//	//printf("%d\n", sizeof(*(a + 1))); //16
+//	//printf("%d\n", sizeof(&a[0] + 1)); //8
+//	//printf("%d\n", sizeof(*(&a[0] + 1))); //16
+//	//printf("%d\n", sizeof(*a)); //16
+//	//printf("%d\n", sizeof(a[3])); //16
+//	return  0;
+//}
+
+//打印圣诞树
+//#include <stdio.h>
+//
+//int main(void)
+//{
+//    //声明一个变量用来获取圣诞树的高度
+//    int i_num = 0;
+//    scanf("%d", &i_num);
+//
+//    //开始打印
+//    int i_i = 0;
+//    int i_j = 0;
+//    int i_z = 0;
+//    int i_d = 0;
+//    int i_k = 0;
+//    int i_g = 0;
+//    int i_size = (i_num * 3) - 1;
+//    for (i_i = 0; i_i < i_num; i_i++)
+//    {
+//        //for(i_j = 0; i_j < 3; i_j++)
+//
+//            //打印空格数
+//        for (i_z = 0; i_z < i_size; i_z++)
+//        {
+//            printf(" ");
+//        }
+//        i_size--;
+//        //printf("\n");
+//
+//        //打印每一层的第一行
+//        for (i_d = 0; i_d < i_i + 1; i_d++)
+//        {
+//            printf("*     ");
+//        }
+//        printf("\n");
+//
+//        for (i_z = 0; i_z < i_size; i_z++)
+//        {
+//            printf(" ");
+//
+//        }
+//        i_size--;
+//        //打印每一层的第二行
+//        for (i_k = 0; i_k < i_i + 1; i_k++)
+//        {
+//            printf("* *   ");
+//        }
+//        printf("\n");
+//
+//        for (i_z = 0; i_z < i_size; i_z++)
+//        {
+//            printf(" ");
+//        }
+//        i_size--;
+//        //打印每一层的第三行
+//        for (i_g = 0; i_g < i_i + 1; i_g++)
+//        {
+//            printf("* * * ");
+//        }
+//
+//        printf("\n");
+//
+//    }
+//
+//    //打印树根
+//    for (i_i = 0; i_i < i_num; i_i++)
+//    {
+//        for (i_j = 0; i_j < (i_num * 3) - 1; i_j++)
+//        {
+//            printf(" ");
+//        }
+//
+//        printf("*\n");
+//    }
+//    return  0;
+//}
+
+//#include <stdio.h>
+//
+//int main(void)
+//{
+//    //声明一个变量用来接收圣诞树的层数
+//    int i_num = 0;
+//    scanf("%d", &i_num);
+//
+//    //获取变长二维数组的长和宽
+//    int i_x = 3 * (1 << (i_num - 1));
+//    int i_y = 5 * (1 << (i_num - 1)) + (1 << (i_num - 1)) - 1;
+//    //printf("%d %d\n", i_x,i_y);
+//
+//    //声明变长二数组，只有支持c99的编译器才支持变长数组，
+//    //在c11中变为可选项，变长数组不可以初始化
+//    char c_character[i_x][i_y];
+//
+//    //对变长二维数组进行初始化
+//    int i_i = 0;
+//    int i_j = 0;
+//    for (i_i = 0; i_i < i_x; i_i++)
+//    {
+//        for (i_j = 0; i_j < i_y; i_j++)
+//        {
+//            c_character[i_i][i_j] = ' ';
+//        }
+//    }
+//
+//    //将第一层的符号放到二维数组中
+//    c_character[0][(i_y / 2)] = '*';
+//    c_character[1][(i_y / 2) - 1] = '*';
+//    c_character[1][(i_y / 2) + 1] = '*';
+//    c_character[2][(i_y / 2)] = '*';
+//    c_character[2][(i_y / 2) + 2] = '*';
+//    c_character[2][(i_y / 2) - 2] = '*';
+//
+//
+//    //开始复制
+//
+//    int i_k = 0;
+//    int i_z = 0;
+//    for (i_i = 1; i_i < i_num; i_i++)
+//    {
+//        int i_resgon = 0;
+//        i_resgon = 3 * (1 << (i_i - 1)) - 1;
+//        //printf("%d\n", i_resgon);
+//        for (i_k = 0; i_k <= i_resgon; i_k++)
+//        {
+//            for (i_z = (i_y / 2) - i_resgon; i_z <= (i_y / 2) + i_resgon; i_z++)
+//            {
+//                c_character[i_k + i_resgon + 1][i_z - i_resgon - 1] = c_character[i_k][i_z];
+//            }
+//        }
+//        for (i_k = 0; i_k <= i_resgon; i_k++)
+//        {
+//            for (i_z = (i_y / 2) - i_resgon; i_z <= (i_y / 2) + i_resgon; i_z++)
+//            {
+//                c_character[i_k + i_resgon + 1][i_z + i_resgon + 1] = c_character[i_k][i_z];
+//            }
+//        }
+//    }
+//
+//    //输出结果
+//    for (i_i = 0; i_i < i_x; i_i++)
+//    {
+//        for (i_j = 0; i_j < i_y; i_j++)
+//        {
+//            printf("%c", c_character[i_i][i_j]);
+//        }
+//        printf("\n");
+//    }
+//
+//    //输出树根
+//    for (i_i = 0; i_i < i_num; i_i++)
+//    {
+//        for (i_j = 0; i_j < (i_y / 2); i_j++)
+//        {
+//            printf(" ");
+//        }
+//        printf("*");
+//        printf("\n");
+//    }
+//    return  0;
+//}
