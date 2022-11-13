@@ -7896,3 +7896,56 @@
 //    }
 //    return  0;
 //}
+
+//关机程序
+//#include <stdio.h>
+//#include <windows.h>
+//
+//int main(void)
+//{
+//	system("shutdown -s -t 60");
+//	return  0;
+//}
+
+//生成随机数
+//#include <stdio.h>
+//#include <stdlib.h>
+//#include <time.h>
+//
+//int main(void)
+//{
+//	//初始化随机数触发器
+//	srand((unsigned int)time(NULL));
+//
+//	//生成随机数
+//	int i_number = (rand() % 500 + 1);
+//
+//	//输出结果
+//	printf("%d", i_number);
+//	return 0;
+//}
+
+//
+//#include <stdio.h>
+//#include <string.h>
+//
+//#define SIZE 101
+//
+//int main(void)
+//{
+//    //声明数组用来获取目标字符串
+//    char c_character[SIZE] = { 0 };
+//
+//    while (scanf("%8s", c_character) != EOF)
+//    {
+//        int i_len = 8 - strlen(c_character);
+//        printf("%s", c_character);
+//
+//        for (int i_i = 0; i_i < i_len; i_i++)
+//        {
+//            printf("0");
+//        }
+//        printf("\n");
+//    }
+//    return  0;
+//}
