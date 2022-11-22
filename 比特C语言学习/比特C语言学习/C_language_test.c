@@ -7949,3 +7949,29 @@
 //    }
 //    return  0;
 //}
+
+//复习将一个十进制数转换为6进制数
+#include <stdio.h>
+
+void Decimal(int i_number);
+
+int main(void)
+{
+	//声明一个变量用来获取一个十进制的数
+	int i_number = 0;
+	scanf("%d", &i_number);
+
+	//转换为6进制
+	Decimal(i_number);
+	return 0;
+}
+
+void Decimal(int i_number)
+{
+	if (i_number > 5)
+	{
+		Decimal(i_number / 6);
+		
+	}
+	printf("%d", i_number % 6);
+}
