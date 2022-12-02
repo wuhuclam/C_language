@@ -7951,27 +7951,52 @@
 //}
 
 //复习将一个十进制数转换为6进制数
-#include <stdio.h>
+//#include <stdio.h>
+//
+//void Decimal(int i_number);
+//
+//int main(void)
+//{
+//	//声明一个变量用来获取一个十进制的数
+//	int i_number = 0;
+//	scanf("%d", &i_number);
+//
+//	//转换为6进制
+//	Decimal(i_number);
+//	return 0;
+//}
+//
+//void Decimal(int i_number)
+//{
+//	if (i_number > 5)
+//	{
+//		Decimal(i_number / 6);
+//		
+//	}
+//	printf("%d", i_number % 6);
+//}
 
-void Decimal(int i_number);
+//最大公约数和最小公倍数
+#include <stdio.h>
 
 int main(void)
 {
-	//声明一个变量用来获取一个十进制的数
-	int i_number = 0;
-	scanf("%d", &i_number);
+	//声明两个变量用来获取两个整数
+	int i_number_one = 0;
+	int i_number_two = 0;
+	scanf("%d %d", &i_number_one, &i_number_two);
 
-	//转换为6进制
-	Decimal(i_number);
-	return 0;
-}
-
-void Decimal(int i_number)
-{
-	if (i_number > 5)
+	//开始计算最大公约数
+	int i_a = i_number_one;
+	int i_b = i_number_two;
+	int i_c = 0;
+	while ((i_c = i_a % i_b))
 	{
-		Decimal(i_number / 6);
-		
+		i_a = i_b;
+		i_b = i_c;
 	}
-	printf("%d", i_number % 6);
+
+	//输出结果
+	printf("%d", i_b);
+	return  0;
 }
