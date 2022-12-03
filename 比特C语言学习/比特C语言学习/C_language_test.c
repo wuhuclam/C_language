@@ -7977,26 +7977,73 @@
 //}
 
 //最大公约数和最小公倍数
-#include <stdio.h>
+//#include <stdio.h>
+//
+//int main(void)
+//{
+//	//声明两个变量用来获取两个整数
+//	int i_number_one = 0;
+//	int i_number_two = 0;
+//	scanf("%d %d", &i_number_one, &i_number_two);
+//
+//	//开始计算最大公约数
+//	int i_a = i_number_one;
+//	int i_b = i_number_two;
+//	int i_c = 0;
+//	while ((i_c = i_a % i_b))
+//	{
+//		i_a = i_b;
+//		i_b = i_c;
+//	}
+//
+//	//输出结果
+//	printf("%d", i_b);
+//	return  0;
+//}
 
-int main(void)
-{
-	//声明两个变量用来获取两个整数
-	int i_number_one = 0;
-	int i_number_two = 0;
-	scanf("%d %d", &i_number_one, &i_number_two);
-
-	//开始计算最大公约数
-	int i_a = i_number_one;
-	int i_b = i_number_two;
-	int i_c = 0;
-	while ((i_c = i_a % i_b))
-	{
-		i_a = i_b;
-		i_b = i_c;
-	}
-
-	//输出结果
-	printf("%d", i_b);
-	return  0;
-}
+//有 1、2、3、4 四个数字，能组成多少个互不相同且无重复数字的三位数？都是多少？
+//#include <stdio.h>
+//
+//int main(void)
+//{
+//	//声明三个变量用来循环使用
+//	int i_i = 0;
+//	int i_j = 0;
+//	int i_z = 0;
+//
+//	//开始循环
+//	int i_count = 0;
+//	int i_number = 0;
+//	for (i_i = 1; i_i < 5; i_i++)
+//	{
+//		for (i_j = 1; i_j < 5; i_j++)
+//		{
+//			if (i_i == i_j)
+//			{
+//				continue;
+//			}
+//			else
+//			{
+//				for ( i_z = 1; i_z < 5; i_z++)
+//				{
+//					if (i_z == i_j || i_z == i_i)
+//					{
+//						continue;
+//					}
+//					else
+//					{
+//						i_count++;
+//						i_number = i_i * 100 + i_j * 10 + i_z;
+//						printf("%d\n", i_number);
+//					}
+//				}
+//			}
+//		}
+//	}
+//
+//	printf("\n");
+//	//输出总数
+//	printf("%d", i_count);
+//
+//	return  0;
+//}
