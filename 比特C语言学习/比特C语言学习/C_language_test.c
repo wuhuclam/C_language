@@ -8059,49 +8059,82 @@
 //高于100万元时，超过100万元的部分按1 % 提成。
 //从键盘输入当月利润I，求应发放奖金总数？
 
-#include <stdio.h>
+//#include <stdio.h>
+//
+//double Bonus(double d_profit);
+//
+//int main(void)
+//{
+//	//声明一个变量用来获取当月的利润
+//	double d_profit = 0;
+//	scanf("%lf", &d_profit);
+//
+//	//开始计算应该发放的奖金
+//	double d_sum = 0.0;
+//	d_sum = Bonus(d_profit);
+//
+//	//输出结果
+//	printf("%1f", d_sum - d_profit);
+//	return  0;
+//}
+//
+//double Bonus(double d_profit)
+//{
+//	if ((d_profit - 100000.0) <= 0)
+//	{
+//		return d_profit + d_profit * 0.1;
+//	}
+//	else if ((d_profit - 100000.0) > 0 && (200000.0 - d_profit) >= 0)
+//	{
+//		return d_profit + 100000.0 * 0.1 + (d_profit - 100000.0) * 0.075;
+//	}
+//	else if ((d_profit - 200000.0) > 0 && (400000.0 - d_profit) >= 0)
+//	{
+//		return d_profit + 100000.0 * 0.1 + 100000.0 * 0.75 + (d_profit - 200000.0) * 0.05;
+//	}
+//	else if ((d_profit - 400000.0) > 0 && (600000.0 - d_profit) >= 0)
+//	{
+//		return d_profit + 100000.0 * 0.1 + 100000.0 * 0.75 + 200000.0 * 0.5 + (d_profit - 400000.0) * 0.03;
+//	}
+//	else if ((d_profit - 600000.0) > 0 && (1000000.0 - d_profit) >= 0)
+//	{
+//		return  d_profit + 100000.0 * 0.1 + 100000.0 * 0.75 + 200000.0 * 0.5 + 200000.0 * 0.3 + (d_profit - 600000.0) * 0.015;
+//	}
+//	else if ((d_profit - 1000000.0) > 0)
+//	{
+//		return  d_profit + 100000.0 * 0.1 + 100000.0 * 0.75 + 200000.0 * 0.5 + 200000.0 * 0.3 + 400000.0 * 1.5 + (d_profit - 1000000.0) * 0.01;
+//	}
+//}
 
-double Bonus(double d_profit);
-
-int main(void)
-{
-	//声明一个变量用来获取当月的利润
-	double d_profit = 0;
-	scanf("%lf", &d_profit);
-
-	//开始计算应该发放的奖金
-	double d_sum = 0.0;
-	d_sum = Bonus(d_profit);
-
-	//输出结果
-	printf("%1f", d_sum - d_profit);
-	return  0;
-}
-
-double Bonus(double d_profit)
-{
-	if ((d_profit - 100000.0) <= 0)
-	{
-		return d_profit + d_profit * 0.1;
-	}
-	else if ((d_profit - 100000.0) > 0 && (200000.0 - d_profit) >= 0)
-	{
-		return d_profit + 100000.0 * 0.1 + (d_profit - 100000.0) * 0.075;
-	}
-	else if ((d_profit - 200000.0) > 0 && (400000.0 - d_profit) >= 0)
-	{
-		return d_profit + 100000.0 * 0.1 + 100000.0 * 0.75 + (d_profit - 200000.0) * 0.05;
-	}
-	else if ((d_profit - 400000.0) > 0 && (600000.0 - d_profit) >= 0)
-	{
-		return d_profit + 100000.0 * 0.1 + 100000.0 * 0.75 + 200000.0 * 0.5 + (d_profit - 400000.0) * 0.03;
-	}
-	else if ((d_profit - 600000.0) > 0 && (1000000.0 - d_profit) >= 0)
-	{
-		return  d_profit + 100000.0 * 0.1 + 100000.0 * 0.75 + 200000.0 * 0.5 + 200000.0 * 0.3 + (d_profit - 600000.0) * 0.015;
-	}
-	else if ((d_profit - 1000000.0) > 0)
-	{
-		return  d_profit + 100000.0 * 0.1 + 100000.0 * 0.75 + 200000.0 * 0.5 + 200000.0 * 0.3 + 400000.0 * 1.5 + (d_profit - 1000000.0) * 0.01;
-	}
-}
+//一个整数，它加上100后是一个完全平方数，再加上168又是一个完全平方数，请问该数是多少？
+//#include <stdio.h>
+//#include <math.h>
+//
+//int main(void)
+//{
+//	//创建一个循环
+//	int i_i = 0;
+//	int i_j = 0;
+//
+//	int i_m = 0;
+//	int i_n = 0;
+//	int i_x = 0;
+//	for (i_i = 1; i_i < 85; i_i++)
+//	{
+//		if (168 % i_i == 0)
+//		{
+//			i_j = 168 / i_i;
+//
+//			if (0 == i_j % 2 && i_i > i_j)
+//			{
+//				i_m = (i_i + i_j) / 2;
+//				i_n = (i_i - i_j) / 2;
+//				i_x = i_n * i_n - 100;
+//
+//				printf("%d + 100 = %d * %d\n", i_x, i_n, i_n);
+//				printf("%d + 268 = %d * %d\n", i_x, i_m, i_m);
+//			}
+//		}
+//	}
+//	return  0;
+//}
