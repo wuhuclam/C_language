@@ -8138,3 +8138,93 @@
 //	}
 //	return  0;
 //}
+
+//输入某年某月某日，判断这一天是这一年的第几天？
+#include <stdio.h>
+
+#define SIZE 12
+
+int main(void)
+{
+	//声明三个变量用来获取年月日
+	int i_year = 0;
+	int i_month = 0;
+	int i_day = 0;
+	scanf("%d %d %d", &i_year, &i_month, &i_day);
+
+	//判断闰年还是非闰年
+	int i_flag = 0;
+	if ((i_year % 4 == 0 && i_year % 100 != 0 || i_year % 400 == 0))
+	{
+		i_flag = 1;
+	}
+
+	//声明两个数组用来获取闰年和非闰年每个月的天数
+	int i_leap_year[SIZE] = { 0 };
+	int i_nleap_year[SIZE] = { 0 };
+
+	//通过循环对两个数组进行赋值
+	int i_i = 0;
+	for (i_i = 1; i_i < SIZE + 1; i_i++)
+	{
+		switch (i_i)
+		{
+		case 1:
+		case 3:
+		case 5:
+		case 7:
+		case 8:
+		case 10:
+		case 12: i_leap_year[i_i - 1] = 31;
+			     i_nleap_year[i_i - 1] = 31;
+			     break;
+		default: i_leap_year[i_i - 1] = 30;
+			     i_nleap_year[i_i - 1] = 30;
+				 break;
+		}
+	}
+
+	i_leap_year[1] = 29;
+	i_nleap_year[1] = 28;
+
+	//验证数据是否正确
+	/*for (i_i = 0; i_i < SIZE; i_i++)
+	{
+		printf("%d ", i_leap_year[i_i]);
+	}
+	printf("\n");
+	for (i_i = 0; i_i < SIZE; i_i++)
+	{
+		printf("%d ", i_nleap_year[i_i]);
+	}*/
+
+
+	//判断改日在当年的那一天
+	//printf("%d\n", i_flag);
+	int i_day_sum = 0;
+	if (i_flag)
+	{
+		for (i_i = 0; i_i < i_month - 1; i_i++)
+		{
+			i_day_sum += i_leap_year[i_i];
+		}
+
+		i_day_sum += i_day;
+	}
+	else
+	{
+		for (i_i = 0; i_i < i_month - 1; i_i++)
+		{
+			i_day_sum += i_nleap_year[i_i];
+			//printf("%d\n", i_day_sum);
+		}
+
+		i_day_sum += i_day;
+	}
+
+	//输出结果
+	printf("%d", i_day_sum);
+
+
+	return  0;
+}
