@@ -8230,41 +8230,57 @@
 //}
 
 //输入三个整数x,y,z，请把这三个数由小到大输出
+//#include <stdio.h>
+//
+//int main(void)
+//{
+//	//声明三个变量用来接收值
+//	int i_number_a = 0;
+//	int i_number_b = 0;
+//	int i_number_c = 0;
+//	scanf("%d %d %d", &i_number_a, &i_number_b, &i_number_c);
+//
+//	//开始排序
+//	int i_temp = 0;
+//	if (i_number_a < i_number_b)
+//	{
+//		i_temp = i_number_a;
+//		i_number_a = i_number_b;
+//		i_number_b = i_temp;
+//	}
+//
+//	if (i_number_a < i_number_c)
+//	{
+//		i_temp = i_number_a;
+//		i_number_a = i_number_c;
+//		i_number_c = i_temp;
+//	}
+//
+//	if (i_number_b < i_number_c)
+//	{
+//		i_temp = i_number_b;
+//		i_number_b = i_number_c;
+//		i_number_c = i_temp;
+//	}
+//
+//
+//	//输出结果
+//	printf("%d %d %d", i_number_a, i_number_b, i_number_c);
+//	return 0;
+//}
+
+//打印c字形
 #include <stdio.h>
 
 int main(void)
 {
-	//声明三个变量用来接收值
-	int i_number_a = 0;
-	int i_number_b = 0;
-	int i_number_c = 0;
-	scanf("%d %d %d", &i_number_a, &i_number_b, &i_number_c);
+	printf("    ****\n"
+		   "************\n"
+	       "***\n"
+	       "*\n"
+	       "***\n"
+		   "************\n"
+		   "    ****\n");
 
-	//开始排序
-	int i_temp = 0;
-	if (i_number_a < i_number_b)
-	{
-		i_temp = i_number_a;
-		i_number_a = i_number_b;
-		i_number_b = i_temp;
-	}
-
-	if (i_number_a < i_number_c)
-	{
-		i_temp = i_number_a;
-		i_number_a = i_number_c;
-		i_number_c = i_temp;
-	}
-
-	if (i_number_b < i_number_c)
-	{
-		i_temp = i_number_b;
-		i_number_b = i_number_c;
-		i_number_c = i_temp;
-	}
-
-
-	//输出结果
-	printf("%d %d %d", i_number_a, i_number_b, i_number_c);
-	return 0;
+	return  0;
 }
