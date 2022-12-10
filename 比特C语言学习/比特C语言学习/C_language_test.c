@@ -8286,14 +8286,36 @@
 //}
 
 //打印特殊图形
-#include<stdio.h>
-int main()
+//#include<stdio.h>
+//int main()
+//{
+//    char a = 176, b = 219;
+//    printf("%c%c%c%c%c\n", b, a, a, a, b);
+//    printf("%c%c%c%c%c\n", a, b, a, b, a);
+//    printf("%c%c%c%c%c\n", a, a, b, a, a);
+//    printf("%c%c%c%c%c\n", a, b, a, b, a);
+//    printf("%c%c%c%c%c\n", b, a, a, a, b);
+//    return 0;
+//}
+
+//打印九九乘法表
+#include <stdio.h>
+
+int main(void)
 {
-    char a = 176, b = 219;
-    printf("%c%c%c%c%c\n", b, a, a, a, b);
-    printf("%c%c%c%c%c\n", a, b, a, b, a);
-    printf("%c%c%c%c%c\n", a, a, b, a, a);
-    printf("%c%c%c%c%c\n", a, b, a, b, a);
-    printf("%c%c%c%c%c\n", b, a, a, a, b);
-    return 0;
+	int i_i = 0;
+	int i_j = 0;
+
+	//开始循环
+	for (i_i = 1; i_i < 10; i_i++)
+	{
+		for (i_j = 1; i_j < i_i + 1; i_j++)
+		{
+			printf("%d * %d = %d ", i_i, i_j, i_i * i_j);
+		}
+
+		printf("\n");
+	}
+
+	return  0;
 }
