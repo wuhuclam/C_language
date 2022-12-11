@@ -8299,23 +8299,39 @@
 //}
 
 //打印九九乘法表
-#include <stdio.h>
+//#include <stdio.h>
+//
+//int main(void)
+//{
+//	int i_i = 0;
+//	int i_j = 0;
+//
+//	//开始循环
+//	for (i_i = 1; i_i < 10; i_i++)
+//	{
+//		for (i_j = 1; i_j < i_i + 1; i_j++)
+//		{
+//			printf("%d * %d = %d ", i_i, i_j, i_i * i_j);
+//		}
+//
+//		printf("\n");
+//	}
+//
+//	return  0;
+//}
 
-int main(void)
+#include<stdio.h>
+
+int main()
 {
-	int i_i = 0;
-	int i_j = 0;
-
-	//开始循环
-	for (i_i = 1; i_i < 10; i_i++)
-	{
-		for (i_j = 1; i_j < i_i + 1; i_j++)
-		{
-			printf("%d * %d = %d ", i_i, i_j, i_i * i_j);
-		}
-
-		printf("\n");
-	}
-
-	return  0;
+    int i, j;
+    for (i = 0; i < 8; i++)
+    {
+        for (j = 0; j < 8; j++)
+            if ((i + j) % 2 == 0)
+                printf("%c%c", 219, 219);
+            else printf("  ");
+        printf("\n");
+    }
+    return 0;
 }
