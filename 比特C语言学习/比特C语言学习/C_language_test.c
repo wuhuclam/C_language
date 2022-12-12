@@ -8320,18 +8320,37 @@
 //	return  0;
 //}
 
-#include<stdio.h>
+//#include<stdio.h>
+//
+//int main()
+//{
+//    int i, j;
+//    for (i = 0; i < 8; i++)
+//    {
+//        for (j = 0; j < 8; j++)
+//            if ((i + j) % 2 == 0)
+//                printf("%c%c", 219, 219);
+//            else printf("  ");
+//        printf("\n");
+//    }
+//    return 0;
+//}
 
-int main()
-{
-    int i, j;
-    for (i = 0; i < 8; i++)
-    {
-        for (j = 0; j < 8; j++)
-            if ((i + j) % 2 == 0)
-                printf("%c%c", 219, 219);
-            else printf("  ");
-        printf("\n");
-    }
-    return 0;
-}
+//打印笑脸
+//#include<stdio.h>
+//
+//int main()
+//{
+//    int i, j;
+//    printf("\1\1\n"); /*输出两个笑脸*/
+//    for (i = 1; i < 11; i++)
+//    {
+//        for (j = 1; j <= i; j++)
+//            printf("%c%c", 219, 219);
+//        printf("\n");
+//    }
+//    return 0;
+//}
+
+
+
