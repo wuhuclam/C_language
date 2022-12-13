@@ -8352,5 +8352,44 @@
 //    return 0;
 //}
 
+//斐波那契数列
+//#include <stdio.h>
+//
+//int main(void)
+//{
+//	//声明两个变量用来获取前两个月的兔子数
+//	int i_number_one = 1;
+//	int i_number_two = 1;
+//
+//	printf("%d", 2 % 2);
+//
+//	//开始计算
+//	int i_i = 0;
+//	int i_temp = 0;
+//	for (i_i = 3; i_i < 41; i_i++)
+//	{
+//		printf("%d\n", i_number_one + i_number_two);
+//
+//		i_temp = i_number_one;
+//		i_number_one = i_number_two;
+//		i_number_two = i_temp + i_number_one;
+//	}
+//	return  0;
+//}
 
+//#include<stdio.h>
+//
+//int main()
+//{
+//    int f1 = 1, f2 = 1, i;
+//    for (i = 2; i <= 20; i++)
+//    {
+//        printf("%12d%12d", f1, f2);
+//        if (i % 2 == 0) printf("\n");
+//        f1 = f1 + f2;
+//        f2 = f1 + f2;
+//    }
+//
+//    return 0;
+//}
 
