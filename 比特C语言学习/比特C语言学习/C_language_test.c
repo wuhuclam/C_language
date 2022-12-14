@@ -8393,3 +8393,36 @@
 //    return 0;
 //}
 
+//判断 101 到 200 之间的素数
+//#include <stdio.h>
+//#include <math.h>
+//
+//int main(void)
+//{
+//	//制造循环
+//	int i_i = 0;
+//
+//	//开始循环
+//	int i_flag = 1;
+//	int i_j = 0;
+//	for (i_i = 101; i_i < 201; i_i++)
+//	{
+//		i_flag = 1;
+//
+//		//printf("%d ", sqrt(i_i));
+//		for (i_j = 2; i_j <= sqrt(i_i); i_j++)
+//		{
+//			if (i_i % i_j == 0)
+//			{
+//				i_flag = 0;
+//				break;
+//			}
+//		}
+//
+//		if (i_flag)
+//		{
+//			printf("%d \n", i_i);
+//		}
+//	}
+//	return  0;
+//}
