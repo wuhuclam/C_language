@@ -8426,3 +8426,51 @@
 //	}
 //	return  0;
 //}
+
+
+//水仙花数
+#include <stdio.h>
+
+int Judgement(int i_number);
+
+int main(void)
+{
+	//在循环中找出水仙花数
+	int i_i = 0;
+	int i_flag = 0;
+	int i_temp = 0;
+	for (i_i = 100; i_i < 1000; i_i++)
+	{
+		i_flag = Judgement(i_i);
+
+		if (i_flag)
+		{
+			printf("%d ", i_i);
+		}
+	}
+	return  0;
+}
+
+int Judgement(int i_number)
+{
+	int i_sum = 0;
+
+	int i_flag = i_number;
+	int i_i = 0;
+	int i_x = 10;
+	for (i_i = 0; i_i < 3; i_i++)
+	{
+		i_sum += (i_flag % i_x) * (i_flag % i_x) * (i_flag % i_x);
+		i_flag /= i_x;
+	}
+
+
+	if (i_number == i_sum)
+	{
+		return 1;
+	}
+	else
+	{
+		return 0;
+	}
+}
